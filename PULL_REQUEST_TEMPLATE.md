@@ -1,5 +1,5 @@
 ____ Wrote Tests
-____ Implemented 
+____ Implemented
 ____ Reviewed
 
 # Neccesary checkmarks:
