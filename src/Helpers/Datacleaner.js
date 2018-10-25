@@ -14,3 +14,5 @@ const cleanMovies = data => {
   })
   return easyObj;
 }
+
+export default cleanMovies;
