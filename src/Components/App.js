@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
+import Login from './Login/Login';
+import Header from './Header/Header';
+import Nav from './Nav/Nav';
+import MovieContainer from './MovieContainer/MovieContainer';
+import { Route, NavLink } from 'react-router-dom';
 
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Hello <span role="img" aria-label="movie-emoji">🎥</span> fam. Fun starts now! <br />
-            -nick
-          </p>
-        </header>
-      </div >
+      <div>
+        <Route exact path='/' render={()=>{
+          return(
+            <div className="App">
+              <Login />
+            </div>
+          )
+        }}
+      />
+      </div>
+
     );
   }
 }
