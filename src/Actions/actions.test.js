@@ -18,7 +18,7 @@ describe('userActions', ()=>{
 
   it('should have an action of type DELETE_FAVORITE', ()=>{
 
-    const id = 2;
+    const id = 3;
 
     let expectedAction = {
       type: 'DELETE_FAVORITE',

@@ -1,7 +1,4 @@
-//
-// export const createAccount = ()=>{
-//   type: 'CREATE_ACCOUNT';
-// }
+//Keep getting error "Expected an assignment or function call and instead saw an expression reactjs"
 
 // export const addFavorite = (id)=>{
 //   type: "ADD_FAVORITE",
