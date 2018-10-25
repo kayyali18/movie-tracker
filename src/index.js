@@ -4,19 +4,19 @@ import './index.css';
 import App from './Components/App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-// import { createStore } from 'redux';
-// import { rootReducer } from './reducers';
+import { createStore } from 'redux';
+import { rootReducer } from './Reducers/index.js';
 import * as serviceWorker from './serviceWorker';
 
-// const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX__DEVTOOLS_EXTENSION__();
-// const store = createStore(rootReducer, devTools)
+const devTools = window.devToolsExtension && window.devToolsExtension()
+const store = createStore(rootReducer, devTools)
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <BrowserRouter >
       <App />
     </BrowserRouter>
   </Provider>,
 
-  document.getElementById('root'));
+document.getElementById('root'));
 serviceWorker.unregister();
