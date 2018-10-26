@@ -51,7 +51,7 @@ class Login extends Component {
         <h2>Login</h2>
         <label>
           E-mail:
-          <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+          <input name='user' placeholder="Username" type="email" value={user} onChange={this.handleChange}/>
         </label>
         <label>
           Password:
@@ -63,11 +63,11 @@ class Login extends Component {
         <h2>Create Account</h2>
         <label>
           Name:
-          <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+          <input name='name' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
         </label>
         <label>
           E-mail:
-          <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+          <input name='user' placeholder="Username" type="email" value={user} onChange={this.handleChange}/>
         </label>
         <label>
           Password:
