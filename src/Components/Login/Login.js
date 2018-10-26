@@ -9,16 +9,6 @@ class Login extends Component {
       password: '',
     }
   }
-  // fetch('/api/v1/projects', {
-  //   method: 'POST',
-  //   body: JSON.stringify({
-  //     projectName: 'Foo',
-  //     totalPoints: 100
-  //   }),
-  //   headers: {
-  //     'content-type': 'application/json'
-  //   }
-  // });
 
   async componentDidMount() {
     const url = `http://localhost:3000/api/users`
@@ -33,7 +23,7 @@ class Login extends Component {
       }
     })
 
-    
+    console.log (req)
   }
 
   resetForm = () => {
@@ -56,10 +46,11 @@ class Login extends Component {
   render() {
     const { user, password } = this.state
     return (
+      <section className='login-main' >
       <form className="login-form" onSubmit={this.submitLogin}>
         <h2>Login</h2>
         <label>
-          Username
+          E-mail
           <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
         </label>
         <label>
@@ -68,6 +59,20 @@ class Login extends Component {
         </label>
           <button>Submit</button>
       </form>
+      <form className="login-new-user" onSubmit={this.submitLogin}>
+        <h2>Create Account</h2>
+        <label>
+          E-mail
+          <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+        </label>
+        <label>
+          Password
+          <input name='password' placeholder="Password" type="password" value={password} onChange={this.handleChange}/>
+        </label>
+          <button>Submit</button>
+      </form>
+
+      </section>
     )
   }
 }
