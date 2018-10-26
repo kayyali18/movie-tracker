@@ -50,11 +50,11 @@ class Login extends Component {
       <form className="login-form" onSubmit={this.submitLogin}>
         <h2>Login</h2>
         <label>
-          E-mail
+          E-mail:
           <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
         </label>
         <label>
-          Password
+          Password:
           <input name='password' placeholder="Password" type="password" value={password} onChange={this.handleChange}/>
         </label>
           <button>Submit</button>
@@ -62,11 +62,15 @@ class Login extends Component {
       <form className="login-new-user" onSubmit={this.submitLogin}>
         <h2>Create Account</h2>
         <label>
-          E-mail
+          Name:
           <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
         </label>
         <label>
-          Password
+          E-mail:
+          <input name='user' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+        </label>
+        <label>
+          Password:
           <input name='password' placeholder="Password" type="password" value={password} onChange={this.handleChange}/>
         </label>
           <button>Submit</button>
