@@ -7,9 +7,9 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: '',
+      email: 'tman2272@aol.com',
       username: '',
-      password: '',
+      password: 'password',
     }
   }
 
@@ -40,9 +40,9 @@ class Login extends Component {
 
   submitLogin = e => {
     const { loginCheck } = this.props
-    const { user, password } = this.state
+    const { email, password } = this.state
     e.preventDefault()
-    loginCheck(user, password)
+    loginCheck(email, password)
     this.resetForm()
   }
 
