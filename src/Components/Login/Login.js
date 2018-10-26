@@ -9,6 +9,32 @@ class Login extends Component {
       password: '',
     }
   }
+  // fetch('/api/v1/projects', {
+  //   method: 'POST',
+  //   body: JSON.stringify({
+  //     projectName: 'Foo',
+  //     totalPoints: 100
+  //   }),
+  //   headers: {
+  //     'content-type': 'application/json'
+  //   }
+  // });
+
+  async componentDidMount() {
+    const url = `http://localhost:3000/api/users`
+    const req = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: 'tman2272@aol.com',
+        password: 'password'
+      }),
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+
+    
+  }
 
   resetForm = () => {
     this.setState({password: ''})
