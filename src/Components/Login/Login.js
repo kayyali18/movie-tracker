@@ -5,7 +5,8 @@ class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      user: '',
+      email: '',
+      username: '',
       password: '',
     }
   }
@@ -44,14 +45,14 @@ class Login extends Component {
   }
   
   render() {
-    const { user, password } = this.state
+    const { email, username, password } = this.state
     return (
       <section className='login-main' >
       <form className="login-form" onSubmit={this.submitLogin} aria-label='Existing user login form'>
         <h2>Login</h2>
         <label>
           E-mail:
-          <input name='user' placeholder="Username" type="email" value={user} onChange={this.handleChange}/>
+          <input name='email' placeholder="Email" type="email" value={email} onChange={this.handleChange}/>
         </label>
         <label>
           Password:
@@ -63,11 +64,11 @@ class Login extends Component {
         <h2>Create Account</h2>
         <label>
           Name:
-          <input name='name' placeholder="Username" type="text" value={user} onChange={this.handleChange}/>
+          <input name='username' placeholder="Username" type="text" value={username} onChange={this.handleChange}/>
         </label>
         <label>
           E-mail:
-          <input name='user' placeholder="Username" type="email" value={user} onChange={this.handleChange}/>
+          <input name='email' placeholder="Email" type="email" value={email} onChange={this.handleChange}/>
         </label>
         <label>
           Password:
