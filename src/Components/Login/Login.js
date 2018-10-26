@@ -47,7 +47,7 @@ class Login extends Component {
     const { user, password } = this.state
     return (
       <section className='login-main' >
-      <form className="login-form" onSubmit={this.submitLogin}>
+      <form className="login-form" onSubmit={this.submitLogin} aria-label='Existing user login form'>
         <h2>Login</h2>
         <label>
           E-mail:
@@ -59,7 +59,7 @@ class Login extends Component {
         </label>
           <button>Submit</button>
       </form>
-      <form className="login-new-user" onSubmit={this.submitLogin}>
+      <form className="login-new-user" onSubmit={this.submitLogin} aria-label='Create new MovieTracker account'>
         <h2>Create Account</h2>
         <label>
           Name:
