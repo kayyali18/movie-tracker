@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import { Route, Link } from 'react-router-dom'
+import { loginUser } from '../../Actions/TheActionMan';
 
 class Login extends Component {
   constructor(props) {
@@ -40,7 +42,7 @@ class Login extends Component {
     const { loginCheck } = this.props
     const { user, password } = this.state
     e.preventDefault()
-    // loginCheck(user, password)
+    loginCheck(user, password)
     this.resetForm()
   }
 
@@ -124,4 +126,9 @@ class Login extends Component {
   }
 }
 
-export default Login
+
+export const mapDispatchToProps = (dispatch) => ({
+  loginCheck: (user, password) => dispatch(loginUser(user, password))
+})
+
+export default connect(null, mapDispatchToProps) (Login)
