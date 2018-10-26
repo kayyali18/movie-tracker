@@ -1,4 +1,4 @@
-const cleanMovies = data => {
+export const cleanMovies = data => {
   const { results } = data;
   const easyObj = results.map(result => {
 
