@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './Containers/App/App'
+import App from './Components/App';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
@@ -18,5 +18,5 @@ ReactDOM.render(
     </BrowserRouter>
   </Provider>,
 
-  document.getElementById('root'));
+document.getElementById('root'));
 serviceWorker.unregister();
