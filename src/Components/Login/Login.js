@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Link } from 'react-router-dom'
+import '../../styles/2-layouts/layouts-dir.sass'
+import '../../styles/1-base/base-dir.sass'
 
 class Login extends Component {
   constructor(props) {
