@@ -57,7 +57,6 @@ class Login extends Component {
         >
           <h2>Login</h2>
           <label>
-            E-mail:
             <input
               tabIndex="0"
               name="email"
@@ -68,7 +67,6 @@ class Login extends Component {
             />
           </label>
           <label>
-            Password:
             <input
               tabIndex="0"
               name="password"
