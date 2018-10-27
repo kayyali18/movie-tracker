@@ -12,6 +12,6 @@ export const loginUser = async (email, password) => {
     },
   })
 
-  if (req.ok) return true
+  if (req.ok) return req
   else return false
 }

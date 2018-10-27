@@ -14,19 +14,7 @@ class Login extends Component {
   }
 
   async componentDidMount() {
-    const url = `http://localhost:3000/api/users`
-    const req = await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify({
-        email: 'tman2272@aol.com',
-        password: 'password',
-      }),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
 
-    console.log(req)
   }
 
   resetForm = () => {

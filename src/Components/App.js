@@ -14,7 +14,7 @@ class App extends Component {
         <Route exact path='/' render={()=>{
           return(
             <div className="App">
-              <Movie />
+              <Login /> 
             </div>
           )
         }}
