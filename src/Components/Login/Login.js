@@ -55,7 +55,7 @@ class Login extends Component {
           onSubmit={this.submitLogin}
           aria-label="Existing user login form"
         >
-          <div className="user-image"></div>
+          <img src="../src/Assets/user.png" />
           <h2>Welcome Back</h2>
           <label className="email-input">
             <input
