@@ -5,14 +5,15 @@ export const fetchNowPlaying = async () => {
   const response = await fetch(url);
   const data = await response.json();
   const movieData = await movieInfo(data);
-  return data;
+  return movieData;
 }
 
 export const movieInfo = async (data) =>{
   let movieDetails = data.results.map(movie=>{
     let movieObj = {title: movie.title, releaseDate: movie.release_date, overview: movie.overview, rating: movie.vote_average, id: movie.id};
-    console.log(movieObj)
-    return movieObj
+    return movieObj;
   })
 }
+
+
 export default fetchNowPlaying;
