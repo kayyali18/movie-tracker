@@ -9,15 +9,26 @@
       background: #FEFEFE
       margin: 20rem auto 0 auto
       width: 80%;
-      // clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%)
-      box-shadow: 10px 10px 5px rgb(110, 110, 110);
+      box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
+
+      h2
+        letter-spacing: 1.5px
+
+      input 
+        border: none
 
     .user-image 
       border-radius: 50%
-
-      h2
-        color: blue
-        padding-top: 3rem;
+    
+    .user-image
+      background: center / cover url("../../Assets/user.png")
+      height: 4rem
+      width: 4rem 
+      z-index: 9000
+      margin: 0 auto
+      position: relative;
+      top: -30px
+      filter: grayscale(1)
 
     .email-input 
       height: 5rem
