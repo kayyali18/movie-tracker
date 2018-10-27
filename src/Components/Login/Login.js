@@ -65,8 +65,10 @@ class Login extends Component {
               type="email"
               value={email}
               onChange={this.handleChange}
+              className="email-text"
             />
           </label>
+          <hr />
           <label>
             <input
               tabIndex="0"
