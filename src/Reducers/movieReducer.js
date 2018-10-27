@@ -4,7 +4,7 @@ import * as movieData from '/Users/Cierra/Documents/TP/movie-tracker/movie-track
 const movieReducer = (state = [], action) =>{
   switch(action.type){
     case 'NOW_PLAYING':
-      return [movieData.fetchNowPlaying()]
+      return [movieData.movieInfo()]
     default:
       return state;
   }
