@@ -1,14 +1,23 @@
 import * as types from '../Actions/userActions';
+import * as movieData from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Helpers/apiCaller.js';
 
+const movieReducer = (state = [], action) =>{
+  switch(action.type){
+    case 'NOW_PLAYING':
+      return [movieData.fetchNowPlaying()]
+    default:
+      return state;
+  }
+}
 
-const favorites = (state = [], action) =>{
+export const favorites = (state = [], action) =>{
   switch(action.type){
     case 'ADD_FAVORITE':
-    //Not sure what should go here yet
       return undefined
+    case 'REMOVE_FAVORITE':
     default:
       return state
   }
 }
 
-export default favorites;
+export default movieReducer;
