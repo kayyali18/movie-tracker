@@ -1,5 +1,5 @@
 import * as types from '../Actions/userActions';
-import * as movieData from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Helpers/apiCaller.js';
+import * as movieData from '../Helpers/apiCaller.js';
 
 const movieReducer = (state = [], action) =>{
   switch(action.type){

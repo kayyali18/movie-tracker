@@ -1,5 +1,5 @@
 import React from 'react';
-import * as api from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Helpers/apiCaller.js';
+import * as api from '../../Helpers/apiCaller.js';
 
 const Movie = () =>{
   
