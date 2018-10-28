@@ -10,6 +10,7 @@
     position: relative
     top: 90px
     width: 50px
+    animation: 🚨 4s linear infinite
 
   .login-form
     background: #FEFEFE
@@ -62,8 +63,8 @@
   .github-logo
     background: center / cover url("../../Assets/github.png")
     cursor: pointer
-    height: 30px
     filter: lightness(gray)
+    height: 30px
     margin: 0 auto
     width: 30px
   
@@ -85,3 +86,17 @@
       outline: none
     &:hover
       background-color: rgb(55, 55, 55)
+
+  @keyframes 🚨 { 100% { transform: rotate(360deg);}}
+
+  .login-new-user
+    background: #FEFEFE
+    border-radius: 3px
+    box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
+    height: 20rem
+    justify-content: center
+    margin: 1rem auto;
+    width: 70%;
+    z-index: -1;
+    position: relative;
+    top: -20.5rem

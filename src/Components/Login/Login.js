@@ -50,7 +50,7 @@ class Login extends Component {
     const { email, username, password } = this.state
     return (
       <section className="login-main">
-        <h1>Now Playing</h1>
+        <div className="app-logo"></div>
         <form
           className="login-form"
           onSubmit={this.submitLogin}
@@ -62,7 +62,7 @@ class Login extends Component {
             <input
               tabIndex="0"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Email"
               type="email"
               value={email}
               onChange={this.handleChange}
