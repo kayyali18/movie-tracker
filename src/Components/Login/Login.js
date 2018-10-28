@@ -10,6 +10,7 @@ class Login extends Component {
       email: '',
       username: '',
       password: '',
+      formState: ''
     }
   }
 
@@ -28,6 +29,12 @@ class Login extends Component {
 
     console.log(req)
   }
+
+  toggleActive = () => {
+    this.state.formState === ""
+      ? this.setState({ formState: "active" })
+      : this.setState({ formState: "" });
+  };
 
   resetForm = () => {
     this.setState({ password: '' })
