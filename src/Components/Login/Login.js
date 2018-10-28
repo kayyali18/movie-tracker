@@ -84,6 +84,8 @@ class Login extends Component {
           <div className="github-logo" />
           <button className='submit-button'>Submit</button>
         </form>
+        <p class="create-account">Create Account</p>
+
         <form
           className="login-new-user"
           onSubmit={this.submitLogin}
