@@ -1,71 +1,87 @@
-$SomewhatBlack: #111111;
+.login-main,
+  width: 375px
+  margin: auto
+  height: 812px
 
-.login-main 
-    width: 375px
-    margin: auto
-    height: 812px
+  .app-logo
+    background: center / cover url("../../Assets/playing.png")
+    height: 50px
+    margin: 0 auto
+    position: relative
+    top: 90px
+    width: 50px
+
+  .login-form
+    background: #FEFEFE
+    border-radius: 3px
+    box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
+    height: 20rem
+    justify-content: center
+    margin: 15rem auto 0 auto
+    width: 80%;
+
+  h2
+    margin-bottom: 2rem
+    letter-spacing: 1.5px
+
+  input 
+    border: none
     
-    .login-form 
-      height: 20rem
-      justify-content: center
-      background: #FEFEFE
-      margin: 15rem auto 0 auto
-      width: 80%;
-      box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
+  .user-image
+    background: center / cover url("../../Assets/user.png")
+    border-radius: 50%
+    filter: grayscale(1)
+    height: 4rem
+    margin: 0 auto
+    position: relative;
+    top: -30px
+    width: 4rem 
 
-      h2
-        letter-spacing: 1.5px
-        margin-bottom: 2rem
+  .email-input 
+    border: none
+    height: 5rem
+    outline: none
 
-      input 
-        border: none
-
-    .user-image 
-      border-radius: 50%
-    
-    .user-image
-      background: center / cover url("../../Assets/user.png")
-      height: 4rem
-      width: 4rem 
-      margin: 0 auto
-      position: relative;
-      top: -30px
-      filter: grayscale(1)
-
-    .email-input 
-      height: 5rem
-      border: none
+  input 
+    padding: 15px
+    width: 15rem
+    &:focus
       outline: none
 
-      input 
-        width: 15rem
-        padding: 15px
-        &:focus
-          outline: none
-        
-    .email-text
-      color: $SomewhatBlack
-      
-      &::placeholder
-        text-align: center;
-        
+  .email-text, .password-text
+    color: black
+    &::placeholder
+      text-align: center;
 
-    hr
-      width: 80%
-      margin: 0 auto
-      color: black
-      border: 1px solid rgb(116, 116, 116)
+  hr
+    border: 1px solid rgb(116, 116, 116)
+    color: black
+    margin: 0 auto
+    width: 80%
 
-
-.submit-button 
-  display: block
-  padding: 8px 20px
-  background-color: black
-  color: white
-  text-transform: uppercase
-  font-size: .7rem
-  border-radius: 20px
-  margin: 0 auto
-  position: relative
-  top: 115px
-  border: none
+  .github-logo
+    background: center / cover url("../../Assets/github.png")
+    cursor: pointer
+    height: 30px
+    filter: lightness(gray)
+    margin: 0 auto
+    width: 30px
+  
+  .submit-button 
+    background-color: black
+    border-radius: 20px
+    border: none
+    color: white
+    cursor: pointer
+    display: block
+    font-size: .7rem
+    margin: 0 auto
+    padding: 8px 20px
+    position: relative
+    top: 55px
+    text-transform: uppercase
+    transition: .2s
+    &:focus
+      outline: none
+    &:hover
+      background-color: rgb(55, 55, 55)

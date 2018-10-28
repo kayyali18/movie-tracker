@@ -50,6 +50,7 @@ class Login extends Component {
     const { email, username, password } = this.state
     return (
       <section className="login-main">
+        <h1>Now Playing</h1>
         <form
           className="login-form"
           onSubmit={this.submitLogin}
@@ -77,8 +78,10 @@ class Login extends Component {
               type="password"
               value={password}
               onChange={this.handleChange}
+              className='password-text'
             />
           </label>
+          <div className="github-logo" />
           <button className='submit-button'>Submit</button>
         </form>
         <form
