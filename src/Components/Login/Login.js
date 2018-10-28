@@ -60,6 +60,7 @@ class Login extends Component {
         <div className="app-logo"></div>
         <h1 className="app-title">Now Playing</h1>
         <p>An Elegant Movie Tracker App</p>
+        <div class="create-account">Create Account</div>
         <form
           className="login-form"
           onSubmit={this.submitLogin}
@@ -94,7 +95,6 @@ class Login extends Component {
           <div className="github-logo" />
           <button className='submit-button'>Submit</button>
         </form>
-        <p class="create-account">Create Account</p>
 
         <form
           className="login-new-user"

@@ -2,6 +2,7 @@
 
 $lobster: 'Lobster', serif;   
 
+
 .login-main,
   width: 375px
   margin: auto
@@ -36,13 +37,13 @@ $lobster: 'Lobster', serif;
     width: 80%;
     &:hover h2
       opacity: 1
-
     p
       letter-spacing: 2px
+      font-weight: 600
       text-transform: uppercase
-
+      color: black
+      
   h2
-    color: black
     letter-spacing: 1.5px
     margin-bottom: 2rem
     opacity: 0
@@ -61,11 +62,14 @@ $lobster: 'Lobster', serif;
     position: relative;
     top: -30px
     width: 4rem 
+    animation: bounce 2s linear infinite    
 
   .email-input 
     border: none
     height: 5rem
     outline: none
+    &:placeholder
+      background-color: red
 
   input 
     padding: 15px
@@ -126,12 +130,12 @@ $lobster: 'Lobster', serif;
     padding-bottom: 2px
     position: relative
     text-transform: uppercase
-    top: 40px
+    top: 35.8rem
     transition: .4s
     &:hover 
       filter: brightness(110%)
       border-bottom: 2px solid black
-
+      
   @keyframes 🎥 { 100% {background-position: 0 958px;}}
 
   .login-new-user
@@ -142,6 +146,6 @@ $lobster: 'Lobster', serif;
     justify-content: center
     margin: 1rem auto;
     position: relative;
-    top: -21.5rem
+    top: -19.7rem
     width: 70%;
     z-index: -1;
