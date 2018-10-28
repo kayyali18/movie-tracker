@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet');
+
+$lobster: 'Lobster', serif;   
+
 
 .login-main,
   width: 375px
@@ -5,7 +9,8 @@
   height: 812px
 
   .app-title
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: $lobster
+    letter-spacing: 4px
 
   .app-logo
     background: center / cover url("../../Assets/film.png")
@@ -32,6 +37,10 @@
     width: 80%;
     &:hover h2
       opacity: 1
+
+    p
+      letter-spacing: 2px
+      text-transform: uppercase
 
   h2
     margin-bottom: 2rem
