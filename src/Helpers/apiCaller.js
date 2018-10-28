@@ -23,4 +23,4 @@ export const movieInfo = async data => {
   return movieDetails
 }
 
-export default fetchNowPlaying
+export default fetchNowPlaying;
