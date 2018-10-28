@@ -2,7 +2,6 @@
 
 $lobster: 'Lobster', serif;   
 
-
 .login-main,
   width: 375px
   margin: auto
@@ -11,6 +10,7 @@ $lobster: 'Lobster', serif;
   .app-title
     font-family: $lobster
     letter-spacing: 4px
+    position: relative
 
   .app-logo
     animation: 🎥 100s linear infinite
@@ -26,6 +26,10 @@ $lobster: 'Lobster', serif;
 
   h1
     color: black
+  
+  p
+    letter-spacing: 1.5px
+    font-weight: 100
 
   .login-form
     background: #FEFEFE
@@ -62,7 +66,6 @@ $lobster: 'Lobster', serif;
     position: relative;
     top: -30px
     width: 4rem 
-    animation: bounce 2s linear infinite    
 
   .email-input 
     border: none
@@ -136,8 +139,6 @@ $lobster: 'Lobster', serif;
       filter: brightness(110%)
       border-bottom: 2px solid black
       
-  @keyframes 🎥 { 100% {background-position: 0 958px;}}
-
   .login-new-user
     background: #FEFEFE
     border-radius: 3px
@@ -149,3 +150,7 @@ $lobster: 'Lobster', serif;
     top: -19.7rem
     width: 70%;
     z-index: -1;
+
+@keyframes 🎥 { 100% {background-position: 0 958px;}}
+
+
