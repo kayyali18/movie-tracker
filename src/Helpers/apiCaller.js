@@ -5,7 +5,6 @@ export const fetchNowPlaying = async () => {
   const response = await fetch(url)
   const data = await response.json()
   const movieData = await movieInfo(data)
-  console.log(movieData)
   return movieData
 }
 

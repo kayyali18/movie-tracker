@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
-import {connect} from 'react-redux'
-
+import {connect} from 'react-redux';
 import {latestMovies} from '../Actions/movieActions'
 import Login from './Login/Login';
 import Header from './Header/Header';
@@ -29,7 +28,7 @@ async componentDidMount() {
         <Route exact path='/' render={()=>{
           return(
             <div className="App">
-              <MovieContainer /> 
+              <MovieContainer />
             </div>
           )
         }}
