@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import {connect} from 'react-redux'
 
+import {latestMovies} from '../Actions/movieActions'
 import Login from './Login/Login';
 import Header from './Header/Header';
 import Nav from './Nav/Nav';
@@ -15,8 +17,11 @@ class App extends Component {
   }
 
 async componentDidMount() {
+  const {latestMovies} = this.props
   const nowPlaying = await api.fetchNowPlaying()
-  console.log (nowPlaying)
+
+  latestMovies(nowPlaying)
+
 }
   render() {
     return (
@@ -37,9 +42,7 @@ async componentDidMount() {
 }
 
 const mapDispatchToProps = (dispatch) =>({
-  fetchMovies: () => {
-
-  }
+  latestMovies: (movies) => dispatch(latestMovies(movies))
 })
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

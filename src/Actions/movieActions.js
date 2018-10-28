@@ -1,3 +1,4 @@
-export const fetchNowPlaying = () =>({
-  type: 'NOW_PLAYING'
+export const latestMovies = (movies) =>({
+  type: 'NOW_PLAYING',
+  latestMovies: movies
 })

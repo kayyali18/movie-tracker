@@ -1,10 +1,11 @@
 import * as types from '../Actions/userActions';
 import * as movieData from '../Helpers/apiCaller.js';
+// import { latestMovies } from '../Actions/movieActions';
 
 const movieReducer = (state = [], action) =>{
   switch(action.type){
     case 'NOW_PLAYING':
-      return [movieData.movieInfo()]
+      return action.latestMovies
     default:
       return state;
   }
