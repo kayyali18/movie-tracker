@@ -59,6 +59,7 @@ class Login extends Component {
           aria-label="Existing user login form"
         >
           <div className="user-image"></div>
+          <p>Login</p>
           <h2>Welcome Back</h2>
           <label className="email-input">
             <input
