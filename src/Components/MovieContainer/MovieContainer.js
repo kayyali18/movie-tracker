@@ -1,13 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
-import Data from '../../Helpers/Datacleaner.js'
+import {connect} from 'react-redux';
+import Data from '../../Helpers/Datacleaner.js';
 
-const imgURL = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2'
+class MovieContainer extends Component{
+  constructor(){
+    super();
+  }
 
-const MovieContainer = () =>{
-  return(
-    <div></div>
-  )
+  makeMovies = () =>{
+    const { latestMovies } = this.props;
+
+    const movies = latestMovies.map(movie=>{
+      return <Movie movie={movie} key={movie.id}/>
+    })
+
+    return movies;
+  }
+
+  render(){
+
+    return(
+      <section>
+        {this.makeMovies()}
+      </section>
+    )
+  }
 }
 
-export default MovieContainer;
+
+const mapStateToProps = ({movies}) =>({
+  latestMovies: movies
+})
+
+export default connect(mapStateToProps, null)(MovieContainer);
