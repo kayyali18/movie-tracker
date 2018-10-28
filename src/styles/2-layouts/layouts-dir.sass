@@ -1,3 +1,5 @@
+$SomewhatBlack: #111111;
+
 .login-main 
     width: 375px
     margin: auto
@@ -24,7 +26,6 @@
       background: center / cover url("../../Assets/user.png")
       height: 4rem
       width: 4rem 
-      z-index: 9000
       margin: 0 auto
       position: relative;
       top: -30px
@@ -41,12 +42,12 @@
         &:focus
           outline: none
         
-
     .email-text
-      color: red
-
-      &:placeholder
-          margin: 0 auto
+      color: $SomewhatBlack
+      
+      &::placeholder
+        text-align: center;
+        
 
     hr
       width: 80%
