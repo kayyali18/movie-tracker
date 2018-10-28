@@ -3,3 +3,8 @@ export const loginUser = (email, password) => ({
   email,
   password
 })
+
+export const latestMovies = (movies) =>({
+  type: 'NOW_PLAYING',
+  latestMovies: movies
+})
