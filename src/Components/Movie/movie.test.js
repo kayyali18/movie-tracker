@@ -7,9 +7,16 @@ import Movie from './Movie';
 describe('Movie', ()=>{
 
   let wrapper;
+  let props;
 
   beforeEach(()=>{
-    wrapper = shallow(<Movie />);
+
+    let props = {
+      movie: [{movie: 'movie1'}]
+    }
+
+    wrapper = shallow(<Movie movie={props}/>);
+
   })
 
   it('should match the snapshot', ()=>{
