@@ -2,7 +2,6 @@
   width: 375px
   margin: auto
   height: 812px
-  border: 1px solid black
 
   .app-header-container 
     text-align: center
@@ -84,7 +83,7 @@
     &:focus
       outline: none
 
-  .email-text, .password-text
+  .email-text, .password-text, .new-user-username, .new-user-email, .new-user-password
     color: black
     &::placeholder
       text-align: center;
@@ -121,6 +120,7 @@
     top: 45px
     text-transform: uppercase
     transition: .4s 
+    z-index: 3
     &:focus
       outline: none
     &:hover
@@ -138,16 +138,11 @@
     position: relative
     text-transform: uppercase
     top: 35.8rem
+    left: 35%
     transition: .4s
     &:hover 
       filter: brightness(110%)
       border-bottom: 2px solid black
       
-.login-new-user
-  .new-user-username, .new-user-email, .new-user-password
-    &::placeholder
-      text-align: center
-    &::hover h2
-      opacity: 1
-
+      
 @keyframes 🎥 { 100% {background-position: 0 958px;}}
