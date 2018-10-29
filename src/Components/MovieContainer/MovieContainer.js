@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
 import {connect} from 'react-redux';
+import { NavLink } from 'react-router-dom'
+
 import Data from '../../Helpers/Datacleaner.js';
 
 class MovieContainer extends Component{
@@ -22,6 +24,9 @@ class MovieContainer extends Component{
 
     return(
       <section>
+         <nav>
+          <NavLink to="/login">Login</NavLink>
+        </nav>
         {this.makeMovies()}
       </section>
     )
