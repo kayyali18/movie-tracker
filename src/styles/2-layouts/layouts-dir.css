@@ -3,6 +3,7 @@
   width: 375px;
   margin: auto;
   height: 812px;
+  border: 1px solid black;
 }
 
 .login-main .app-title {

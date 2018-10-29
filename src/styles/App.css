@@ -341,6 +341,7 @@ textarea {
   width: 375px;
   margin: auto;
   height: 812px;
+  border: 1px solid black;
 }
 
 .login-main .app-title {
@@ -365,7 +366,7 @@ textarea {
 }
 
 .login-main h1 {
-  color: #555555;
+  color: black;
 }
 
 .login-main .active {
