@@ -3,7 +3,42 @@
   width: 375px;
   margin: auto;
   height: 812px;
-  border: 1px solid black;
+}
+
+.login-main .app-header-container {
+  text-align: center;
+}
+
+.login-main .app-title {
+  letter-spacing: 4px;
+  position: relative;
+  margin-top: 1.8rem;
+}
+
+.login-main .app-logo {
+  -webkit-animation: 🎥 100s linear infinite;
+          animation: 🎥 100s linear infinite;
+  background: center/cover url("./Assets/film.png");
+  -webkit-box-shadow: inset 0 10px 50px white;
+          box-shadow: inset 0 10px 50px white;
+  -webkit-filter: opacity(20%);
+          filter: opacity(20%);
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: 70px;
+  width: 70px;
+  z-index: -1;
+}
+
+.login-main .app-title {
+  color: black;
+}
+
+.login-main .app-subtitle {
+  letter-spacing: .5px;
+  font-weight: 100;
+  margin-top: .8rem;
 }
 
 .login-main .form-container {
@@ -12,14 +47,16 @@
   -webkit-box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
           box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
   height: 20rem;
+  overflow: hidden;
+  position: re;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
   margin: 13rem auto 0 auto;
   width: 80%;
-  -webkit-transition: .2s;
-  transition: .2s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .login-main .form-container:hover h2 {
@@ -27,6 +64,7 @@
 }
 
 .login-main .form-container p {
+  margin-top: 3.5rem;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
@@ -55,7 +93,7 @@
   height: 4rem;
   margin: 0 auto;
   position: relative;
-  top: -30px;
+  top: 15rem;
   width: 4rem;
   z-index: 4;
 }
@@ -64,10 +102,6 @@
   border: none;
   height: 5rem;
   outline: none;
-}
-
-.login-main .email-input:placeholder {
-  background-color: red;
 }
 
 .login-main input {
@@ -79,23 +113,23 @@
   outline: none;
 }
 
-.login-main .email-text, .login-main .password-text {
+.login-main .email-text, .login-main .password-text, .login-main .new-user-username, .login-main .new-user-email, .login-main .new-user-password {
   color: black;
 }
 
-.login-main .email-text::-webkit-input-placeholder, .login-main .password-text::-webkit-input-placeholder {
+.login-main .email-text::-webkit-input-placeholder, .login-main .password-text::-webkit-input-placeholder, .login-main .new-user-username::-webkit-input-placeholder, .login-main .new-user-email::-webkit-input-placeholder, .login-main .new-user-password::-webkit-input-placeholder {
   text-align: center;
 }
 
-.login-main .email-text:-ms-input-placeholder, .login-main .password-text:-ms-input-placeholder {
+.login-main .email-text:-ms-input-placeholder, .login-main .password-text:-ms-input-placeholder, .login-main .new-user-username:-ms-input-placeholder, .login-main .new-user-email:-ms-input-placeholder, .login-main .new-user-password:-ms-input-placeholder {
   text-align: center;
 }
 
-.login-main .email-text::-ms-input-placeholder, .login-main .password-text::-ms-input-placeholder {
+.login-main .email-text::-ms-input-placeholder, .login-main .password-text::-ms-input-placeholder, .login-main .new-user-username::-ms-input-placeholder, .login-main .new-user-email::-ms-input-placeholder, .login-main .new-user-password::-ms-input-placeholder {
   text-align: center;
 }
 
-.login-main .email-text::placeholder, .login-main .password-text::placeholder {
+.login-main .email-text::placeholder, .login-main .password-text::placeholder, .login-main .new-user-username::placeholder, .login-main .new-user-email::placeholder, .login-main .new-user-password::placeholder {
   text-align: center;
 }
 
@@ -106,28 +140,9 @@
   width: 80%;
 }
 
-.login-main .github-logo {
-  background: center/cover url("./Assets/github.png");
-  cursor: pointer;
-  -webkit-filter: 50.19608%;
-          filter: 50.19608%;
-  height: 30px;
-  position: relative;
-  margin: 0 auto;
-  width: 30px;
-  -webkit-transition: .2s;
-  transition: .2s;
-}
-
-.login-main .github-logo:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .login-main .submit-button {
   background-color: black;
   border-radius: 20px;
-  border: 1px solid transparent;
   color: white;
   cursor: pointer;
   display: block;
@@ -135,10 +150,11 @@
   margin: 0 auto;
   padding: 8px 20px;
   position: relative;
-  top: 35px;
+  top: 20px;
   text-transform: uppercase;
   -webkit-transition: .4s;
   transition: .4s;
+  z-index: 3;
 }
 
 .login-main .submit-button:focus {
@@ -147,7 +163,6 @@
 
 .login-main .submit-button:hover {
   background-color: #424242;
-  border: 1px solid white;
 }
 
 .login-main .create-account {
@@ -157,10 +172,10 @@
   display: inline;
   font-size: .8rem;
   font-weight: 600;
-  padding-bottom: 2px;
   position: relative;
+  top: 40px;
+  padding-bottom: 2px;
   text-transform: uppercase;
-  top: 35.8rem;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -172,39 +187,8 @@
 }
 
 .login-new-user {
-  background: #FEFEFE;
-  border-radius: 3px;
-  -webkit-box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
-          box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
-  height: 20rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 1rem auto;
-  position: relative;
-  top: -19.7rem;
-  width: 70%;
-  z-index: -2;
-}
-
-.login-new-user .new-user-username::-webkit-input-placeholder, .login-new-user .new-user-email::-webkit-input-placeholder, .login-new-user .new-user-password::-webkit-input-placeholder {
-  text-align: center;
-}
-
-.login-new-user .new-user-username:-ms-input-placeholder, .login-new-user .new-user-email:-ms-input-placeholder, .login-new-user .new-user-password:-ms-input-placeholder {
-  text-align: center;
-}
-
-.login-new-user .new-user-username::-ms-input-placeholder, .login-new-user .new-user-email::-ms-input-placeholder, .login-new-user .new-user-password::-ms-input-placeholder {
-  text-align: center;
-}
-
-.login-new-user .new-user-username::placeholder, .login-new-user .new-user-email::placeholder, .login-new-user .new-user-password::placeholder {
-  text-align: center;
-}
-
-.login-new-user .new-user-username::hover h2, .login-new-user .new-user-email::hover h2, .login-new-user .new-user-password::hover h2 {
-  opacity: 1;
+  margin: 2rem auto 0 auto;
+  width: 80%;
 }
 
 @-webkit-keyframes 🎥 {
@@ -219,7 +203,39 @@
   }
 }
 
+.new-user-submit {
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: .7rem;
+  margin: 0 auto;
+  padding: 8px 20px;
+  position: relative;
+  top: 45px;
+  text-transform: uppercase;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 3;
+}
+
+.new-user-submit:focus {
+  outline: none;
+}
+
+.new-user-submit:hover {
+  background-color: #424242;
+  border: 1px solid white;
+}
+
+.login-new-user {
+  margin-top: 3rem;
+}
+
 .active {
-  z-index: 5 !important;
+  position: absolute;
+  top: 500px;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
