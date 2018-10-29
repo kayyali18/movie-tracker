@@ -128,25 +128,12 @@
       filter: brightness(110%);
       border-bottom: 2px solid black; }
 
-.login-new-user {
-  background: #FEFEFE;
-  border-radius: 3px;
-  box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
-  height: 20rem;
-  justify-content: center;
-  margin: 1rem auto;
-  position: relative;
-  top: -19.7rem;
-  width: 70%;
-  z-index: -2; }
-  .login-new-user .new-user-username::placeholder, .login-new-user .new-user-email::placeholder, .login-new-user .new-user-password::placeholder {
-    text-align: center; }
-  .login-new-user .new-user-username::hover h2, .login-new-user .new-user-email::hover h2, .login-new-user .new-user-password::hover h2 {
-    opacity: 1; }
+.login-new-user .new-user-username::placeholder, .login-new-user .new-user-email::placeholder, .login-new-user .new-user-password::placeholder {
+  text-align: center; }
+
+.login-new-user .new-user-username::hover h2, .login-new-user .new-user-email::hover h2, .login-new-user .new-user-password::hover h2 {
+  opacity: 1; }
 
 @keyframes 🎥 {
   100% {
     background-position: 0 958px; } }
-
-.active {
-  z-index: 5 !important; }
