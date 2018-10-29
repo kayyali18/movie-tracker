@@ -468,18 +468,16 @@ textarea {
   text-align: center;
 }
 
-.login-main hr {
+hr {
   border: 1px solid #747474;
   color: black;
   margin: 0 auto;
   width: 80%;
 }
 
-.login-main .github-logo {
+hr .github-logo {
   background: center/cover url("./Assets/github.png");
   cursor: pointer;
-  -webkit-filter: 50.19608%;
-          filter: 50.19608%;
   height: 30px;
   position: relative;
   margin: 0 auto;
@@ -488,12 +486,12 @@ textarea {
   transition: .2s;
 }
 
-.login-main .github-logo:hover {
+hr .github-logo:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.login-main .submit-button {
+hr .submit-button {
   background-color: black;
   border-radius: 20px;
   border: 1px solid transparent;
@@ -510,16 +508,16 @@ textarea {
   transition: .4s;
 }
 
-.login-main .submit-button:focus {
+hr .submit-button:focus {
   outline: none;
 }
 
-.login-main .submit-button:hover {
+hr .submit-button:hover {
   background-color: #424242;
   border: 1px solid white;
 }
 
-.login-main .create-account {
+hr .create-account {
   border-bottom: 2px solid transparent;
   color: black;
   cursor: pointer;
@@ -534,19 +532,14 @@ textarea {
   transition: .4s;
 }
 
-.login-main .create-account:hover {
+hr .create-account:hover {
+  border-bottom: 2px solid black;
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  border-bottom: 2px solid black;
 }
 
 .login-new-user {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 1rem auto;
   position: relative;
-  width: 70%;
 }
 
 .login-new-user .new-user-username::-webkit-input-placeholder, .login-new-user .new-user-email::-webkit-input-placeholder, .login-new-user .new-user-password::-webkit-input-placeholder {

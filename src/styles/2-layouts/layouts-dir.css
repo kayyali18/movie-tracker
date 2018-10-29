@@ -97,10 +97,6 @@
   outline: none;
 }
 
-.login-main .email-input:placeholder {
-  background-color: red;
-}
-
 .login-main input {
   padding: 15px;
   width: 15rem;
@@ -195,16 +191,12 @@
 }
 
 .login-main .create-account:hover {
+  border-bottom: 2px solid black;
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
-  border-bottom: 2px solid black;
 }
 
 .login-new-user {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 1rem auto;
   position: relative;
 }
 
