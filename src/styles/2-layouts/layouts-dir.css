@@ -235,7 +235,6 @@
 }
 
 .active {
-  position: absolute;
-  top: 500px;
+  display: none;
 }
 /*# sourceMappingURL=layouts-dir.css.map */

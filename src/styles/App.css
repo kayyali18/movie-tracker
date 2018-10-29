@@ -149,5 +149,4 @@
   margin-top: 3rem; }
 
 .active {
-  position: absolute;
-  top: 500px; }
+  display: none; }

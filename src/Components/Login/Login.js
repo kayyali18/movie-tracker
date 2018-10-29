@@ -87,51 +87,53 @@ class Login extends Component {
               <button className='submit-button'>Submit</button>
               <div class="create-account" onClick={this.toggleActive}>Create Account</div>
             </form>
-            <form
-              className="login-new-user"
-              onSubmit={this.submitLogin}
-              aria-label="Create new MovieTracker account"
-            >
-              <h2 className="new-user-h2">Create Account</h2>
-              <label>
-                <input
-                  className="new-user-username"
-                  tabIndex="1"
-                  name="username"
-                  placeholder="Username"
-                  type="text"
-                  value={username}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <hr />
-              <label>
-                <input
-                  className="new-user-email"
-                  tabIndex="2"
-                  name="email"
-                  placeholder="Email"
-                  type="email"
-                  value={email}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <hr />
-              <label>
-                <input
-                  className="new-user-password"
-                  tabIndex="3"
-                  name="password"
-                  placeholder="Password"
-                  type="password"
-                  value={password}
-                  onChange={this.handleChange}
-                />
-              </label>
-              <hr />
-              <button tabIndex="1" className="new-user-submit">Submit</button>
-            </form>
           </section>
+
+          <form
+            className="login-new-user"
+            onSubmit={this.submitLogin}
+            aria-label="Create new MovieTracker account"
+          >
+            <h2 className="new-user-h2">Create Account</h2>
+            <label>
+              <input
+                className="new-user-username"
+                tabIndex="1"
+                name="username"
+                placeholder="Username"
+                type="text"
+                value={username}
+                onChange={this.handleChange}
+              />
+            </label>
+            <hr />
+            <label>
+              <input
+                className="new-user-email"
+                tabIndex="2"
+                name="email"
+                placeholder="Email"
+                type="email"
+                value={email}
+                onChange={this.handleChange}
+              />
+            </label>
+            <hr />
+            <label>
+              <input
+                className="new-user-password"
+                tabIndex="3"
+                name="password"
+                placeholder="Password"
+                type="password"
+                value={password}
+                onChange={this.handleChange}
+              />
+            </label>
+            <hr />
+            <button tabIndex="1" className="new-user-submit">Submit</button>
+            <div class="create-account" onClick={this.toggleActive}>Create Account</div>
+          </form>
         </section>
       </section>
     )
