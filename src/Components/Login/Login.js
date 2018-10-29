@@ -1,33 +1,23 @@
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import { Route, Link } from 'react-router-dom'
 import '../../styles/2-layouts/layouts-dir.sass'
 import '../../styles/1-base/base-dir.sass'
+import { loginUser } from '../../Actions/TheActionMan';
 
 class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      email: '',
+      email: 'tman2272@aol.com',
       username: '',
-      password: '',
       formState: ''
+      password: 'password',
     }
   }
 
   async componentDidMount() {
-    const url = `http://localhost:3000/api/users`
-    const req = await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify({
-        email: 'tman2272@aol.com',
-        password: 'password',
-      }),
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
 
-    console.log(req)
   }
 
   toggleActive = () => {
@@ -47,9 +37,9 @@ class Login extends Component {
 
   submitLogin = e => {
     const { loginCheck } = this.props
-    const { user, password } = this.state
+    const { email, password } = this.state
     e.preventDefault()
-    // loginCheck(user, password)
+    loginCheck(email, password)
     this.resetForm()
   }
 
@@ -145,4 +135,9 @@ class Login extends Component {
   }
 }
 
-export default Login
+
+export const mapDispatchToProps = (dispatch) => ({
+  loginCheck: (user, password) => dispatch(loginUser(user, password))
+})
+
+export default connect(null, mapDispatchToProps) (Login)

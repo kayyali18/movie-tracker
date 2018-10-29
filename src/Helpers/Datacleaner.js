@@ -1,6 +1,6 @@
 const cleanMovies = data => {
   const { results } = data;
-  const easyObj = results.map(result => {
+  const movie = results.map(result => {
 
     return {
       movie_id: result.id,
@@ -12,5 +12,8 @@ const cleanMovies = data => {
       favd: false
     }
   })
-  return easyObj;
+
+  return movie;
 }
+
+export default cleanMovies;

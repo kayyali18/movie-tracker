@@ -1,5 +1,10 @@
-export const loginUser = (user, password) => ({
+export const loginUser = (email, password) => ({
   type: 'LOGIN_USER',
-  user,
+  email,
   password
+})
+
+export const latestMovies = (movies) =>({
+  type: 'NOW_PLAYING',
+  latestMovies: movies
 })
