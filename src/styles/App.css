@@ -6,7 +6,8 @@
   border: 1px solid black; }
   .login-main .app-title {
     letter-spacing: 4px;
-    position: relative; }
+    position: relative;
+    text-align: center; }
   .login-main .app-logo {
     animation: 🎥 100s linear infinite;
     background: center/cover url("./Assets/film.png");
@@ -26,17 +27,18 @@
   .login-main p {
     letter-spacing: 1.5px;
     font-weight: 100; }
-  .login-main .form-container {
+  .login-main .login-form {
     background: #FEFEFE;
     border-radius: 3px;
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
     height: 20rem;
+    justify-content: center;
     margin: 13rem auto 0 auto;
     width: 80%;
     transition: .2s; }
-    .login-main .form-container:hover h2 {
+    .login-main .login-form:hover h2 {
       opacity: 1; }
-    .login-main .form-container p {
+    .login-main .login-form p {
       letter-spacing: 2px;
       font-weight: 600;
       text-transform: uppercase;
@@ -133,7 +135,9 @@
   justify-content: center;
   margin: 1rem auto;
   position: relative;
-  width: 70%; }
+  top: -19.7rem;
+  width: 70%;
+  z-index: -2; }
   .login-new-user .new-user-username::placeholder, .login-new-user .new-user-email::placeholder, .login-new-user .new-user-password::placeholder {
     text-align: center; }
   .login-new-user .new-user-username::hover h2, .login-new-user .new-user-email::hover h2, .login-new-user .new-user-password::hover h2 {
