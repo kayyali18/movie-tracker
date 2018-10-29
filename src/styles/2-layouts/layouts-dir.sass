@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet');
+
+$lobster: 'Lobster', serif;   
+
+.login-main,
+  width: 375px
+  margin: auto
+  height: 812px
+
+  .app-title
+    font-family: $lobster
+    letter-spacing: 4px
+    position: relative
+
+  .app-logo
+    animation: 🎥 100s linear infinite
+    background: center / cover url("../../Assets/film.png")
+    box-shadow: inset 0 10px 50px rgb(255, 255, 255);
+    filter: opacity(20%)
+    height: 50px
+    margin: 0 auto
+    position: relative
+    top: 70px
+    width: 70px
+    z-index: -1
+
+  h1
+    color: black
+
+  .active 
+    right: 20px
+    opacity: 0;
+  
+  p
+    letter-spacing: 1.5px
+    font-weight: 100
+
+  .login-form
+    background: #FEFEFE
+    border-radius: 3px
+    box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
+    height: 20rem
+    justify-content: center
+    margin: 13rem auto 0 auto
+    width: 80%;
+    transition: .2s
+    &:hover h2
+      opacity: 1
+    p
+      letter-spacing: 2px
+      font-weight: 600
+      text-transform: uppercase
+      color: black
+      
+  h2
+    letter-spacing: 1.5px
+    margin-bottom: 2rem
+    opacity: 0
+    transition: .4s
+
+  input 
+    border: none
+    
+  .user-image
+    background: center / cover url("../../Assets/user.png")
+    border-radius: 50%
+    box-shadow: 0 0 5px
+    filter: grayscale(1)
+    height: 4rem
+    margin: 0 auto
+    position: relative;
+    top: -30px
+    width: 4rem 
+    z-index: 4
+
+  .email-input 
+    border: none
+    height: 5rem
+    outline: none
+    &:placeholder
+      background-color: red
+
+  input 
+    padding: 15px
+    width: 15rem
+    &:focus
+      outline: none
+
+  .email-text, .password-text
+    color: black
+    &::placeholder
+      text-align: center;
+
+  hr
+    border: 1px solid rgb(116, 116, 116)
+    color: black
+    margin: 0 auto
+    width: 80%
+
+  .github-logo
+    background: center / cover url("../../Assets/github.png")
+    cursor: pointer
+    filter: lightness(gray)
+    height: 30px
+    position: relative
+    margin: 0 auto
+    width: 30px
+    transition: .2s
+    &:hover
+      transform: scale(1.1)
+  
+  .submit-button 
+    background-color: black
+    border-radius: 20px
+    border: 1px solid transparent
+    color: white
+    cursor: pointer
+    display: block
+    font-size: .7rem
+    margin: 0 auto
+    padding: 8px 20px
+    position: relative
+    top: 35px
+    text-transform: uppercase
+    transition: .4s 
+    &:focus
+      outline: none
+    &:hover
+      background-color: rgb(66, 66, 66)
+      border: 1px solid white
+  
+  .create-account 
+    border-bottom: 2px solid transparent
+    color: black
+    cursor: pointer
+    display: inline
+    font-size: .8rem
+    font-weight: 600
+    padding-bottom: 2px
+    position: relative
+    text-transform: uppercase
+    top: 35.8rem
+    transition: .4s
+    &:hover 
+      filter: brightness(110%)
+      border-bottom: 2px solid black
+      
+.login-new-user
+  background: #FEFEFE
+  border-radius: 3px
+  box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767)
+  height: 20rem
+  justify-content: center
+  margin: 1rem auto
+  position: relative
+  top: -19.7rem
+  width: 70%
+  z-index: -2
+  .new-user-username, .new-user-email, .new-user-password
+    &::placeholder
+      text-align: center
+    &::hover h2
+      opacity: 1
+
+@keyframes 🎥 { 100% {background-position: 0 958px;}}
+
+.active 
+  z-index: 5 !important
+  

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { Route, Link } from 'react-router-dom'
+import '../../styles/2-layouts/layouts-dir.sass'
+import '../../styles/1-base/base-dir.sass'
 import { loginUser } from '../../Actions/TheActionMan';
 
 class Login extends Component {
@@ -9,6 +11,7 @@ class Login extends Component {
     this.state = {
       email: 'tman2272@aol.com',
       username: '',
+      formState: ''
       password: 'password',
     }
   }
@@ -16,6 +19,12 @@ class Login extends Component {
   async componentDidMount() {
 
   }
+
+  toggleActive = () => {
+    this.state.formState === ""
+      ? this.setState({ formState: "active" })
+      : this.setState({ formState: "" });
+  };
 
   resetForm = () => {
     this.setState({ password: '' })
@@ -38,14 +47,19 @@ class Login extends Component {
     const { email, username, password } = this.state
     return (
       <section className="login-main">
+        <div className="app-logo"></div>
+        <h1 className="app-title">Now Playing</h1>
+        <p>An Elegant Movie Tracker App</p>
+        <div class="create-account">Create Account</div>
         <form
           className="login-form"
           onSubmit={this.submitLogin}
           aria-label="Existing user login form"
         >
-          <h2>Login</h2>
-          <label>
-            E-mail:
+          <div className="user-image"></div>
+          <p>Login</p>
+          <h2>Welcome Back</h2>
+          <label className="email-input">
             <input
               tabIndex="0"
               name="email"
@@ -53,10 +67,11 @@ class Login extends Component {
               type="email"
               value={email}
               onChange={this.handleChange}
+              className="email-text"
             />
           </label>
+          <hr />
           <label>
-            Password:
             <input
               tabIndex="0"
               name="password"
@@ -64,19 +79,22 @@ class Login extends Component {
               type="password"
               value={password}
               onChange={this.handleChange}
+              className='password-text'
             />
           </label>
-          <button>Submit</button>
+          <div className="github-logo" />
+          <button className='submit-button'>Submit</button>
         </form>
+
         <form
           className="login-new-user"
           onSubmit={this.submitLogin}
           aria-label="Create new MovieTracker account"
         >
-          <h2>Create Account</h2>
+          <h2 className="new-user-h2">Create Account</h2>
           <label>
-            Name:
             <input
+              className="new-user-username"
               tabIndex="1"
               name="username"
               placeholder="Username"
@@ -85,10 +103,11 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <label>
-            E-mail:
             <input
-              tabIndex="1"
+              className="new-user-email"
+              tabIndex="2"
               name="email"
               placeholder="Email"
               type="email"
@@ -96,10 +115,11 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <label>
-            Password:
             <input
-              tabIndex="1"
+              className="new-user-password"
+              tabIndex="3"
               name="password"
               placeholder="Password"
               type="password"
@@ -107,6 +127,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <button tabIndex="1">Submit</button>
         </form>
       </section>
