@@ -140,8 +140,6 @@
 .login-main .github-logo {
   background: center/cover url("./Assets/github.png");
   cursor: pointer;
-  -webkit-filter: 50.19608%;
-          filter: 50.19608%;
   height: 30px;
   position: relative;
   margin: 0 auto;
