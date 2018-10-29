@@ -85,7 +85,6 @@ class Login extends Component {
             </label>
             <button className='submit-button'>Submit</button>
             <div class="create-account">Create Account</div>
-
           </form>
 
           <form

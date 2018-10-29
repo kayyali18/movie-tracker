@@ -97,7 +97,6 @@
   .login-main .submit-button {
     background-color: black;
     border-radius: 20px;
-    border: 1px solid transparent;
     color: white;
     cursor: pointer;
     display: block;
@@ -112,8 +111,7 @@
     .login-main .submit-button:focus {
       outline: none; }
     .login-main .submit-button:hover {
-      background-color: #424242;
-      border: 1px solid white; }
+      background-color: #424242; }
   .login-main .create-account {
     border-bottom: 2px solid transparent;
     color: black;
@@ -121,6 +119,8 @@
     display: inline;
     font-size: .8rem;
     font-weight: 600;
+    position: relative;
+    top: 40px;
     padding-bottom: 2px;
     text-transform: uppercase;
     transition: .4s; }
