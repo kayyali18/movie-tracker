@@ -10,10 +10,10 @@ class Login extends Component {
     this.state = {
       email: 'tman2272@aol.com',
       username: '',
-      formState: ''
+      formState: '',
       password: 'password',
     }
-  }
+  } 
 
   async componentDidMount() {}
 
