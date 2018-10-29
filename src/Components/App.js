@@ -24,14 +24,14 @@ class App extends Component {
   render() {
     return (
       <div>
-       
+
         <Route
           exact
           path="/"
           render={() => {
             return (
               <div className="App">
-                <MovieContainer />
+                <Login />
               </div>
             )
           }}
@@ -41,7 +41,7 @@ class App extends Component {
           path="/login"
           render={() => {
             return (
-                <Login />
+              <Login />
             )
           }}
         />

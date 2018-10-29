@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
 import { loginUser } from '../../Actions/TheActionMan'
+import HeaderLogin from './HeaderLogin/HeaderLogin'
 
 class Login extends Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class Login extends Component {
       formState: '',
       password: 'password',
     }
-  } 
+  }
 
-  async componentDidMount() {}
+  async componentDidMount() { }
 
   toggleActive = () => {
     this.state.formState === ""
@@ -44,9 +45,7 @@ class Login extends Component {
     const { email, username, password } = this.state
     return (
       <section className="login-main">
-        <div className="app-logo"></div>
-        <h1 className="app-title">Now Playing</h1>
-        <p>An Elegant Movie Tracker App</p>
+        <HeaderLogin />
         <div class="create-account">Create Account</div>
         <nav>
           <NavLink to="/">Home</NavLink>
