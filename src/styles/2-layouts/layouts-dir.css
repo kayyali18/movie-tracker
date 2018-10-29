@@ -203,19 +203,11 @@
 }
 
 .login-new-user {
-  background: #FEFEFE;
-  border-radius: 3px;
-  -webkit-box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
-          box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
-  height: 20rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 1rem auto;
   position: relative;
-  top: -19.7rem;
-  width: 70%;
-  z-index: -2;
 }
 
 .login-new-user .new-user-username::-webkit-input-placeholder, .login-new-user .new-user-email::-webkit-input-placeholder, .login-new-user .new-user-password::-webkit-input-placeholder {
@@ -248,9 +240,5 @@
   100% {
     background-position: 0 958px;
   }
-}
-
-.active {
-  z-index: 5 !important;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
