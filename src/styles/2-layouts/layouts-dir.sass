@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet');
-
-$lobster: 'Lobster', serif;   
-
-.login-main,
+.login-main
   width: 375px
   margin: auto
   height: 812px
 
+  .app-header-container 
+    text-align: center
+
   .app-title
-    font-family: $lobster
     letter-spacing: 4px
     position: relative
+    margin-top: 1.8rem
 
   .app-logo
     animation: 🎥 100s linear infinite
@@ -24,34 +23,35 @@ $lobster: 'Lobster', serif;
     width: 70px
     z-index: -1
  
-  h1
+  .app-title
     color: black
-
-  .active 
-    right: 20px
-    opacity: 0;
   
-  p
-    letter-spacing: 1.5px
+  .app-subtitle
+    letter-spacing: .5px
     font-weight: 100
+    margin-top: .8rem
 
-  .login-form
+  .form-container
     background: #FEFEFE
     border-radius: 3px
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
     height: 20rem
+    overflow: hidden
+    position: re
     justify-content: center
+    text-align: center
     margin: 13rem auto 0 auto
     width: 80%;
-    transition: .2s
+    transition: 2s
     &:hover h2
       opacity: 1
     p
+      margin-top: 3.5rem
       letter-spacing: 2px
       font-weight: 600
       text-transform: uppercase
       color: black
-      
+    
   h2
     letter-spacing: 1.5px
     margin-bottom: 2rem
@@ -69,7 +69,7 @@ $lobster: 'Lobster', serif;
     height: 4rem
     margin: 0 auto
     position: relative;
-    top: -30px
+    top: 15rem
     width: 4rem 
     z-index: 4
 
@@ -77,8 +77,6 @@ $lobster: 'Lobster', serif;
     border: none
     height: 5rem
     outline: none
-    &:placeholder
-      background-color: red
 
   input 
     padding: 15px
@@ -86,7 +84,7 @@ $lobster: 'Lobster', serif;
     &:focus
       outline: none
 
-  .email-text, .password-text
+  .email-text, .password-text, .new-user-username, .new-user-email, .new-user-password
     color: black
     &::placeholder
       text-align: center;
@@ -96,23 +94,10 @@ $lobster: 'Lobster', serif;
     color: black
     margin: 0 auto
     width: 80%
-
-  .github-logo
-    background: center / cover url("./Assets/github.png")
-    cursor: pointer
-    filter: lightness(gray)
-    height: 30px
-    position: relative
-    margin: 0 auto
-    width: 30px
-    transition: .2s
-    &:hover
-      transform: scale(1.1)
   
   .submit-button 
     background-color: black
     border-radius: 20px
-    border: 1px solid transparent
     color: white
     cursor: pointer
     display: block
@@ -120,14 +105,14 @@ $lobster: 'Lobster', serif;
     margin: 0 auto
     padding: 8px 20px
     position: relative
-    top: 35px
+    top: 20px
     text-transform: uppercase
     transition: .4s 
+    z-index: 3
     &:focus
       outline: none
     &:hover
       background-color: rgb(66, 66, 66)
-      border: 1px solid white
   
   .create-account 
     border-bottom: 2px solid transparent
@@ -136,34 +121,42 @@ $lobster: 'Lobster', serif;
     display: inline
     font-size: .8rem
     font-weight: 600
-    padding-bottom: 2px
     position: relative
+    top: 20px
+    padding-bottom: 2px
     text-transform: uppercase
-    top: 35.8rem
     transition: .4s
     &:hover 
       filter: brightness(110%)
       border-bottom: 2px solid black
-      
+
 .login-new-user
-  background: #FEFEFE
-  border-radius: 3px
-  box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767)
-  height: 20rem
-  justify-content: center
-  margin: 1rem auto
-  position: relative
-  top: -19.7rem
-  width: 70%
-  z-index: -2
-  .new-user-username, .new-user-email, .new-user-password
-    &::placeholder
-      text-align: center
-    &::hover h2
-      opacity: 1
+  margin: 3rem auto 0 auto
+  width: 80%
 
 @keyframes 🎥 { 100% {background-position: 0 958px;}}
 
-.active 
-  z-index: 5 !important
+.new-user-submit
+  background-color: black
+  border-radius: 20px
+  border: 1px solid transparent
+  color: white
+  cursor: pointer
+  display: block
+  font-size: .7rem
+  margin: 0 auto
+  padding: 8px 20px
+  position: relative
+  top: 15px
+  text-transform: uppercase
+  transition: .4s 
+  z-index: 3
+  &:focus
+    outline: none
+  &:hover
+    background-color: rgb(66, 66, 66)
+    border: 1px solid white
   
+.active
+  display: none
+
