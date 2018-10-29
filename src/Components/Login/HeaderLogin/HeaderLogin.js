@@ -5,7 +5,7 @@ const HeaderLogin = () => {
     <div className="app-header-container">
       <div className="app-logo"></div>
       <h1 className="app-title">Now Playing</h1>
-      <p>A Simple Movie Tracking App</p>
+      <p className="app-subtitle">A Simple Movie Tracking App</p>
     </div>
   )
 }

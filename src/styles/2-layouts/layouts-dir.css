@@ -6,47 +6,16 @@
   border: 1px solid black;
 }
 
-.login-main .app-title {
-  letter-spacing: 4px;
-  position: relative;
-}
-
-.login-main .app-logo {
-  -webkit-animation: 🎥 100s linear infinite;
-          animation: 🎥 100s linear infinite;
-  background: center/cover url("./Assets/film.png");
-  -webkit-box-shadow: inset 0 10px 50px white;
-          box-shadow: inset 0 10px 50px white;
-  -webkit-filter: opacity(20%);
-          filter: opacity(20%);
-  height: 50px;
-  margin: 0 auto;
-  position: relative;
-  top: 70px;
-  width: 70px;
-  z-index: -1;
-}
-
-.login-main h1 {
-  color: black;
-}
-
-.login-main .active {
-  right: 20px;
-  opacity: 0;
-}
-
-.login-main p {
-  letter-spacing: 1.5px;
-  font-weight: 100;
-}
-
 .login-main .form-container {
-  background: red;
+  background: #FEFEFE;
   border-radius: 3px;
   -webkit-box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
           box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
   height: 20rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
   margin: 13rem auto 0 auto;
   width: 80%;
   -webkit-transition: .2s;
@@ -97,6 +66,10 @@
   outline: none;
 }
 
+.login-main .email-input:placeholder {
+  background-color: red;
+}
+
 .login-main input {
   padding: 15px;
   width: 15rem;
@@ -136,6 +109,8 @@
 .login-main .github-logo {
   background: center/cover url("./Assets/github.png");
   cursor: pointer;
+  -webkit-filter: 50.19608%;
+          filter: 50.19608%;
   height: 30px;
   position: relative;
   margin: 0 auto;
@@ -191,13 +166,25 @@
 }
 
 .login-main .create-account:hover {
-  border-bottom: 2px solid black;
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
+  border-bottom: 2px solid black;
 }
 
 .login-new-user {
+  background: #FEFEFE;
+  border-radius: 3px;
+  -webkit-box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
+          box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
+  height: 20rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem auto;
   position: relative;
+  top: -19.7rem;
+  width: 70%;
+  z-index: -2;
 }
 
 .login-new-user .new-user-username::-webkit-input-placeholder, .login-new-user .new-user-email::-webkit-input-placeholder, .login-new-user .new-user-password::-webkit-input-placeholder {
@@ -230,5 +217,9 @@
   100% {
     background-position: 0 958px;
   }
+}
+
+.active {
+  z-index: 5 !important;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
