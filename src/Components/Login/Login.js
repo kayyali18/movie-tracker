@@ -132,7 +132,7 @@ class Login extends Component {
             </label>
             <hr />
             <button tabIndex="1" className="new-user-submit">Submit</button>
-            <div class="create-account" onClick={this.toggleActive}>Create Account</div>
+            <div class="create-account" onClick={this.toggleActive}>Back to Login</div>
           </form>
         </section>
       </section>

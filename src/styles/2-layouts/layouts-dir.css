@@ -173,7 +173,7 @@
   font-size: .8rem;
   font-weight: 600;
   position: relative;
-  top: 40px;
+  top: 20px;
   padding-bottom: 2px;
   text-transform: uppercase;
   -webkit-transition: .4s;
@@ -187,7 +187,7 @@
 }
 
 .login-new-user {
-  margin: 2rem auto 0 auto;
+  margin: 3rem auto 0 auto;
   width: 80%;
 }
 
@@ -214,7 +214,7 @@
   margin: 0 auto;
   padding: 8px 20px;
   position: relative;
-  top: 45px;
+  top: 15px;
   text-transform: uppercase;
   -webkit-transition: .4s;
   transition: .4s;
@@ -228,10 +228,6 @@
 .new-user-submit:hover {
   background-color: #424242;
   border: 1px solid white;
-}
-
-.login-new-user {
-  margin-top: 3rem;
 }
 
 .active {
