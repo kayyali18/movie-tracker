@@ -33,6 +33,7 @@
 
   .form-container
     background: #FEFEFE
+    border: 1px solid red
     border-radius: 3px
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
     height: 20rem
@@ -95,18 +96,6 @@
     color: black
     margin: 0 auto
     width: 80%
-
-  .github-logo
-    background: center / cover url("./Assets/github.png")
-    cursor: pointer
-    filter: lightness(gray)
-    height: 30px
-    position: relative
-    margin: 0 auto
-    width: 30px
-    transition: .2s
-    &:hover
-      transform: scale(1.1)
   
   .submit-button 
     background-color: black
@@ -144,11 +133,8 @@
       border-bottom: 2px solid black
 
 .login-new-user
-  margin: 3rem auto 0 auto
+  margin: 2rem auto 0 auto
   width: 80%
-
-.new-user-h2
-  margin-top: 6rem
 
 @keyframes 🎥 { 100% {background-position: 0 958px;}}
 
@@ -172,3 +158,10 @@
   &:hover
     background-color: rgb(66, 66, 66)
     border: 1px solid white
+
+.login-new-user
+  margin-top: 3rem
+
+.active
+  position: absolute
+  bottom: 1100px

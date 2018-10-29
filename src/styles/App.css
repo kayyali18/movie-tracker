@@ -28,6 +28,7 @@
     margin-top: .8rem; }
   .login-main .form-container {
     background: #FEFEFE;
+    border: 1px solid red;
     border-radius: 3px;
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
     height: 20rem;
@@ -83,17 +84,6 @@
     color: black;
     margin: 0 auto;
     width: 80%; }
-  .login-main .github-logo {
-    background: center/cover url("./Assets/github.png");
-    cursor: pointer;
-    filter: 50.19608%;
-    height: 30px;
-    position: relative;
-    margin: 0 auto;
-    width: 30px;
-    transition: .2s; }
-    .login-main .github-logo:hover {
-      transform: scale(1.1); }
   .login-main .submit-button {
     background-color: black;
     border-radius: 20px;
@@ -129,11 +119,8 @@
       border-bottom: 2px solid black; }
 
 .login-new-user {
-  margin: 3rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   width: 80%; }
-
-.new-user-h2 {
-  margin-top: 6rem; }
 
 @keyframes 🎥 {
   100% {
@@ -159,3 +146,10 @@
   .new-user-submit:hover {
     background-color: #424242;
     border: 1px solid white; }
+
+.login-new-user {
+  margin-top: 3rem; }
+
+.active {
+  position: absolute;
+  bottom: 1100px; }
