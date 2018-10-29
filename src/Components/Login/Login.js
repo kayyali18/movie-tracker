@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
-import { loginUser } from '../../Actions/TheActionMan'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
+import { loginUser } from '../../Actions'
+import { fetchUser } from '../../Thunks/fetchUser';
 
 class Login extends Component {
   constructor(props) {
@@ -36,10 +37,10 @@ class Login extends Component {
   }
 
   submitLogin = e => {
-    const { loginCheck } = this.props
+    const { fetchUser } = this.props
     const { email, password } = this.state
     e.preventDefault()
-    loginCheck(email, password)
+    fetchUser(email, password)
     this.resetForm()
   }
 
@@ -141,6 +142,7 @@ class Login extends Component {
 
 export const mapDispatchToProps = dispatch => ({
   loginCheck: (user, password) => dispatch(loginUser(user, password)),
+  fetchUser: (user, password) => dispatch(fetchUser(user, password))
 })
 
 export default connect(

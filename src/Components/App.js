@@ -50,6 +50,11 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  userExists: state.userExists,
+  userSuccess: state.userSuccess
+})
+
 const mapDispatchToProps = dispatch => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
 })

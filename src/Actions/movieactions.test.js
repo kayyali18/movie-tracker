@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Actions from './TheActionMan.js';
+import * as Actions from './index';
 import { configure } from 'enzyme';
 import {shallow, mount} from 'enzyme';
 import rootReducer from '../Reducers/index.js'
