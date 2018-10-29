@@ -7,7 +7,8 @@ import Header from './Header/Header';
 import Nav from './Nav/Nav';
 import Movie from './Movie/Movie';
 import MovieContainer from './MovieContainer/MovieContainer';
-import * as api from '../Helpers/apiCaller'
+import * as api from '../Helpers/apiCaller';
+import { Route, withRouter, Link, Redirect } from 'react-router-dom';
 import '../styles/App.css';
 
 class App extends Component {
@@ -25,23 +26,23 @@ async componentDidMount() {
   render() {
     return (
       <div>
-        <Route exact path='/' render={()=>{
+        <Route exact path='/login' render={()=>{
           return(
             <div className="App">
-              <MovieContainer />
+              <Login />
             </div>
           )
         }}
       />
       </div>
-
     );
   }
-
 }
 
 const mapDispatchToProps = (dispatch) =>({
   latestMovies: (movies) => dispatch(latestMovies(movies))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+const moviesProps = withRouter(connect(null, mapDispatchToProps)(App));
+
+export default moviesProps;
