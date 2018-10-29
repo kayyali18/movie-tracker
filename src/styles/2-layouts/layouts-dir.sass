@@ -26,6 +26,10 @@ $lobster: 'Lobster', serif;
 
   h1
     color: black
+
+  .active 
+    right: 20px
+    opacity: 0;
   
   p
     letter-spacing: 1.5px
@@ -39,6 +43,7 @@ $lobster: 'Lobster', serif;
     justify-content: center
     margin: 13rem auto 0 auto
     width: 80%;
+    transition: .2s
     &:hover h2
       opacity: 1
     p
@@ -66,6 +71,7 @@ $lobster: 'Lobster', serif;
     position: relative;
     top: -30px
     width: 4rem 
+    z-index: 4
 
   .email-input 
     border: none
@@ -101,7 +107,7 @@ $lobster: 'Lobster', serif;
     width: 30px
     transition: .2s
     &:hover
-      transform: scale(1.2)
+      transform: scale(1.1)
   
   .submit-button 
     background-color: black
@@ -139,18 +145,25 @@ $lobster: 'Lobster', serif;
       filter: brightness(110%)
       border-bottom: 2px solid black
       
-  .login-new-user
-    background: #FEFEFE
-    border-radius: 3px
-    box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767)
-    height: 20rem
-    justify-content: center
-    margin: 1rem auto;
-    position: relative;
-    top: -19.7rem
-    width: 70%;
-    z-index: -1;
+.login-new-user
+  background: #FEFEFE
+  border-radius: 3px
+  box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767)
+  height: 20rem
+  justify-content: center
+  margin: 1rem auto
+  position: relative
+  top: -19.7rem
+  width: 70%
+  z-index: -2
+  .new-user-username, .new-user-email, .new-user-password
+    &::placeholder
+      text-align: center
+    &::hover h2
+      opacity: 1
 
 @keyframes 🎥 { 100% {background-position: 0 958px;}}
 
-
+.active 
+  z-index: 5 !important
+  

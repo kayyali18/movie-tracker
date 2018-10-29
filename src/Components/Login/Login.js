@@ -101,10 +101,10 @@ class Login extends Component {
           onSubmit={this.submitLogin}
           aria-label="Create new MovieTracker account"
         >
-          <h2>Create Account</h2>
+          <h2 className="new-user-h2">Create Account</h2>
           <label>
-            Name:
             <input
+              className="new-user-username"
               tabIndex="1"
               name="username"
               placeholder="Username"
@@ -113,9 +113,10 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <label>
-            E-mail:
             <input
+              className="new-user-email"
               tabIndex="2"
               name="email"
               placeholder="Email"
@@ -124,9 +125,10 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <label>
-            Password:
             <input
+              className="new-user-password"
               tabIndex="3"
               name="password"
               placeholder="Password"
@@ -135,6 +137,7 @@ class Login extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <hr />
           <button tabIndex="1">Submit</button>
         </form>
       </section>
