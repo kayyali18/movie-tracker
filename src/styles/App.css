@@ -31,6 +31,7 @@
     border-radius: 3px;
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
     height: 20rem;
+    overflow: hidden;
     justify-content: center;
     text-align: center;
     margin: 13rem auto 0 auto;
@@ -39,6 +40,7 @@
     .login-main .form-container:hover h2 {
       opacity: 1; }
     .login-main .form-container p {
+      margin-top: 3.5rem;
       letter-spacing: 2px;
       font-weight: 600;
       text-transform: uppercase;
@@ -58,7 +60,7 @@
     height: 4rem;
     margin: 0 auto;
     position: relative;
-    top: -30px;
+    top: 15rem;
     width: 4rem;
     z-index: 4; }
   .login-main .email-input {
@@ -103,7 +105,7 @@
     margin: 0 auto;
     padding: 8px 20px;
     position: relative;
-    top: 45px;
+    top: 20px;
     text-transform: uppercase;
     transition: .4s;
     z-index: 3; }
@@ -120,10 +122,7 @@
     font-size: .8rem;
     font-weight: 600;
     padding-bottom: 2px;
-    position: relative;
     text-transform: uppercase;
-    top: 35.8rem;
-    left: 35%;
     transition: .4s; }
     .login-main .create-account:hover {
       filter: brightness(110%);

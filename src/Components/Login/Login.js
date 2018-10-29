@@ -48,17 +48,16 @@ class Login extends Component {
     return (
       <section className="login-main">
         <HeaderLogin />
-        <div class="create-account">Create Account</div>
         {/* <nav>
           <NavLink to="/">Home</NavLink>
         </nav> */}
+        <div className="user-image"></div>
         <section className='form-container'>
           <form
             className="login-form"
             onSubmit={this.submitLogin}
             aria-label="Existing user login form"
           >
-            <div className="user-image"></div>
             <p>Login</p>
             <h2>Welcome Back</h2>
             <label className="email-input">
@@ -84,8 +83,9 @@ class Login extends Component {
                 className='password-text'
               />
             </label>
-            <div className="github-logo" />
             <button className='submit-button'>Submit</button>
+            <div class="create-account">Create Account</div>
+
           </form>
 
           <form
