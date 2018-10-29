@@ -47,9 +47,9 @@ class Login extends Component {
       <section className="login-main">
         <HeaderLogin />
         <div class="create-account">Create Account</div>
-        <nav>
+        {/* <nav>
           <NavLink to="/">Home</NavLink>
-        </nav>
+        </nav> */}
         <section className='form-container'>
           <form
             className="login-form"
