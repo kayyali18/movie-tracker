@@ -1,8 +1,6 @@
-export const loginUser = (email, exists, success) => ({
+export const loginUser = (user) => ({
   type: 'LOGIN_USER',
-  email,
-  userSuccess: success,
-  userExists: exists
+  user
 })
 
 export const latestMovies = (movies) =>({
