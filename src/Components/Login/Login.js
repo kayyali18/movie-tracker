@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
-import { Route, Link } from 'react-router-dom'
-import '../../styles/2-layouts/layouts-dir.sass'
-import '../../styles/1-base/base-dir.sass'
-import { loginUser } from '../../Actions/TheActionMan';
+
+import { connect } from 'react-redux'
+import { Route, NavLink } from 'react-router-dom'
+import { loginUser } from '../../Actions/TheActionMan'
 
 class Login extends Component {
   constructor(props) {
@@ -11,14 +10,12 @@ class Login extends Component {
     this.state = {
       email: 'tman2272@aol.com',
       username: '',
-      formState: ''
+      formState: '',
       password: 'password',
     }
-  }
+  } 
 
-  async componentDidMount() {
-
-  }
+  async componentDidMount() {}
 
   toggleActive = () => {
     this.state.formState === ""
@@ -51,6 +48,9 @@ class Login extends Component {
         <h1 className="app-title">Now Playing</h1>
         <p>An Elegant Movie Tracker App</p>
         <div class="create-account">Create Account</div>
+        <nav>
+          <NavLink to="/">Home</NavLink>
+        </nav>
         <form
           className="login-form"
           onSubmit={this.submitLogin}
@@ -135,9 +135,11 @@ class Login extends Component {
   }
 }
 
-
-export const mapDispatchToProps = (dispatch) => ({
-  loginCheck: (user, password) => dispatch(loginUser(user, password))
+export const mapDispatchToProps = dispatch => ({
+  loginCheck: (user, password) => dispatch(loginUser(user, password)),
 })
 
-export default connect(null, mapDispatchToProps) (Login)
+export default connect(
+  null,
+  mapDispatchToProps
+)(Login)

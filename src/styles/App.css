@@ -1,8 +1,10 @@
+@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url('https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet');
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -292,6 +294,156 @@ textarea {
   -webkit-appearance: button;
   font: inherit; }
 
+.login-main {
+  width: 375px;
+  margin: auto;
+  height: 812px; }
+  .login-main .app-title {
+    font-family: "Lobster", serif;
+    letter-spacing: 4px;
+    position: relative; }
+  .login-main .app-logo {
+    animation: 🎥 100s linear infinite;
+    background: center/cover url("./Assets/film.png");
+    box-shadow: inset 0 10px 50px white;
+    filter: opacity(20%);
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: 70px;
+    width: 70px;
+    z-index: -1; }
+  .login-main h1 {
+    color: black; }
+  .login-main .active {
+    right: 20px;
+    opacity: 0; }
+  .login-main p {
+    letter-spacing: 1.5px;
+    font-weight: 100; }
+  .login-main .login-form {
+    background: #FEFEFE;
+    border-radius: 3px;
+    box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
+    height: 20rem;
+    justify-content: center;
+    margin: 13rem auto 0 auto;
+    width: 80%;
+    transition: .2s; }
+    .login-main .login-form:hover h2 {
+      opacity: 1; }
+    .login-main .login-form p {
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: black; }
+  .login-main h2 {
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: .4s; }
+  .login-main input {
+    border: none; }
+  .login-main .user-image {
+    background: center/cover url("./Assets/user.png");
+    border-radius: 50%;
+    box-shadow: 0 0 5px;
+    filter: grayscale(1);
+    height: 4rem;
+    margin: 0 auto;
+    position: relative;
+    top: -30px;
+    width: 4rem;
+    z-index: 4; }
+  .login-main .email-input {
+    border: none;
+    height: 5rem;
+    outline: none; }
+    .login-main .email-input:placeholder {
+      background-color: red; }
+  .login-main input {
+    padding: 15px;
+    width: 15rem; }
+    .login-main input:focus {
+      outline: none; }
+  .login-main .email-text, .login-main .password-text {
+    color: black; }
+    .login-main .email-text::placeholder, .login-main .password-text::placeholder {
+      text-align: center; }
+  .login-main hr {
+    border: 1px solid #747474;
+    color: black;
+    margin: 0 auto;
+    width: 80%; }
+  .login-main .github-logo {
+    background: center/cover url("./Assets/github.png");
+    cursor: pointer;
+    filter: 50.19608%;
+    height: 30px;
+    position: relative;
+    margin: 0 auto;
+    width: 30px;
+    transition: .2s; }
+    .login-main .github-logo:hover {
+      transform: scale(1.1); }
+  .login-main .submit-button {
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: .7rem;
+    margin: 0 auto;
+    padding: 8px 20px;
+    position: relative;
+    top: 35px;
+    text-transform: uppercase;
+    transition: .4s; }
+    .login-main .submit-button:focus {
+      outline: none; }
+    .login-main .submit-button:hover {
+      background-color: #424242;
+      border: 1px solid white; }
+  .login-main .create-account {
+    border-bottom: 2px solid transparent;
+    color: black;
+    cursor: pointer;
+    display: inline;
+    font-size: .8rem;
+    font-weight: 600;
+    padding-bottom: 2px;
+    position: relative;
+    text-transform: uppercase;
+    top: 35.8rem;
+    transition: .4s; }
+    .login-main .create-account:hover {
+      filter: brightness(110%);
+      border-bottom: 2px solid black; }
+
+.login-new-user {
+  background: #FEFEFE;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(116, 116, 116, 0.767);
+  height: 20rem;
+  justify-content: center;
+  margin: 1rem auto;
+  position: relative;
+  top: -19.7rem;
+  width: 70%;
+  z-index: -2; }
+  .login-new-user .new-user-username::placeholder, .login-new-user .new-user-email::placeholder, .login-new-user .new-user-password::placeholder {
+    text-align: center; }
+  .login-new-user .new-user-username::hover h2, .login-new-user .new-user-email::hover h2, .login-new-user .new-user-password::hover h2 {
+    opacity: 1; }
+
+@keyframes 🎥 {
+  100% {
+    background-position: 0 958px; } }
+
+.active {
+  z-index: 5 !important; }
+
 .App {
   text-align: center; }
 
@@ -304,5 +456,3 @@ textarea {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white; }
-
-  

@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow, mount} from 'enzyme';
+import configureStore from 'redux-mock-store';
 import App from './App';
-
 
 describe('App',()=>{
 
   let wrapper;
+  const mockStore = configureStore();
+  let latestMovies;
+  let store;
 
   beforeEach(()=>{
-    wrapper = shallow(<App />);
+
+    latestMovies = []
+
+    store = mockStore(latestMovies);
+
+    wrapper = shallow(<App store={store}/>, store);
+
+  })
+
+  it('should match the snapshot', ()=>{
+    expect(wrapper).toMatchSnapshot();
   })
 
   // it('renders without crashing', () => {
@@ -17,10 +30,5 @@ describe('App',()=>{
   //   ReactDOM.render(<App />, div);
   //   ReactDOM.unmountComponentAtNode(div);
   // });
-
-
-  it('should match the snapshot', ()=>{
-    expect(wrapper).toMatchSnapshot();
-  })
 
 })
