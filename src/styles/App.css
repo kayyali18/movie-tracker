@@ -379,26 +379,23 @@ textarea {
   font-weight: 100;
 }
 
-.login-main .login-form {
+.login-main .form-container {
   background: #FEFEFE;
   border-radius: 3px;
   -webkit-box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
           box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
   height: 20rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin: 13rem auto 0 auto;
   width: 80%;
   -webkit-transition: .2s;
   transition: .2s;
 }
 
-.login-main .login-form:hover h2 {
+.login-main .form-container:hover h2 {
   opacity: 1;
 }
 
-.login-main .login-form p {
+.login-main .form-container p {
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
