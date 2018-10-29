@@ -130,7 +130,7 @@ class Login extends Component {
               />
             </label>
             <hr />
-            <button tabIndex="1">Submit</button>
+            <button tabIndex="1" className="new-user-submit">Submit</button>
           </form>
         </section>
       </section>

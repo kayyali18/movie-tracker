@@ -129,6 +129,34 @@
       filter: brightness(110%);
       border-bottom: 2px solid black; }
 
+.login-new-user {
+  margin: 3rem auto 0 auto;
+  width: 80%; }
+
+.new-user-h2 {
+  margin-top: 6rem; }
+
 @keyframes 🎥 {
   100% {
     background-position: 0 958px; } }
+
+.new-user-submit {
+  background-color: black;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: .7rem;
+  margin: 0 auto;
+  padding: 8px 20px;
+  position: relative;
+  top: 45px;
+  text-transform: uppercase;
+  transition: .4s;
+  z-index: 3; }
+  .new-user-submit:focus {
+    outline: none; }
+  .new-user-submit:hover {
+    background-color: #424242;
+    border: 1px solid white; }
