@@ -1,12 +1,10 @@
 import React from 'react';
 
 
-const Nav = () => {
+const Faves = () => {
   return (
-    <div>
-
-    </div>
+    <div className="fave-star" />
   )
 }
 
-export default Nav;
+export default Faves;
