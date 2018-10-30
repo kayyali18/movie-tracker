@@ -268,10 +268,27 @@ nav {
 
 .movie-img {
   width: 19.5rem;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
+          box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
 }
 
 .now-playing-title-text {
-  color: black;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+a, h3 {
+  color: gray;
   text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+a:hover, h3:hover {
+  color: lightgray;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
