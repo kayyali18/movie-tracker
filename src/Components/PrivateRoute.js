@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
 export const fakeAuth = {
-  isAuthenticated: true,
+  isAuthenticated: false,
   authenticate(cb){
     this.isAuthenticated = true
     setTimeout(cb, 100)

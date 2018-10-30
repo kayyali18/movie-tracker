@@ -23,3 +23,8 @@ export const latestMovies = (movies) =>({
   type: 'NOW_PLAYING',
   latestMovies: movies
 })
+
+export const isAuthenticated = (bool) =>({
+  type: 'IS_AUTHENTICATED',
+  isAuthenticated: bool
+})

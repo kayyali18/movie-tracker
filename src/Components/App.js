@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import PrivateRoute from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Components/PrivateRoute.js';
-import { latestMovies } from '../Actions/movieActions';
-import { isAuthenticated } from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Actions/TheActionMan.js';
+import PrivateRoute from '../Components/PrivateRoute.js';
+import { latestMovies, isAuthenticated } from '../Actions';
 import { BrowserRouter, Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import Main from './Main/Main';
 import Nav from './Nav/Nav';
@@ -23,49 +22,6 @@ class App extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <div>
-
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return (
-              <div className="App">
-                <MovieContainer />
-              </div>
-            )
-          }}
-        />
-        <Route
-          exact
-          path="/login"
-          render={() => {
-            return (
-              <Login />
-            )
-          }}
-        />
-      </div>
-    )
-  }
-}
-
-const mapStateToProps = state => ({
-  userExists: state.userExists,
-  userSuccess: state.userSuccess
-})
-
-const mapDispatchToProps = dispatch => ({
-  latestMovies: movies => dispatch(latestMovies(movies)),
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
-=======
     return(
           <div>
             <PrivateRoute exact path='/' component={Main} />
@@ -86,4 +42,3 @@ const mapDispatchToProps = (dispatch) => ({
 const exportWithRouter = withRouter(connect(null, mapDispatchToProps)(App))
 
 export default exportWithRouter;
->>>>>>> 94aa23b1293935aed0323e3ac301fce9a45aed95
