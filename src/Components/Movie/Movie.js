@@ -16,11 +16,13 @@ class Movie extends Component {
     return (
 
       <article className="movie-card">
-        <img className="movie-img" src={`${imgURL}${movie.poster}`} />
+        <section className='img-box'>
+          <img className="movie-img" src={`${imgURL}${movie.poster}`} />
+        </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">
-          <section className="release"> {movie.release_date}</section>
-          <p>Overview: {movie.overview}</p>
+          {/* <section className="release"> {movie.release_date}</section> */}
+          <p>{movie.overview}</p>
         </section>
       </article>
 

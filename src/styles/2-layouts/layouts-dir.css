@@ -271,6 +271,7 @@ nav {
 .movie-img {
   width: 19.5rem;
   padding: 10px;
+  display: block;
   background-color: black;
   -webkit-box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
           box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
@@ -281,7 +282,6 @@ nav {
 
 .movie-img:hover {
   opacity: .6;
-  opacity: 55s ease-in-out;
 }
 
 .faves, a {
@@ -300,13 +300,22 @@ nav {
   width: 100%;
 }
 
-.date-box {
-  background-color: white;
+.img-box {
   position: relative;
-  bottom: 100%;
-  color: black;
-  width: 93.5%;
+}
+
+.date-box {
+  background-color: rgba(0, 0, 0, 0.692);
+  position: relative;
+  bottom: 30.5rem;
+  color: white;
+  width: 94.5%;
   padding: 10px;
   margin: 0 auto;
+  z-index: 10;
+}
+
+.movie-img {
+  top: 3rem;
 }
 /*# sourceMappingURL=layouts-dir.css.map */

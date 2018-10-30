@@ -177,13 +177,13 @@ nav {
 .movie-img {
   width: 19.5rem;
   padding: 10px;
+  display: block;
   background-color: black;
   box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
   opacity: 1;
   transition: .5s; }
   .movie-img:hover {
-    opacity: .6;
-    opacity: 55s ease-in-out; }
+    opacity: .6; }
 
 .faves, a {
   color: gray;
@@ -195,10 +195,18 @@ nav {
   .faves .test, a .test {
     width: 100%; }
 
+.img-box {
+  position: relative; }
+
 .date-box {
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.692);
   position: relative;
-  color: black;
-  width: 93.5%;
+  bottom: 30.5rem;
+  color: white;
+  width: 94.5%;
   padding: 10px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  z-index: 10; }
+
+.movie-img {
+  top: 3rem; }

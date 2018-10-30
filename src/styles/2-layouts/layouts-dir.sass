@@ -191,14 +191,15 @@ nav
 .movie-img
   width: 19.5rem
   padding: 10px
+  display: block
   background-color: black
   box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767)
   opacity: 1
   transition: .5s
   &:hover
     opacity: .6
-    opacity: 55s ease-in-out
-  
+
+
 .faves, a
   color: gray
   text-decoration: none
@@ -210,11 +211,20 @@ nav
   .test
     width: 100%;
 
-.date-box
-  background-color: white
+.img-box
   position: relative
-  bottom: 
-  color: black
-  width: 93.5%
+
+.date-box
+  background-color: rgba(0, 0, 0, 0.692)
+  position: relative
+  bottom: 30.5rem
+  color: white
+  width: 94.5%
   padding: 10px
   margin: 0 auto
+  z-index: 10
+
+.movie-img
+  &:hover 
+  .date-box
+  top: 3rem
