@@ -156,6 +156,20 @@ nav {
   padding-right: 20px;
   margin-right: 100px;
   width: 50rem; }
+  .movie-card:hover .date-box {
+    opacity: 1;
+    bottom: 30.5rem; }
+
+.date-box {
+  background-color: rgba(0, 0, 0, 0.692);
+  position: relative;
+  color: white;
+  width: 94%;
+  padding: 10px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: .8s;
+  bottom: 15rem; }
 
 .now-playing-title-text {
   color: black; }
@@ -183,7 +197,7 @@ nav {
   opacity: 1;
   transition: .5s; }
   .movie-img:hover {
-    opacity: .6; }
+    opacity: .8; }
 
 .faves, a {
   color: gray;
@@ -197,18 +211,3 @@ nav {
 
 .img-box {
   position: relative; }
-
-.date-box {
-  background-color: rgba(0, 0, 0, 0.692);
-  position: relative;
-  bottom: 30.5rem;
-  opacity: 0;
-  color: white;
-  width: 94.5%;
-  padding: 10px;
-  margin: 0 auto; }
-
-.movie-card {
-  cursor: pointer; }
-  .movie-card .date-box {
-    display: none; }
