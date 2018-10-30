@@ -323,7 +323,8 @@ nav {
 
 @media (min-width: 900px) {
   .movie-box {
-    border: 2px solid red;
+    border: 2px solid blue;
+    width: 100rem;
   }
 }
 
