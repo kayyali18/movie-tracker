@@ -2,6 +2,7 @@
 .login-main {
   width: 375px;
   margin: auto;
+  height: 100vh;
 }
 
 .login-main .app-header-container {
@@ -276,7 +277,7 @@ nav {
 }
 
 .movie-img:hover {
-  color: red;
+  background-color: red;
 }
 
 .faves, a {
@@ -291,8 +292,8 @@ nav {
   color: lightgray;
 }
 
-.arrow {
-  background: url center/cover url("../Assets/caret.png");
-  width: 20px;
+.faves .test, a .test {
+  width: 100%;
+  background-color: green;
 }
 /*# sourceMappingURL=layouts-dir.css.map */

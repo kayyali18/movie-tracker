@@ -1,7 +1,8 @@
 @charset "UTF-8";
 .login-main {
   width: 375px;
-  margin: auto; }
+  margin: auto;
+  height: 100vh; }
   .login-main .app-header-container {
     text-align: center; }
   .login-main .app-title {
@@ -179,7 +180,7 @@ nav {
   background-color: white;
   box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767); }
   .movie-img:hover {
-    color: red; }
+    background-color: red; }
 
 .faves, a {
   color: gray;
@@ -188,7 +189,5 @@ nav {
   cursor: pointer; }
   .faves:hover, a:hover {
     color: lightgray; }
-
-.arrow {
-  background: url center/cover url("../Assets/caret.png");
-  width: 20px; }
+  .faves .test, a .test {
+    width: 100%; }
