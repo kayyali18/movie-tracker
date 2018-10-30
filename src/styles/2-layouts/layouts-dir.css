@@ -2,7 +2,6 @@
 .login-main {
   width: 375px;
   margin: auto;
-  height: 100vh;
 }
 
 .login-main .app-header-container {
@@ -309,14 +308,18 @@ nav {
   background-color: rgba(0, 0, 0, 0.692);
   position: relative;
   bottom: 30.5rem;
+  opacity: 0;
   color: white;
   width: 94.5%;
   padding: 10px;
   margin: 0 auto;
-  z-index: 10;
 }
 
-.movie-img {
-  top: 3rem;
+.movie-card {
+  cursor: pointer;
+}
+
+.movie-card .date-box {
+  display: none;
 }
 /*# sourceMappingURL=layouts-dir.css.map */

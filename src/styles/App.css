@@ -1,8 +1,7 @@
 @charset "UTF-8";
 .login-main {
   width: 375px;
-  margin: auto;
-  height: 100vh; }
+  margin: auto; }
   .login-main .app-header-container {
     text-align: center; }
   .login-main .app-title {
@@ -203,11 +202,13 @@ nav {
   background-color: rgba(0, 0, 0, 0.692);
   position: relative;
   bottom: 30.5rem;
+  opacity: 0;
   color: white;
   width: 94.5%;
   padding: 10px;
-  margin: 0 auto;
-  z-index: 10; }
+  margin: 0 auto; }
 
-.movie-img {
-  top: 3rem; }
+.movie-card {
+  cursor: pointer; }
+  .movie-card .date-box {
+    display: none; }
