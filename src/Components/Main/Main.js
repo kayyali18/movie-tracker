@@ -7,8 +7,6 @@ import MovieContainer from '../MovieContainer/MovieContainer';
 const Main = () =>{
   return(
     <div className="Main">
-      <Header />
-      <Nav />
       <MovieContainer />
     </div>
   )

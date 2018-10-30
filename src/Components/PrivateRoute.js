@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
+import {connect} from 'react-redux'
+// import { mapStateToProps } from './Login/Login';
 
 export const fakeAuth = {
   isAuthenticated: false,
@@ -13,10 +15,19 @@ export const fakeAuth = {
   }
 }
 
-const PrivateRoute = ({component: Main, ...rest})=>(
+const PrivateRoute = (props, {component: Main, ...rest})=>{
+  return(
   <Route {...rest} render={(props)=>(
-    fakeAuth.isAuthenticated == true ? <Main {...props}/> : <Redirect to='/login'/>
+    props.isAuthenticated == true ? <Main {...props}/> : <Redirect to='/login'/>
   )} />
 )
+}
 
-export default PrivateRoute;
+
+export const mapStateToProps = state => ({
+  isAuthenticated: state.isAuthenticated
+})
+
+const exportWithRouter = withRouter(connect(mapStateToProps, null)(PrivateRoute))
+
+export default exportWithRouter;

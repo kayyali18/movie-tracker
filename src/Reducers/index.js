@@ -4,13 +4,15 @@ import movieReducer from './movieReducer';
 import {userExistsReducer} from './userExistsReducer';
 import {wrongCredentialsReducer} from './wrongCredentialsReducer';
 import {createAccountDisplayReducer} from './createAccountReducer';
+import { authenticateReducer } from './authenticateReducer';
 
 const rootReducer = combineReducers({
   movies: movieReducer,
   user: loginReducer,
   createAccountDisplay: createAccountDisplayReducer,
   userExists: userExistsReducer,
-  wrongCredentials: wrongCredentialsReducer
+  wrongCredentials: wrongCredentialsReducer,
+  isAuthenticated: authenticateReducer
 })
 
 export default rootReducer;

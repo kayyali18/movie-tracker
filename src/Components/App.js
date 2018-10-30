@@ -24,7 +24,8 @@ class App extends Component {
   render() {
     return(
           <div>
-            <PrivateRoute exact path='/' component={Main} />
+            {this.props.isAuthenticated ? <Redirect to='/main' /> : <Redirect to='/login'/> }
+            <Route exact path='/main' props={this.props} component={Main} />
             <Route exact path='/login' component={Login} />
           </div>
     );
@@ -39,6 +40,6 @@ const mapDispatchToProps = (dispatch) => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
 })
 
-const exportWithRouter = withRouter(connect(null, mapDispatchToProps)(App))
+const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
 
 export default exportWithRouter;
