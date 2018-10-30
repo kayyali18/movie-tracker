@@ -3,6 +3,11 @@ export const loginUser = (user) => ({
   user
 })
 
+export const userExists = bool => ({
+  type: 'USER_EXISTS',
+  userExists: bool
+
+})
 
 export const createAccountDisplay = string => ({
   type: 'CREATE_ACCOUNT_DISPLAY',
