@@ -17,7 +17,7 @@ class Movie extends Component {
 
       <article class="movie-card">
         <img className="movie-img" src={`${imgURL}${movie.poster}`} />
-        <h3 className="movie-title">{movie.title}</h3>
+        <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <time dateTime={movie.release_date}>Release date: {movie.release_date}</time>
         <p>Overview: {movie.overview}</p>
       </article>

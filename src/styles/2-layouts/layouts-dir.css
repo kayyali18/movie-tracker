@@ -2,7 +2,6 @@
 .login-main {
   width: 375px;
   margin: auto;
-  height: 812px;
 }
 
 .login-main .app-header-container {
@@ -274,13 +273,7 @@ nav {
           box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
 }
 
-.now-playing-title-text {
-  -webkit-transition: .2s;
-  transition: .2s;
-  cursor: pointer;
-}
-
-a, h3 {
+.faves, a {
   color: gray;
   text-decoration: none;
   -webkit-transition: .2s;
@@ -288,7 +281,7 @@ a, h3 {
   cursor: pointer;
 }
 
-a:hover, h3:hover {
+.faves:hover, a:hover {
   color: lightgray;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
