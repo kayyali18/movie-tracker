@@ -12,6 +12,7 @@ export const loginUser = async (email, password) => {
     },
   })
 
+
   if (req.ok) return req
   else return false
 }
@@ -29,6 +30,6 @@ export const createUser = async (username, email, password) => {
       'content-type': 'application/json',
     }
   })
-  return(req)
+  return(req.json())
 
 }
