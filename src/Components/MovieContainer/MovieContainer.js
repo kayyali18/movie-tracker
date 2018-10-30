@@ -1,40 +1,48 @@
 import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 
 import Data from '../../Helpers/Datacleaner.js';
 
-class MovieContainer extends Component{
-  constructor(){
+class MovieContainer extends Component {
+  constructor() {
     super();
   }
 
-  makeMovies = () =>{
+  makeMovies = () => {
     const { latestMovies } = this.props;
 
-    const movies = latestMovies.map(movie=>{
-      return <Movie movie={movie} key={movie.id}/>
+    const movies = latestMovies.map(movie => {
+      return <Movie movie={movie} key={movie.id} />
     })
 
     return movies;
   }
 
-  render(){
+  render() {
 
-    return(
+    return (
       <section>
-         <nav>
+        <nav>
           <NavLink to="/login">Login</NavLink>
         </nav>
-        {this.makeMovies()}
+        <section className="even-bigger-movie-box">
+          <h1 className="now-playing-title-text">
+            now <br />
+            playing
+          </h1>
+          <section className='movie-box'>
+            {this.makeMovies()}
+          </section>
+        </section>
       </section>
     )
   }
 }
 
 
-const mapStateToProps = ({movies}) =>({
+const mapStateToProps = ({ movies }) => ({
   latestMovies: movies
 })
 

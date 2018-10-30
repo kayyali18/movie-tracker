@@ -228,7 +228,26 @@
   background-color: #424242;
 }
 
+nav {
+  text-align: right;
+}
+
 .active {
   display: none;
+}
+
+.movie-card {
+  border: 1px solid red;
+  width: 20rem;
+}
+
+.movie-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.now-playing-title-text {
+  font-size: 5rem;
 }
 /*# sourceMappingURL=layouts-dir.css.map */

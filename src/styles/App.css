@@ -143,5 +143,18 @@
   .new-user-submit:hover {
     background-color: #424242; }
 
+nav {
+  text-align: right; }
+
 .active {
   display: none; }
+
+.movie-card {
+  border: 1px solid red;
+  width: 20rem; }
+
+.movie-box {
+  display: flex; }
+
+.now-playing-title-text {
+  font-size: 5rem; }
