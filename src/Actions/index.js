@@ -24,6 +24,16 @@ export const latestMovies = (movies) =>({
   latestMovies: movies
 })
 
+export const addFav = (movie) => ({
+  type: 'ADD_FAV',
+  movie
+})
+
+export const removeFav = (movie) => ({
+  type: 'REMOVE_FAV',
+  movie
+})
+
 export const isAuthenticated = (bool) =>({
   type: 'IS_AUTHENTICATED',
   isAuthenticated: bool

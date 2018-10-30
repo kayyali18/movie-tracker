@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 
 import Data from '../../Helpers/Datacleaner.js';
 
-class MovieContainer extends Component {
+class FavesContainer extends Component {
   constructor() {
     super();
   }
@@ -43,9 +42,8 @@ class MovieContainer extends Component {
 }
 
 
-const mapStateToProps = ({ movies, faveMovies }) => ({
-  latestMovies: movies,
-  faveMovies
+const mapStateToProps = ({ movies }) => ({
+  latestMovies: movies
 })
 
-export default connect(mapStateToProps, null)(MovieContainer);
+export default connect(mapStateToProps, null)(FavesContainer);
