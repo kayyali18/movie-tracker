@@ -4,7 +4,7 @@
 
 .App-header {
   background-color: #171717;
-  min-height: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

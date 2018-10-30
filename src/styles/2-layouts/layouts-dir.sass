@@ -1,13 +1,12 @@
 .login-main
   width: 375px
   margin: auto
-  height: 812px
+  height: 100vh
 
   .app-header-container 
     text-align: center
 
   .app-title
-    letter-spacing: 4px
     position: relative
     margin-top: 1.8rem
 
@@ -37,7 +36,7 @@
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
     height: 20rem
     overflow: hidden
-    position: re
+    position: relative
     justify-content: center
     text-align: center
     margin: 13rem auto 0 auto
@@ -104,8 +103,9 @@
     font-size: .7rem
     margin: 0 auto
     padding: 8px 20px
+    top: 50px
     position: relative
-    top: 20px
+    top: 33px
     text-transform: uppercase
     transition: .4s 
     z-index: 3
@@ -122,8 +122,7 @@
     font-size: .8rem
     font-weight: 600
     position: relative
-    top: 20px
-    padding-bottom: 2px
+    bottom: -30px
     text-transform: uppercase
     transition: .4s
     &:hover 
@@ -132,14 +131,13 @@
 
 .login-new-user
   margin: 3rem auto 0 auto
-  width: 80%
+  width: 100%
 
 @keyframes 🎥 { 100% {background-position: 0 958px;}}
 
 .new-user-submit
   background-color: black
   border-radius: 20px
-  border: 1px solid transparent
   color: white
   cursor: pointer
   display: block
@@ -147,7 +145,7 @@
   margin: 0 auto
   padding: 8px 20px
   position: relative
-  top: 15px
+  top: 5px
   text-transform: uppercase
   transition: .4s 
   z-index: 3
@@ -155,8 +153,78 @@
     outline: none
   &:hover
     background-color: rgb(66, 66, 66)
-    border: 1px solid white
+
+nav 
+  text-align: right
   
 .active
   display: none
 
+.movie-title
+  color: black
+  font-size: 2rem
+  text-align: right
+
+.movie-card
+  padding-right: 20px
+  // margin-right: 100px
+  width: 50rem
+
+.now-playing-title-text
+  color: black
+
+.movie-box 
+  display: flex
+  width: 20rem
+  overflow: scroll
+  margin: 0 auto  
+  
+.text-box
+  font-size: 4rem
+  h1
+  margin: 0
+  padding: -2rem
+  letter-spacing: -2px
+  line-height: 65px
+  margin-bottom: 2rem
+
+.movie-img
+  width: 19.5rem
+  padding: 10px
+  display: block
+  background-color: black
+  box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767)
+  opacity: 1
+  transition: .5s
+  &:hover
+    opacity: .6
+
+
+.faves, a
+  color: gray
+  text-decoration: none
+  transition: .2s
+  cursor: pointer
+  &:hover 
+    color: lightgray
+
+  .test
+    width: 100%;
+
+.img-box
+  position: relative
+
+.date-box
+  background-color: rgba(0, 0, 0, 0.692)
+  position: relative
+  bottom: 30.5rem
+  color: white
+  width: 94.5%
+  padding: 10px
+  margin: 0 auto
+  z-index: 10
+
+.movie-img
+  &:hover 
+  .date-box
+  top: 3rem
