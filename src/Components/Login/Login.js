@@ -86,7 +86,7 @@ class Login extends Component {
                 />
               </label>
               <button className='submit-button'>Submit</button>
-              <div class="create-account" onClick={this.toggleActive}>Create Account</div>
+              <div className="create-account" onClick={this.toggleActive}>Create Account</div>
             </form>
           </section>
 
@@ -133,7 +133,7 @@ class Login extends Component {
             </label>
             <hr />
             <button tabIndex="1" className="new-user-submit">Submit</button>
-            <div class="create-account" onClick={this.toggleActive}>Back to Login</div>
+            <div className="create-account" onClick={this.toggleActive}>Back to Login</div>
           </form>
         </section>
       </section>
@@ -141,11 +141,15 @@ class Login extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  active: state.createAccount.class
+})
+
 export const mapDispatchToProps = dispatch => ({
   fetchUser: (user, password) => dispatch(fetchUser(user, password))
 })
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login)
