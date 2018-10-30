@@ -1,14 +1,425 @@
 @charset "UTF-8";
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
+ */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   @mixin ========================================================================= */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+[hidden] {
+  display: none; }
+
+/* Links
+   @mixin ========================================================================= */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active, a:hover {
+  outline-width: 0; }
+
+/* Text-level semantics
+   @mixin ========================================================================= */
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted; }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b, strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b, strong {
+  font-weight: bolder; }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   @mixin ========================================================================= */
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   @mixin ========================================================================= */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible; }
+
+/* Forms
+   @mixin ========================================================================= */
+/**
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button, input, select, textarea {
+  font: inherit;
+  margin: 0; }
+
+/**
+ * Restore the font weight unset by the previous rule.
+ */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button, input {
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal; }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px; }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit; }
+
+.login-new-user {
+  margin: 3rem auto 0 auto;
+  width: 100%; }
+
+@keyframes 🎥 {
+  100% {
+    background-position: 0 958px; } }
+
+.new-user-submit {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: .7rem;
+  margin: 0 auto;
+  padding: 8px 20px;
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+  transition: .4s;
+  z-index: 3; }
+  .new-user-submit:focus {
+    outline: none; }
+  .new-user-submit:hover {
+    background-color: #424242; }
+
+nav {
+  text-align: right; }
+
+.active {
+  display: none; }
+
+.movie-title {
+  color: black;
+  font-size: 2rem;
+  text-align: right; }
+
+.movie-card {
+  padding-right: 20px;
+  margin-right: 100px;
+  width: 50rem; }
+  .movie-card:hover .date-box {
+    opacity: 1;
+    bottom: 30.5rem; }
+
+.date-box {
+  background-color: rgba(0, 0, 0, 0.692);
+  position: relative;
+  color: white;
+  width: 94%;
+  padding: 10px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: .8s;
+  bottom: 15rem;
+  text-align: right; }
+
+.now-playing-title-text {
+  color: black; }
+
+.movie-box {
+  display: flex;
+  width: 19.8rem;
+  overflow: scroll;
+  margin: 0 auto;
+  height: 33.29rem; }
+
+.text-box {
+  font-size: 4rem;
+  margin: 0;
+  padding: -2rem;
+  letter-spacing: -2px;
+  line-height: 65px;
+  margin-bottom: 2rem; }
+
+.movie-img {
+  width: 19.5rem;
+  padding: 10px;
+  display: block;
+  background-color: black;
+  box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
+  opacity: 1;
+  transition: .5s; }
+  .movie-img:hover {
+    opacity: .8; }
+
+.faves, a {
+  color: gray;
+  text-decoration: none;
+  transition: .2s;
+  cursor: pointer; }
+  .faves:hover, a:hover {
+    color: lightgray; }
+  .faves .test, a .test {
+    width: 100%; }
+
+.img-box {
+  position: relative; }
+
+@media (min-width: 900px) {
+  .movie-box {
+    width: 80rem;
+    padding-left: 1rem; } }
+
+.App {
+  text-align: center; }
+
+.App-header {
+  background-color: #171717;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; }
+
 .login-main {
   width: 375px;
-  margin: auto;
-  height: 812px; }
+  margin: auto; }
   .login-main .app-header-container {
     text-align: center; }
   .login-main .app-title {
-    letter-spacing: 4px;
-    position: relative;
-    margin-top: 1.8rem; }
+    margin: 0 auto;
+    color: black;
+    font-size: 3rem; }
   .login-main .app-logo {
     animation: 🎥 100s linear infinite;
     background: center/cover url("./Assets/film.png");
@@ -20,8 +431,6 @@
     top: 70px;
     width: 70px;
     z-index: -1; }
-  .login-main .app-title {
-    color: black; }
   .login-main .app-subtitle {
     letter-spacing: .5px;
     font-weight: 100;
@@ -35,7 +444,7 @@
     position: relative;
     justify-content: center;
     text-align: center;
-    margin: 13rem auto 0 auto;
+    margin: 10rem auto 0 auto;
     width: 80%;
     transition: 2s; }
     .login-main .form-container:hover h2 {
@@ -45,7 +454,7 @@
       letter-spacing: 2px;
       font-weight: 600;
       text-transform: uppercase;
-      color: black; }
+      color: #004411; }
   .login-main h2 {
     letter-spacing: 1.5px;
     margin-bottom: 2rem;
@@ -61,7 +470,7 @@
     height: 4rem;
     margin: 0 auto;
     position: relative;
-    top: 15rem;
+    top: 12rem;
     width: 4rem;
     z-index: 4; }
   .login-main .email-input {
@@ -115,33 +524,3 @@
     .login-main .create-account:hover {
       filter: brightness(110%);
       border-bottom: 2px solid black; }
-
-.login-new-user {
-  margin: 3rem auto 0 auto;
-  width: 100%; }
-
-@keyframes 🎥 {
-  100% {
-    background-position: 0 958px; } }
-
-.new-user-submit {
-  background-color: black;
-  border-radius: 20px;
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: .7rem;
-  margin: 0 auto;
-  padding: 8px 20px;
-  position: relative;
-  top: 5px;
-  text-transform: uppercase;
-  transition: .4s;
-  z-index: 3; }
-  .new-user-submit:focus {
-    outline: none; }
-  .new-user-submit:hover {
-    background-color: #424242; }
-
-.active {
-  display: none; }

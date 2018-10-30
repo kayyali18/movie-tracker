@@ -1,60 +1,45 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { latestMovies } from '../Actions/movieActions'
+import PrivateRoute from '../Components/PrivateRoute.js';
+import { latestMovies, isAuthenticated } from '../Actions';
+import { BrowserRouter, Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import Main from './Main/Main';
+import Nav from './Nav/Nav';
 import Login from './Login/Login'
-import Header from './Header/Header'
-import Nav from './Nav/Nav'
-import Movie from './Movie/Movie'
-import MovieContainer from './MovieContainer/MovieContainer'
 import * as api from '../Helpers/apiCaller'
-import '../styles/App.css'
+import '../styles/App.css';
 
 class App extends Component {
   constructor(props) {
     super(props)
+
   }
 
   async componentDidMount() {
-    const { latestMovies } = this.props
+    const { latestMovies } = this.props;
     const nowPlaying = await api.fetchNowPlaying()
-
     latestMovies(nowPlaying)
   }
-  render() {
-    return (
-      <div>
 
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return (
-              <div className="App">
-                <Login />
-              </div>
-            )
-          }}
-        />
-        <Route
-          exact
-          path="/login"
-          render={() => {
-            return (
-              <Login />
-            )
-          }}
-        />
-      </div>
-    )
+  render() {
+    return(
+          <div>
+            {this.props.isAuthenticated ? <Redirect to='/main' /> : <Redirect to='/login'/> }
+            <Route exact path='/main' props={this.props} component={Main} />
+            <Route exact path='/login' component={Login} />
+          </div>
+    );
   }
 }
 
-const mapDispatchToProps = dispatch => ({
+const mapStateToProps = (state) =>({
+  isAuthenticated: state.isAuthenticated,
+})
+
+const mapDispatchToProps = (dispatch) => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
 })
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(App)
+const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+
+export default exportWithRouter;

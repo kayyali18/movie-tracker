@@ -12,6 +12,24 @@ export const loginUser = async (email, password) => {
     },
   })
 
+
   if (req.ok) return req
   else return false
+}
+
+export const createUser = async (username, email, password) => {
+  const url = `http://localhost:3000/api/users/new`
+  const req = await fetch (url, {
+    method: 'POST',
+    body: JSON.stringify({
+      name: username,
+      email,
+      password
+    }),
+    headers: {
+      'content-type': 'application/json',
+    }
+  })
+  return req
+
 }
