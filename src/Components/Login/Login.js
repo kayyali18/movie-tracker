@@ -59,9 +59,6 @@ class Login extends Component {
     return (
       <section className="login-main">
         <HeaderLogin />
-        {/* <nav>
-          <NavLink to="/">Home</NavLink>
-        </nav> */}
         <div className="user-image"></div>
         <section className='form-container'>
           <section className={this.props.active}>
@@ -161,7 +158,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 const exportWithRouter = withRouter(connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login))
 

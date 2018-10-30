@@ -1,4 +1,4 @@
-export const authenticateReducer = (state = true, action)=>{
+export const authenticateReducer = (state = false, action)=>{
   switch(action.type){
     case 'IS_AUTHENTICATED':
       return action.isAuthenticated;
