@@ -29,7 +29,7 @@ class MovieContainer extends Component {
 
         </nav>
         <section className="even-bigger-movie-box">
-          <section className="text-box">
+          <section className="nav-box">
             <Nav />
           </section>
           <div className="arrow" />
