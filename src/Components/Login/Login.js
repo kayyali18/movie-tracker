@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-
 import { connect } from 'react-redux'
-import { Route, NavLink } from 'react-router-dom'
-import { loginUser } from '../../Actions/TheActionMan'
+import { BrowserRouter, Route, withRouter, Link, NavLink, Redirect } from 'react-router-dom';
+import { loginUser } from '../../Actions/TheActionMan';
+import App from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Components/App.js';
 
 class Login extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class Login extends Component {
       formState: '',
       password: 'password',
     }
-  } 
+  }
 
   async componentDidMount() {}
 
@@ -47,7 +47,7 @@ class Login extends Component {
         <div className="app-logo"></div>
         <h1 className="app-title">Now Playing</h1>
         <p>An Elegant Movie Tracker App</p>
-        <div class="create-account">Create Account</div>
+        <div className="create-account">Create Account</div>
         <nav>
           <NavLink to="/">Home</NavLink>
         </nav>
@@ -128,7 +128,7 @@ class Login extends Component {
             />
           </label>
           <hr />
-          <button tabIndex="1">Submit</button>
+          <NavLink to='/'><button tabIndex="1">Submit</button></NavLink>
         </form>
       </section>
     )
@@ -139,7 +139,9 @@ export const mapDispatchToProps = dispatch => ({
   loginCheck: (user, password) => dispatch(loginUser(user, password)),
 })
 
-export default connect(
+const exportWith = withRouter(connect(
   null,
   mapDispatchToProps
-)(Login)
+)(Login))
+
+export default exportWith;
