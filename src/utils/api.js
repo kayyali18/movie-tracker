@@ -30,6 +30,6 @@ export const createUser = async (username, email, password) => {
       'content-type': 'application/json',
     }
   })
-  return(req.json())
+  return req
 
 }

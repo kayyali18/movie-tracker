@@ -56,7 +56,7 @@ class Login extends Component {
 
   render() {
     const { email, username, password } = this.state
-    const {wrongCredentials} = this.props
+    const {wrongCredentials, userExists} = this.props
     return (
       <section className="login-main">
         <HeaderLogin />
@@ -106,6 +106,8 @@ class Login extends Component {
             aria-label="Create new MovieTracker account"
           >
             <h2 className="new-user-h2">Create Account</h2>
+            {userExists ? <p className='wrong-credentials'> Username/Email already exists</p> : null}
+
             <label>
               <input
                 className="new-user-username"
@@ -152,7 +154,8 @@ class Login extends Component {
 
 export const mapStateToProps = state => ({
   active: state.createAccountDisplay.class,
-  wrongCredentials: state.wrongCredentials
+  wrongCredentials: state.wrongCredentials,
+  userExists: state.userExists
 })
 
 export const mapDispatchToProps = dispatch => ({
