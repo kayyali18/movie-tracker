@@ -33,3 +33,7 @@ export const createUser = async (username, email, password) => {
   return req
 
 }
+
+export const setFavs = (favs) => {
+  localStorage.setItem('favs', JSON.stringify(favs))
+}
