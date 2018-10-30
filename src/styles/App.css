@@ -150,11 +150,18 @@ nav {
   display: none; }
 
 .movie-card {
-  border: 1px solid red;
-  width: 20rem; }
+  padding-right: 20px;
+  width: 50rem; }
 
 .movie-box {
+  display: flex;
+  width: 20rem;
+  overflow: scroll;
+  margin: 0 auto; }
+
+.text-box {
+  font-size: 5rem;
   display: flex; }
 
-.now-playing-title-text {
-  font-size: 5rem; }
+.movie-img {
+  width: 19.5rem; }

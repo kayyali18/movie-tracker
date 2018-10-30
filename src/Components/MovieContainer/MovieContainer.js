@@ -25,13 +25,15 @@ class MovieContainer extends Component {
     return (
       <section>
         <nav>
-          <NavLink to="/login">Login</NavLink>
+          <NavLink to="/login">Log out</NavLink>
         </nav>
         <section className="even-bigger-movie-box">
-          <h1 className="now-playing-title-text">
-            now <br />
-            playing
+          <section className="text-box">
+            <h1 className="now-playing-title-text">
+              now <br />
+              playing
           </h1>
+          </section>
           <section className='movie-box'>
             {this.makeMovies()}
           </section>
