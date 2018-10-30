@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
-import { loginUser } from '../../Actions'
+import { loginUser, createAccount } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
 
 class Login extends Component {
@@ -22,9 +22,10 @@ class Login extends Component {
   async componentDidMount() { }
 
   toggleActive = () => {
-    this.state.formState === ""
-      ? this.setState({ formState: "active" })
-      : this.setState({ formState: "" });
+    const {createAccount} = this.props
+    this.props.active === ""
+      ? createAccount('active')
+      : createAccount('');
   };
 
   resetForm = () => {
@@ -54,7 +55,7 @@ class Login extends Component {
         </nav> */}
         <div className="user-image"></div>
         <section className='form-container'>
-          <section className={this.state.formState}>
+          <section className={this.props.active}>
             <form
               className="login-form"
               onSubmit={this.submitLogin}
@@ -145,7 +146,8 @@ export const mapStateToProps = state => ({
 })
 
 export const mapDispatchToProps = dispatch => ({
-  fetchUser: (user, password) => dispatch(fetchUser(user, password))
+  fetchUser: (user, password) => dispatch(fetchUser(user, password)),
+  createAccount: (string) => dispatch(createAccount(string))
 })
 
 export default connect(
