@@ -9,8 +9,9 @@
 }
 
 .login-main .app-title {
-  position: relative;
-  margin-top: 1.8rem;
+  margin: 0 auto;
+  color: black;
+  font-size: 3rem;
 }
 
 .login-main .app-logo {
@@ -27,10 +28,6 @@
   top: 70px;
   width: 70px;
   z-index: -1;
-}
-
-.login-main .app-title {
-  color: black;
 }
 
 .login-main .app-subtitle {
@@ -51,7 +48,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  margin: 13rem auto 0 auto;
+  margin: 10rem auto 0 auto;
   width: 80%;
   -webkit-transition: 2s;
   transition: 2s;
@@ -91,7 +88,7 @@
   height: 4rem;
   margin: 0 auto;
   position: relative;
-  top: 15rem;
+  top: 12rem;
   width: 4rem;
   z-index: 4;
 }
@@ -244,7 +241,6 @@ nav {
   padding-right: 20px;
   margin-right: 100px;
   width: 50rem;
-  overflow: hidden;
 }
 
 .movie-card:hover .date-box {

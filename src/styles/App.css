@@ -5,8 +5,9 @@
   .login-main .app-header-container {
     text-align: center; }
   .login-main .app-title {
-    position: relative;
-    margin-top: 1.8rem; }
+    margin: 0 auto;
+    color: black;
+    font-size: 3rem; }
   .login-main .app-logo {
     animation: 🎥 100s linear infinite;
     background: center/cover url("./Assets/film.png");
@@ -18,8 +19,6 @@
     top: 70px;
     width: 70px;
     z-index: -1; }
-  .login-main .app-title {
-    color: black; }
   .login-main .app-subtitle {
     letter-spacing: .5px;
     font-weight: 100;
@@ -33,7 +32,7 @@
     position: relative;
     justify-content: center;
     text-align: center;
-    margin: 13rem auto 0 auto;
+    margin: 10rem auto 0 auto;
     width: 80%;
     transition: 2s; }
     .login-main .form-container:hover h2 {
@@ -59,7 +58,7 @@
     height: 4rem;
     margin: 0 auto;
     position: relative;
-    top: 15rem;
+    top: 12rem;
     width: 4rem;
     z-index: 4; }
   .login-main .email-input {
@@ -169,7 +168,8 @@ nav {
   margin: 0 auto;
   opacity: 0;
   transition: .8s;
-  bottom: 15rem; }
+  bottom: 15rem;
+  text-align: right; }
 
 .now-playing-title-text {
   color: black; }
