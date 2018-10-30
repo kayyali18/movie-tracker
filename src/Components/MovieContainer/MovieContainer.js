@@ -33,6 +33,8 @@ class MovieContainer extends Component {
             <h3 className='faves'> faves </h3>
             <h3 className='logout'> <NavLink to="/login">log out</NavLink> </h3>
           </section>
+          <div className="arrow" />
+
           <section className='movie-box'>
             {this.makeMovies()}
           </section>

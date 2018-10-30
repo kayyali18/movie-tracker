@@ -148,7 +148,9 @@ nav {
   display: none; }
 
 .movie-title {
-  color: black; }
+  color: black;
+  font-size: 2rem;
+  text-align: right; }
 
 .movie-card {
   padding-right: 20px;
@@ -176,6 +178,8 @@ nav {
   padding: 10px;
   background-color: white;
   box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767); }
+  .movie-img:hover {
+    color: red; }
 
 .faves, a {
   color: gray;
@@ -184,3 +188,7 @@ nav {
   cursor: pointer; }
   .faves:hover, a:hover {
     color: lightgray; }
+
+.arrow {
+  background: url center/cover url("../Assets/caret.png");
+  width: 20px; }
