@@ -1,15 +1,17 @@
 import * as API from '../utils/api'
+import {loginUser, wrongCredentials, createAccountDisplay, isAuthenticated} from '../Actions'
 
 
 export const addFavThunk = (movie, userID) => {
   return async (dispatch) => {
     try {
       const response = await API.postFav(movie, userID)
-      console.log (response)
+      if (!response.ok) throw Error(response.statusText)
       //dispatch{addedtofavs}
       //dispatch{addfavs}
       //dispatch{removefavs}
     } catch (error) {
+      console.log (error)
 
     }
   }
@@ -17,7 +19,6 @@ export const addFavThunk = (movie, userID) => {
 
 
 
-import {loginUser, wrongCredentials, createAccountDisplay, isAuthenticated} from '../Actions'
 
 
 export const fetchUser = (email, password) => {

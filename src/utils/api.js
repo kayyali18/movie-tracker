@@ -58,7 +58,7 @@ export const addFav2DB = async (movie, id) => {
 export const postFav = async (movie, id) => {
   const url = `http://localhost:3000/api/users/favorites/new`
   const data = {
-    movie_id: movie.movie_id,
+    movie_id: movie.id,
     user_id: id,
     title: movie.title,
     poster_path: movie.poster,
@@ -66,19 +66,16 @@ export const postFav = async (movie, id) => {
     vote_average: movie.rating,
     overview: movie.overview,
   }
+  console.log (data)
 
   // Default options are marked with *
-  const response = fetch(url, {
+  const response = await fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, cors, *same-origin
     credentials: 'same-origin', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
     },
-    redirect: 'follow', // manual, *follow, error
-    referrer: 'no-referrer', // no-referrer, *client
     body: JSON.stringify(data), // body data type must match "Content-Type" header
   })
-
   return await response.json()
 }
