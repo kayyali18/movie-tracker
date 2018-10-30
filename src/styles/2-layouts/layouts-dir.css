@@ -262,6 +262,7 @@ nav {
   -webkit-transition: .8s;
   transition: .8s;
   bottom: 15rem;
+  text-align: right;
 }
 
 .now-playing-title-text {

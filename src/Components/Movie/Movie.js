@@ -22,7 +22,7 @@ class Movie extends Component {
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">
           {/* <section className="release"> {movie.release_date}</section> */}
-          <p>{movie.overview}</p>
+          <p className="movie-overview">{movie.overview.toLowerCase()}</p>
         </section>
       </article>
 
