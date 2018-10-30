@@ -1,4 +1,4 @@
-import {loginUser, createAccount, createAccountDisplay} from '../Actions'
+import {loginUser, wrongCredentials, createAccountDisplay} from '../Actions'
 import * as API from '../utils/api'
 
 
@@ -9,9 +9,10 @@ export const fetchUser = (email, password) => {
       if (!response.ok) throw Error(response.statusText)
       const user = await response.json()
       dispatch(loginUser(user.data))
-      console.log(user)
+      dispatch(wrongCredentials(false))
     } catch (error) {
       dispatch(createAccountDisplay('active'))
+      dispatch(wrongCredentials(true))
     }
   }
 }
