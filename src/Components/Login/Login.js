@@ -139,9 +139,9 @@ export const mapDispatchToProps = dispatch => ({
   loginCheck: (user, password) => dispatch(loginUser(user, password)),
 })
 
-const exportWith = withRouter(connect(
+const exportWithRouter = withRouter(connect(
   null,
   mapDispatchToProps
 )(Login))
 
-export default exportWith;
+export default exportWithRouter;

@@ -40,6 +40,6 @@ const mapDispatchToProps = (dispatch) => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
 })
 
-const app = withRouter(connect(null, mapDispatchToProps)(App))
+const exportWithRouter = withRouter(connect(null, mapDispatchToProps)(App))
 
-export default app;
+export default exportWithRouter;
