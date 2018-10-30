@@ -213,6 +213,23 @@ nav {
 .img-box {
   position: relative; }
 
+.arrow {
+  background: center/cover url("./Assets/caret.png");
+  height: 26px;
+  color: black;
+  width: 26px;
+  position: fixed;
+  bottom: 18rem;
+  animation: bouncey 2s linear infinite; }
+
+@keyframes bouncey {
+  0% {
+    right: 15px; }
+  50% {
+    right: 0px; }
+  100% {
+    right: 15px; } }
+
 @media (min-width: 900px) {
   .movie-box {
     width: 80rem;

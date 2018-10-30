@@ -32,11 +32,10 @@ class MovieContainer extends Component {
           <section className="text-box">
             <Nav />
           </section>
-          <div className="arrow" />
-
           <section className='movie-box'>
             {this.makeMovies()}
           </section>
+          <div className="arrow" />
         </section>
       </section>
     )
