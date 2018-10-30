@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
-
 import { connect } from 'react-redux'
+<<<<<<< HEAD
 import { Route, NavLink } from 'react-router-dom'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
 import { loginUser, createAccountDisplay } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
 import { createAccountThunk } from '../../Thunks/createAccount';
+=======
+import { BrowserRouter, Route, withRouter, Link, NavLink, Redirect } from 'react-router-dom';
+import { loginUser } from '../../Actions/TheActionMan';
+import App from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Components/App.js';
+>>>>>>> 94aa23b1293935aed0323e3ac301fce9a45aed95
 
 class Login extends Component {
   constructor(props) {
@@ -58,8 +63,16 @@ class Login extends Component {
     const { email, username, password } = this.state
     return (
       <section className="login-main">
+<<<<<<< HEAD
         <HeaderLogin />
         {/* <nav>
+=======
+        <div className="app-logo"></div>
+        <h1 className="app-title">Now Playing</h1>
+        <p>An Elegant Movie Tracker App</p>
+        <div className="create-account">Create Account</div>
+        <nav>
+>>>>>>> 94aa23b1293935aed0323e3ac301fce9a45aed95
           <NavLink to="/">Home</NavLink>
         </nav> */}
         <div className="user-image"></div>
@@ -100,6 +113,7 @@ class Login extends Component {
             </form>
           </section>
 
+<<<<<<< HEAD
           <form
             className="login-new-user"
             onSubmit={this.createAccount}
@@ -145,6 +159,52 @@ class Login extends Component {
             <div className="create-account" onClick={this.toggleActive}>Back to Login</div>
           </form>
         </section>
+=======
+        <form
+          className="login-new-user"
+          onSubmit={this.submitLogin}
+          aria-label="Create new MovieTracker account"
+        >
+          <h2 className="new-user-h2">Create Account</h2>
+          <label>
+            <input
+              className="new-user-username"
+              tabIndex="1"
+              name="username"
+              placeholder="Username"
+              type="text"
+              value={username}
+              onChange={this.handleChange}
+            />
+          </label>
+          <hr />
+          <label>
+            <input
+              className="new-user-email"
+              tabIndex="2"
+              name="email"
+              placeholder="Email"
+              type="email"
+              value={email}
+              onChange={this.handleChange}
+            />
+          </label>
+          <hr />
+          <label>
+            <input
+              className="new-user-password"
+              tabIndex="3"
+              name="password"
+              placeholder="Password"
+              type="password"
+              value={password}
+              onChange={this.handleChange}
+            />
+          </label>
+          <hr />
+          <NavLink to='/'><button tabIndex="1">Submit</button></NavLink>
+        </form>
+>>>>>>> 94aa23b1293935aed0323e3ac301fce9a45aed95
       </section>
     )
   }
@@ -160,7 +220,14 @@ export const mapDispatchToProps = dispatch => ({
   createAccount: (username, email, password) => dispatch(createAccountThunk(username, email, password))
 })
 
+<<<<<<< HEAD
 export default connect(
   mapStateToProps,
+=======
+const exportWithRouter = withRouter(connect(
+  null,
+>>>>>>> 94aa23b1293935aed0323e3ac301fce9a45aed95
   mapDispatchToProps
-)(Login)
+)(Login))
+
+export default exportWithRouter;
