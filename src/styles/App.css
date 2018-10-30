@@ -176,9 +176,10 @@ nav {
 
 .movie-box {
   display: flex;
-  width: 20rem;
+  width: 19.8rem;
   overflow: scroll;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 33rem; }
 
 .text-box {
   font-size: 4rem;
@@ -211,3 +212,11 @@ nav {
 
 .img-box {
   position: relative; }
+
+@media (min-width: 900px) {
+  .movie-box {
+    border: 2px solid red; } }
+
+@media (max-width: 600px) {
+  .movie-box {
+    border: 2px solid red; } }
