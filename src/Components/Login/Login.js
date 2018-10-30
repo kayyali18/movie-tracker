@@ -3,8 +3,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
-import { loginUser, createAccount } from '../../Actions'
+import { loginUser, createAccountDisplay } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
+import { createAccountThunk } from '../../Thunks/createAccount';
 
 class Login extends Component {
   constructor(props) {
@@ -13,7 +14,6 @@ class Login extends Component {
       // email: 'tman2272@aol.com',
       email: '',
       username: '',
-      formState: '',
       password: '',
       // password: 'password',
     }
@@ -22,10 +22,10 @@ class Login extends Component {
   async componentDidMount() { }
 
   toggleActive = () => {
-    const {createAccount} = this.props
+    const {createAccountDisplay} = this.props
     this.props.active === ""
-      ? createAccount('active')
-      : createAccount('');
+      ? createAccountDisplay('active')
+      : createAccountDisplay('');
   };
 
   resetForm = () => {
@@ -44,6 +44,15 @@ class Login extends Component {
     fetchUser(email, password)
     this.resetForm()
   }
+
+  createAccount = e => {
+    const {createAccount} = this.props
+    const {email, password, username} = this.state
+    e.preventDefault()
+    createAccount(username, email, password)
+    this.resetForm()
+  }
+
 
   render() {
     const { email, username, password } = this.state
@@ -93,7 +102,7 @@ class Login extends Component {
 
           <form
             className="login-new-user"
-            onSubmit={this.submitLogin}
+            onSubmit={this.createAccount}
             aria-label="Create new MovieTracker account"
           >
             <h2 className="new-user-h2">Create Account</h2>
@@ -142,12 +151,13 @@ class Login extends Component {
 }
 
 export const mapStateToProps = state => ({
-  active: state.createAccount.class
+  active: state.createAccountDisplay.class
 })
 
 export const mapDispatchToProps = dispatch => ({
   fetchUser: (user, password) => dispatch(fetchUser(user, password)),
-  createAccount: (string) => dispatch(createAccount(string))
+  createAccountDisplay: (string) => dispatch(createAccountDisplay(string)),
+  createAccount: (username, email, password) => dispatch(createAccountThunk(username, email, password))
 })
 
 export default connect(
