@@ -14,7 +14,6 @@ export const fetchUser = (email, password) => {
       dispatch(wrongCredentials(false))
     } catch (error) {
       dispatch(isAuthenticated(false))
-      dispatch(createAccountDisplay('active'))
       dispatch(wrongCredentials(true))
     }
   }

@@ -56,6 +56,7 @@ class Login extends Component {
 
   render() {
     const { email, username, password } = this.state
+    const {wrongCredentials} = this.props
     return (
       <section className="login-main">
         <HeaderLogin />
@@ -69,6 +70,8 @@ class Login extends Component {
             >
               <p>Login</p>
               <h2>Welcome Back</h2>
+              {wrongCredentials ? <p className='wrong-credentials'> Username/Password incorrect</p> : null}
+              
               <label className="email-input">
                 <input
                   tabIndex="0"
@@ -148,7 +151,8 @@ class Login extends Component {
 }
 
 export const mapStateToProps = state => ({
-  active: state.createAccountDisplay.class
+  active: state.createAccountDisplay.class,
+  wrongCredentials: state.wrongCredentials
 })
 
 export const mapDispatchToProps = dispatch => ({
