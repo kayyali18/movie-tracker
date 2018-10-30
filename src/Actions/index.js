@@ -9,6 +9,11 @@ export const userExists = bool => ({
 
 })
 
+export const wrongCredentials = bool => ({
+  type: 'WRONG_CREDENTIALS',
+  wrong: bool
+})
+
 export const createAccountDisplay = string => ({
   type: 'CREATE_ACCOUNT_DISPLAY',
   active: string
