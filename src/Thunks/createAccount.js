@@ -1,4 +1,5 @@
-import {loginUser, createAccount} from '../Actions'
+import {userExists} from '../Actions'
+import {fetchUser} from './fetchUser'
 import * as API from '../utils/api'
 
 
@@ -7,11 +8,10 @@ export const createAccountThunk = (username, email, password) => {
     try {
       const response = await API.createUser(username, email, password)
       if (!response.ok) throw Error(response.statusText)
-      const user = await response.json()
-      // dispatch(loginUser(user.data))
-      console.log(user)
+      dispatch(userExists(false))
+      fetchUser(email, password)
     } catch (error) {
-      // dispatch(createAccountDisplay('active'))
+      dispatch(userExists(true))
     }
   }
 }

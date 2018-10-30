@@ -29,7 +29,6 @@ export const createUser = async (username, email, password) => {
       'content-type': 'application/json',
     }
   })
-
-  console.log (req)
+  return(req)
 
 }
