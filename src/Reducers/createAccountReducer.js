@@ -1,6 +1,6 @@
-export const createAccountReducer = (state = {class: ''}, action) => {
+export const createAccountDisplayReducer = (state = {class: ''}, action) => {
   switch(action.type) {
-    case 'CREATE_ACCOUNT':
+    case 'CREATE_ACCOUNT_DISPLAY':
       return {class: action.active}
 
     default:

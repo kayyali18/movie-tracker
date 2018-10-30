@@ -3,8 +3,9 @@ export const loginUser = (user) => ({
   user
 })
 
-export const createAccount = string => ({
-  type: 'CREATE_ACCOUNT',
+
+export const createAccountDisplay = string => ({
+  type: 'CREATE_ACCOUNT_DISPLAY',
   active: string
 })
 

@@ -1,4 +1,4 @@
-import {loginUser, createAccount} from '../Actions'
+import {loginUser, createAccount, createAccountDisplay} from '../Actions'
 import * as API from '../utils/api'
 
 
@@ -11,7 +11,7 @@ export const fetchUser = (email, password) => {
       dispatch(loginUser(user.data))
       console.log(user)
     } catch (error) {
-      dispatch(createAccount('active'))
+      dispatch(createAccountDisplay('active'))
     }
   }
 }
