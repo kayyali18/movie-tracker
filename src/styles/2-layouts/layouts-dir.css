@@ -258,10 +258,12 @@ nav {
 }
 
 .text-box {
-  font-size: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  font-size: 4rem;
+  margin: 0;
+  padding: -2rem;
+  letter-spacing: -2px;
+  line-height: 65px;
+  margin-bottom: 2rem;
 }
 
 .movie-img {
@@ -269,6 +271,7 @@ nav {
 }
 
 .now-playing-title-text {
-  font-size: 4rem;
+  color: black;
+  text-decoration: none;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
