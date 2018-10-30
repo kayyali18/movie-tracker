@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 
 import { connect } from 'react-redux'
 import { Route, NavLink } from 'react-router-dom'
-import { loginUser } from '../../Actions/TheActionMan'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
+import { loginUser, createAccountDisplay } from '../../Actions'
+import { fetchUser } from '../../Thunks/fetchUser';
+import { createAccountThunk } from '../../Thunks/createAccount';
 
 class Login extends Component {
   constructor(props) {
@@ -12,7 +14,6 @@ class Login extends Component {
       // email: 'tman2272@aol.com',
       email: '',
       username: '',
-      formState: '',
       password: '',
       // password: 'password',
     }
@@ -21,9 +22,10 @@ class Login extends Component {
   async componentDidMount() { }
 
   toggleActive = () => {
-    this.state.formState === ""
-      ? this.setState({ formState: "active" })
-      : this.setState({ formState: "" });
+    const {createAccountDisplay} = this.props
+    this.props.active === ""
+      ? createAccountDisplay('active')
+      : createAccountDisplay('');
   };
 
   resetForm = () => {
@@ -36,12 +38,21 @@ class Login extends Component {
   }
 
   submitLogin = e => {
-    const { loginCheck } = this.props
+    const { fetchUser } = this.props
     const { email, password } = this.state
     e.preventDefault()
-    loginCheck(email, password)
+    fetchUser(email, password)
     this.resetForm()
   }
+
+  createAccount = e => {
+    const {createAccount} = this.props
+    const {email, password, username} = this.state
+    e.preventDefault()
+    createAccount(username, email, password)
+    this.resetForm()
+  }
+
 
   render() {
     const { email, username, password } = this.state
@@ -53,7 +64,7 @@ class Login extends Component {
         </nav> */}
         <div className="user-image"></div>
         <section className='form-container'>
-          <section className={this.state.formState}>
+          <section className={this.props.active}>
             <form
               className="login-form"
               onSubmit={this.submitLogin}
@@ -85,13 +96,13 @@ class Login extends Component {
                 />
               </label>
               <button className='submit-button'>Submit</button>
-              <div class="create-account" onClick={this.toggleActive}>Create Account</div>
+              <div className="create-account" onClick={this.toggleActive}>Create Account</div>
             </form>
           </section>
 
           <form
             className="login-new-user"
-            onSubmit={this.submitLogin}
+            onSubmit={this.createAccount}
             aria-label="Create new MovieTracker account"
           >
             <h2 className="new-user-h2">Create Account</h2>
@@ -131,7 +142,7 @@ class Login extends Component {
               />
             </label>
             <button tabIndex="1" className="new-user-submit">Submit</button>
-            <div class="create-account" onClick={this.toggleActive}>Back to Login</div>
+            <div className="create-account" onClick={this.toggleActive}>Back to Login</div>
           </form>
         </section>
       </section>
@@ -139,11 +150,17 @@ class Login extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  active: state.createAccountDisplay.class
+})
+
 export const mapDispatchToProps = dispatch => ({
-  loginCheck: (user, password) => dispatch(loginUser(user, password)),
+  fetchUser: (user, password) => dispatch(fetchUser(user, password)),
+  createAccountDisplay: (string) => dispatch(createAccountDisplay(string)),
+  createAccount: (username, email, password) => dispatch(createAccountThunk(username, email, password))
 })
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Login)
