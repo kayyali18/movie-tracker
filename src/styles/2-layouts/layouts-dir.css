@@ -10,7 +10,6 @@
 }
 
 .login-main .app-title {
-  letter-spacing: 4px;
   position: relative;
   margin-top: 1.8rem;
 }
@@ -236,9 +235,17 @@ nav {
   display: none;
 }
 
+.movie-title {
+  color: black;
+}
+
 .movie-card {
   padding-right: 20px;
   width: 50rem;
+}
+
+.now-playing-title-text {
+  color: black;
 }
 
 .movie-box {
@@ -259,5 +266,9 @@ nav {
 
 .movie-img {
   width: 19.5rem;
+}
+
+.now-playing-title-text {
+  font-size: 4rem;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
