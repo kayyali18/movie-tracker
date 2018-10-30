@@ -1,13 +1,13 @@
 @charset "UTF-8";
 .login-main {
   width: 375px;
-  margin: auto;
-  height: 100vh; }
+  margin: auto; }
   .login-main .app-header-container {
     text-align: center; }
   .login-main .app-title {
-    position: relative;
-    margin-top: 1.8rem; }
+    margin: 0 auto;
+    color: black;
+    font-size: 3rem; }
   .login-main .app-logo {
     animation: 🎥 100s linear infinite;
     background: center/cover url("./Assets/film.png");
@@ -19,8 +19,6 @@
     top: 70px;
     width: 70px;
     z-index: -1; }
-  .login-main .app-title {
-    color: black; }
   .login-main .app-subtitle {
     letter-spacing: .5px;
     font-weight: 100;
@@ -34,7 +32,7 @@
     position: relative;
     justify-content: center;
     text-align: center;
-    margin: 13rem auto 0 auto;
+    margin: 10rem auto 0 auto;
     width: 80%;
     transition: 2s; }
     .login-main .form-container:hover h2 {
@@ -60,7 +58,7 @@
     height: 4rem;
     margin: 0 auto;
     position: relative;
-    top: 15rem;
+    top: 12rem;
     width: 4rem;
     z-index: 4; }
   .login-main .email-input {
@@ -155,16 +153,33 @@ nav {
 
 .movie-card {
   padding-right: 20px;
+  margin-right: 100px;
   width: 50rem; }
+  .movie-card:hover .date-box {
+    opacity: 1;
+    bottom: 30.5rem; }
+
+.date-box {
+  background-color: rgba(0, 0, 0, 0.692);
+  position: relative;
+  color: white;
+  width: 94%;
+  padding: 10px;
+  margin: 0 auto;
+  opacity: 0;
+  transition: .8s;
+  bottom: 15rem;
+  text-align: right; }
 
 .now-playing-title-text {
   color: black; }
 
 .movie-box {
   display: flex;
-  width: 20rem;
+  width: 19.8rem;
   overflow: scroll;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 33.29rem; }
 
 .text-box {
   font-size: 4rem;
@@ -183,7 +198,7 @@ nav {
   opacity: 1;
   transition: .5s; }
   .movie-img:hover {
-    opacity: .6; }
+    opacity: .8; }
 
 .faves, a {
   color: gray;
@@ -198,15 +213,7 @@ nav {
 .img-box {
   position: relative; }
 
-.date-box {
-  background-color: rgba(0, 0, 0, 0.692);
-  position: relative;
-  bottom: 30.5rem;
-  color: white;
-  width: 94.5%;
-  padding: 10px;
-  margin: 0 auto;
-  z-index: 10; }
-
-.movie-img {
-  top: 3rem; }
+@media (min-width: 900px) {
+  .movie-box {
+    width: 80rem;
+    padding-left: 1rem; } }

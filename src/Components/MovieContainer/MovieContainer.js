@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
+import Nav from '../Nav/Nav'
 
 import Data from '../../Helpers/Datacleaner.js';
 
@@ -29,9 +30,7 @@ class MovieContainer extends Component {
         </nav>
         <section className="even-bigger-movie-box">
           <section className="text-box">
-            <h3 className="now-playing-title-text"> now playing </h3>
-            <h3 className='faves'> faves </h3>
-            <h3 className='logout'> <NavLink to="/login">log out</NavLink> </h3>
+            <Nav />
           </section>
           <div className="arrow" />
 
