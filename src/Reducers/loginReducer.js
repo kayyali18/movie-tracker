@@ -14,7 +14,7 @@ export const loginReducer = (state = {}, action) => {
 export const authenticateReducer = (state = false, action)=>{
   switch(action.type){
     case 'IS_AUTHENTICATED':
-      return action.isAuthenticated
+      return action.isAuthenticated == true;
     default:
       return state
   }

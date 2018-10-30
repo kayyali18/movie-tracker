@@ -16,21 +16,21 @@ import { BrowserRouter,
       } from 'react-router-dom';
 
 
-const fakeAuth = {
-  isAuthenticated: true,
-  authenticate(cb){
-    this.isAuthenticated = true
-    setTimeout(cb, 100)
-  },
-  signout(cb){
-    this.isAuthenticated = false;
-    setTimeout(cb, 100)
-  }
-}
+// const fakeAuth = {
+//   isAuthenticated: true,
+//   authenticate(cb){
+//     this.isAuthenticated = true
+//     setTimeout(cb, 100)
+//   },
+//   signout(cb){
+//     this.isAuthenticated = false;
+//     setTimeout(cb, 100)
+//   }
+// }
 
 const PrivateRoute = ({component: Main, ...rest})=>(
   <Route {...rest} render={(props)=>(
-    fakeAuth.isAuthenticated == true ? <Main {...props}/> : <Redirect to='/login'/>
+    props.isAuthenticated == true ? <Main {...props}/> : <Redirect to='/login'/>
   )} />
 )
 
@@ -57,9 +57,12 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = (state) =>({
+  isAuthenticated: state.isAuthenticated,
+})
+
 const mapDispatchToProps = (dispatch) => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
-  isAuthenticated: () => dispatch(isAuthenticated())
 })
 
 export default connect(
