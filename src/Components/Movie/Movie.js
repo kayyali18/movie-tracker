@@ -10,8 +10,10 @@ class Movie extends Component {
   }
 
   toggleFav = () => {
-    const {toggleFav, movie} = this.props
-    toggleFav(movie)
+    const {toggleFav, movie, userID} = this.props
+    console.log (userID)
+    console.log ('hi')
+    toggleFav(movie, userID)
   }
 
   render() {
@@ -38,8 +40,11 @@ class Movie extends Component {
   }
 }
 
+export const mapStateToProps = state => ({
+  userID: state.user.id
+})
 
 export const mapDispatchToProps = dispatch => ({
-  toggleFav: (fav) => dispatch(addFav(fav))
+  toggleFav: (fav, userID) => dispatch(addFav(fav, userID))
 })
-export default connect(null, mapDispatchToProps)(Movie);
+export default connect(mapStateToProps, mapDispatchToProps)(Movie);

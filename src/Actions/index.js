@@ -24,9 +24,10 @@ export const latestMovies = (movies) =>({
   latestMovies: movies
 })
 
-export const addFav = (movie) => ({
+export const addFav = (movie, userID) => ({
   type: 'ADD_FAV',
-  movie
+  movie,
+  userID
 })
 
 export const removeFav = (movie) => ({
