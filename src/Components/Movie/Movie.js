@@ -9,18 +9,19 @@ class Movie extends Component {
 
   render() {
 
-    const imgURL = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
+    const imgURL = 'https://image.tmdb.org/t/p/w500';
 
     const { movie } = this.props;
 
     return (
 
       <article className="movie-card">
-
         <img className="movie-img" src={`${imgURL}${movie.poster}`} />
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
-        {/* <time dateTime={movie.release_date}>Release date: {movie.release_date}</time> */}
-        {/* <p>Overview: {movie.overview}</p> */}
+        <section className="date-box">
+          <section dateTime={movie.release_date}>Release date: {movie.release_date}</section>
+          <p>Overview: {movie.overview}</p>
+        </section>
       </article>
 
     )

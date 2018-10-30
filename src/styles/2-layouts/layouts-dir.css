@@ -271,13 +271,17 @@ nav {
 .movie-img {
   width: 19.5rem;
   padding: 10px;
-  background-color: white;
+  background-color: black;
   -webkit-box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
           box-shadow: 3px 3px 10px rgba(116, 116, 116, 0.767);
+  opacity: 1;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .movie-img:hover {
-  background-color: red;
+  opacity: .6;
+  opacity: 55s ease-in-out;
 }
 
 .faves, a {
@@ -294,6 +298,15 @@ nav {
 
 .faves .test, a .test {
   width: 100%;
-  background-color: green;
+}
+
+.date-box {
+  background-color: white;
+  position: relative;
+  bottom: 100%;
+  color: black;
+  width: 93.5%;
+  padding: 10px;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=layouts-dir.css.map */
