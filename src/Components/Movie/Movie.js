@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import * as api from '../../Helpers/apiCaller.js';
+import Faves from '../../Faves/Faves'
 
 class Movie extends Component {
   constructor() {
@@ -17,6 +18,7 @@ class Movie extends Component {
 
       <article className="movie-card">
         <section className='img-box'>
+          <Faves />
           <img className="movie-img" src={`${imgURL}${movie.poster}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>

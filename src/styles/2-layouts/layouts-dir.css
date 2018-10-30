@@ -321,10 +321,63 @@ nav {
   position: relative;
 }
 
+.arrow {
+  background: center/cover url("./Assets/caret.png");
+  height: 26px;
+  color: black;
+  width: 26px;
+  position: fixed;
+  bottom: 18rem;
+  -webkit-animation: bouncey 2s linear infinite;
+          animation: bouncey 2s linear infinite;
+}
+
+@-webkit-keyframes bouncey {
+  0% {
+    right: 15px;
+  }
+  50% {
+    right: 0px;
+  }
+  100% {
+    right: 15px;
+  }
+}
+
+@keyframes bouncey {
+  0% {
+    right: 15px;
+  }
+  50% {
+    right: 0px;
+  }
+  100% {
+    right: 15px;
+  }
+}
+
 @media (min-width: 900px) {
   .movie-box {
     width: 80rem;
     padding-left: 1rem;
   }
+}
+
+.fave-star {
+  background: center/cover url("./Assets/star.png");
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.fave-star:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 /*# sourceMappingURL=layouts-dir.css.map */
