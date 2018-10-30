@@ -243,4 +243,7 @@ nav {
   right: 10px;
   position: absolute;
   cursor: pointer;
-  z-index: 9; }
+  z-index: 9;
+  transition: .2s; }
+  .fave-star:hover {
+    transform: scale(1.5); }
