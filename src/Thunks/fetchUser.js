@@ -1,4 +1,4 @@
-import {loginUser, wrongCredentials, createAccountDisplay, isAuthenticated} from '../Actions'
+import { loginUser, wrongCredentials, isAuthenticated } from '../Actions'
 import * as API from '../utils/api'
 
 
