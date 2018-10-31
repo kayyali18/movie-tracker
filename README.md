@@ -44,7 +44,7 @@ cd into the backend directory
 * Unit and integration Testing
 * Code QA
 
-#### nick dambroso- Lead Designer
+#### nick dambrosio- Lead Designer
 * Design and layout
 * Unit and integration testing
 * React component/container development
@@ -60,10 +60,6 @@ cd into the backend directory
 * Git/GitHub
 
 ### Design and Comps (early, pre-feature implementation/prototypes)
-
-Early concepting for these project took on theme of clean, minimilist design. 
-![desktop-scroll-mock](https://user-images.githubusercontent.com/29719272/47746098-f7ed1300-dc4a-11e8-8af6-d3bbe3e4dc62.png)
-![desktop-login-bluebackleftcentered](https://user-images.githubusercontent.com/29719272/47746105-fae80380-dc4a-11e8-9eab-c34fb558d37c.png)
 
 ### Wireframes
 
