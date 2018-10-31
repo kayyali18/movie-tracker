@@ -13,7 +13,7 @@ class Movie extends Component {
   }
 
   toggleFav = () => {
-    const {toggleFav, movie, userID, resetFavs} = this.props
+    const { toggleFav, movie, userID, resetFavs } = this.props
     toggleFav(movie, userID)
     resetFavs()
 
@@ -29,12 +29,11 @@ class Movie extends Component {
 
       <article className="movie-card">
         <section className='img-box'>
-          <div className="fave-star" onClick={this.toggleFav}/>
+          <div className="fave-star" onClick={this.toggleFav} />
           <img className="movie-img" src={`${imgURL}${movie.poster}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">
-          {/* <section className="release"> {movie.release_date}</section> */}
           <p className="movie-overview">{movie.overview.toLowerCase()}</p>
         </section>
       </article>
@@ -52,3 +51,11 @@ export const mapDispatchToProps = dispatch => ({
 
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);
+
+Movie.propTypes = {
+  toggleFav: PropTypes.func,
+  movie: PropTypes.object,
+  movieID: PropTypes.number,
+  userID: propTypes.number,
+  resetFavs: propTypes.func
+}
