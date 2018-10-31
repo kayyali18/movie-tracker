@@ -4,7 +4,6 @@ import PrivateRoute from '../Components/PrivateRoute.js';
 import { latestMovies, isAuthenticated } from '../Actions';
 import { BrowserRouter, Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import Main from './Main/Main';
-import Nav from './Nav/Nav';
 import Login from './Login/Login'
 import * as api from '../Helpers/apiCaller'
 import '../styles/App.css';
@@ -22,17 +21,17 @@ class App extends Component {
   }
 
   render() {
-    return(
-          <div>
-            {this.props.isAuthenticated ? <Redirect to='/main' /> : <Redirect to='/login'/> }
-            <Route exact path='/main' props={this.props} component={Main} />
-            <Route exact path='/login' component={Login} />
-          </div>
+    return (
+      <div>
+        {this.props.isAuthenticated ? <Redirect to='/main' /> : <Redirect to='/login' />}
+        <Route exact path='/main' props={this.props} component={Main} />
+        <Route exact path='/login' component={Login} />
+      </div>
     );
   }
 }
 
-const mapStateToProps = (state) =>({
+const mapStateToProps = (state) => ({
   isAuthenticated: state.isAuthenticated,
 })
 

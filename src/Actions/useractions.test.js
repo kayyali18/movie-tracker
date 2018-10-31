@@ -1,7 +1,4 @@
-import React from 'react';
 import * as Actions from './userActions';
-import { configure } from 'enzyme';
-import { shallow, mount } from 'enzyme';
 
 describe('userActions', () => {
 
