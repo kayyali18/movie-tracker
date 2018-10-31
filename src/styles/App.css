@@ -745,4 +745,11 @@ nav {
   top: 0;
   margin: 0 auto;
 }
+
+.faves-counter {
+  position: absolute;
+  right: 45px;
+  bottom: -5px;
+  color: gray;
+}
 /*# sourceMappingURL=app.css.map */

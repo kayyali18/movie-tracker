@@ -63,6 +63,7 @@ class MovieContainer extends Component {
             <section className="text-box">
               <Nav />
             </section>
+            <h1 className="faves-counter">faves: {this.props.faveMovies.length}</h1>
             <section className='movie-box'>
               {this.makeMovies()}
             </section>
