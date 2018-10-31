@@ -5,6 +5,7 @@
   .app-header-container 
     text-align: left
     margin: 0;
+    line-height: 75px
 
   .app-title
     margin: 0 auto
@@ -16,14 +17,15 @@
   .app-subtitle
     position: relative
     letter-spacing: -2px
-    top: 7rem
+    top: 10rem
     font-size: 5rem
+    font-weight: 600
 
   .form-container
     background: #FEFEFE
     border-radius: 3px
     box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767)
-    height: 20rem
+    height: 23rem
     overflow: hidden
     position: relative
     justify-content: center
@@ -38,7 +40,15 @@
       letter-spacing: 2px
       font-weight: 600
       text-transform: uppercase
-      color: $Navy
+
+  .wrong-credentials
+    color: red
+    position: absolute
+    left: 0
+    right: 0
+    letter-spacing: 1px
+    top: 45px
+    margin: 0 auto
     
   h2
     letter-spacing: 1.5px
@@ -92,9 +102,8 @@
     font-size: .7rem
     margin: 0 auto
     padding: 8px 20px
-    top: 50px
+    top: 30px
     position: relative
-    top: 33px
     text-transform: uppercase
     transition: .4s 
     z-index: 3
@@ -111,9 +120,21 @@
     font-size: .8rem
     font-weight: 600
     position: relative
-    bottom: -30px
+    bottom: -50px
     text-transform: uppercase
     transition: .4s
     &:hover 
       filter: brightness(110%)
       border-bottom: 2px solid black
+
+  .create-p
+    margin-top: 6rem !important
+
+.wrong-credentials2
+  color: red
+  position: absolute
+  left: 0
+  right: 0
+  letter-spacing: 1px
+  top: 0
+  margin: 0 auto

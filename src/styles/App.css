@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -342,16 +341,8 @@ textarea {
   width: 100%;
 }
 
-@-webkit-keyframes 🎥 {
-  100% {
-    background-position: 0 958px;
-  }
-}
-
-@keyframes 🎥 {
-  100% {
-    background-position: 0 958px;
-  }
+span {
+  font-size: 1rem;
 }
 
 .new-user-submit {
@@ -569,6 +560,7 @@ nav {
 .login-main .app-header-container {
   text-align: left;
   margin: 0;
+  line-height: 75px;
 }
 
 .login-main .app-title {
@@ -582,8 +574,9 @@ nav {
 .login-main .app-subtitle {
   position: relative;
   letter-spacing: -2px;
-  top: 7rem;
+  top: 10rem;
   font-size: 5rem;
+  font-weight: 600;
 }
 
 .login-main .form-container {
@@ -591,7 +584,7 @@ nav {
   border-radius: 3px;
   -webkit-box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
           box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
-  height: 20rem;
+  height: 23rem;
   overflow: hidden;
   position: relative;
   -webkit-box-pack: center;
@@ -613,7 +606,16 @@ nav {
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #004411;
+}
+
+.login-main .wrong-credentials {
+  color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  letter-spacing: 1px;
+  top: 45px;
+  margin: 0 auto;
 }
 
 .login-main h2 {
@@ -694,9 +696,8 @@ nav {
   font-size: .7rem;
   margin: 0 auto;
   padding: 8px 20px;
-  top: 50px;
+  top: 30px;
   position: relative;
-  top: 33px;
   text-transform: uppercase;
   -webkit-transition: .4s;
   transition: .4s;
@@ -719,7 +720,7 @@ nav {
   font-size: .8rem;
   font-weight: 600;
   position: relative;
-  bottom: -30px;
+  bottom: -50px;
   text-transform: uppercase;
   -webkit-transition: .4s;
   transition: .4s;
@@ -729,5 +730,19 @@ nav {
   -webkit-filter: brightness(110%);
           filter: brightness(110%);
   border-bottom: 2px solid black;
+}
+
+.login-main .create-p {
+  margin-top: 6rem !important;
+}
+
+.wrong-credentials2 {
+  color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  letter-spacing: 1px;
+  top: 0;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=app.css.map */
