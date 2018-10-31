@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
 
-
-
-
 class Movie extends Component {
   constructor() {
     super();
   }
 
   toggleFav = () => {
-    const {toggleFav, movie, userID, resetFavs} = this.props
+    const { toggleFav, movie, userID, resetFavs } = this.props
     toggleFav(movie, userID)
     resetFavs()
 
@@ -27,7 +24,7 @@ class Movie extends Component {
 
       <article className="movie-card">
         <section className='img-box'>
-          <div className="fave-star" onClick={this.toggleFav}/>
+          <div className="fave-star" onClick={this.toggleFav} />
           <img className="movie-img" src={`${imgURL}${movie.poster_path}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
@@ -50,3 +47,10 @@ export const mapDispatchToProps = dispatch => ({
 
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);
+
+Faves.propTypes = {
+  toggleFav: PropTypes.function,
+  user: PropTypes.object,
+  userID: PropTypes.number,
+  resetFaves: PropTypes.function
+}
