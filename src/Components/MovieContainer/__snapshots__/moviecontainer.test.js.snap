@@ -28,7 +28,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
+      "faveMovies": undefined,
+      "getUserFavs": [Function],
       "latestMovies": undefined,
       "store": Object {
         "clearActions": [Function],
@@ -57,6 +58,7 @@ ShallowWrapper {
         },
         "unsubscribe": [Function],
       },
+      "user": undefined,
     },
     "ref": null,
     "rendered": null,
@@ -68,7 +70,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
+        "faveMovies": undefined,
+        "getUserFavs": [Function],
         "latestMovies": undefined,
         "store": Object {
           "clearActions": [Function],
@@ -97,6 +100,7 @@ ShallowWrapper {
           },
           "unsubscribe": [Function],
         },
+        "user": undefined,
       },
       "ref": null,
       "rendered": null,

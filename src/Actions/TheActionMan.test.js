@@ -12,7 +12,7 @@ describe('actions', () => {
         password: 'Ahmad'
       }
     }
-    const result = Actions.loginUser(email, password)
+    const result = Actions.loginUser({email, password})
     expect(result).toEqual(expected);
   })
 })

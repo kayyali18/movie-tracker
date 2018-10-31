@@ -18,29 +18,31 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
-        <Nav />,
-        <Connect(MovieContainer) />,
-        <Connect(Login) />,
+        <Route
+          exact={true}
+          path="/favs"
+          render={[Function]}
+        />,
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/main"
+          props={Object {}}
+        />,
       ],
-      "className": "App",
+      "className": "Main",
     },
     "ref": null,
     "rendered": Array [
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
+        "nodeType": "class",
+        "props": Object {
+          "exact": true,
+          "path": "/favs",
+          "render": [Function],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -49,16 +51,12 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "component": [Function],
+          "exact": true,
+          "path": "/main",
+          "props": Object {},
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -73,29 +71,31 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
-          <Nav />,
-          <Connect(MovieContainer) />,
-          <Connect(Login) />,
+          <Route
+            exact={true}
+            path="/favs"
+            render={[Function]}
+          />,
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/main"
+            props={Object {}}
+          />,
         ],
-        "className": "App",
+        "className": "Main",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
+          "nodeType": "class",
+          "props": Object {
+            "exact": true,
+            "path": "/favs",
+            "render": [Function],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
@@ -104,16 +104,12 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "component": [Function],
+            "exact": true,
+            "path": "/main",
+            "props": Object {},
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
