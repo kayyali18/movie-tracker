@@ -1,13 +1,9 @@
-import React from 'react';
 import * as Actions from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Actions/TheActionMan.js';
-import { configure } from 'enzyme';
-import {shallow, mount} from 'enzyme';
-import rootReducer from '../Reducers/index.js';
 import movieReducer from '/Users/Cierra/Documents/TP/movie-tracker/movie-tracker/src/Reducers/movieReducer.js';
 
-describe('movieReducer', ()=>{
+describe('movieReducer', () => {
 
-  it('should return default state', ()=>{
+  it('should return default state', () => {
     const expected = [];
 
     const result = movieReducer(undefined, {});
@@ -16,14 +12,14 @@ describe('movieReducer', ()=>{
 
   })
 
-  it('should new state with latest movies in store', ()=>{
+  it('should new state with latest movies in store', () => {
     const mockMovies =
       {
         movie: 'movie1'
       }
-    
 
-    const mockAction = Actions.latestMovies([{movie: 'movie1'}]);
+
+    const mockAction = Actions.latestMovies([{ movie: 'movie1' }]);
 
     const expected = [mockMovies];
 

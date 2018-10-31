@@ -1,11 +1,10 @@
-import {userExists} from '../Actions'
-import {fetchUser} from './fetchUser'
+import { userExists } from '../Actions'
 import * as API from '../utils/api'
 
 
 export const createAccountThunk = (username, email, password) => {
   return async (dispatch) => {
-    try { 
+    try {
       const response = await API.createUser(username, email, password)
       if (!response.ok) throw Error(response.statusText)
       const user = await response.json()

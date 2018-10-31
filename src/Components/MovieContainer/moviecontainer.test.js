@@ -1,30 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {shallow, mount} from 'enzyme';
+import { shallow } from 'enzyme';
 import MovieContainer from './MovieContainer';
 import configureStore from 'redux-mock-store';
 
-describe('MovieContainer', ()=>{
+describe('MovieContainer', () => {
 
   const mockStore = configureStore();
   let wrapper;
   let latestMovies;
   let store;
 
-  beforeEach(()=>{
+  beforeEach(() => {
 
-    latestMovies = [{movies: 'movie3'}]
+    latestMovies = [{ movies: 'movie3' }]
 
     store = mockStore(latestMovies);
 
-    wrapper = shallow(<MovieContainer store={store}/>, store);
+    wrapper = shallow(<MovieContainer store={store} />, store);
 
   })
 
-  it('should match the snapshot', ()=>{
+  it('should match the snapshot', () => {
 
     const testState = {
-      latestMovies: [{movies: 'movie2'}]
+      latestMovies: [{ movies: 'movie2' }]
     }
 
     expect(wrapper).toMatchSnapshot();
