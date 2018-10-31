@@ -13,10 +13,8 @@ const Main = (props) => {
         return <FavesContainer props={props} />
       }}
       />
-
+  
       <Route exact path='/main' props={props} component={MovieContainer} />
-
-
 
     </div>
   )

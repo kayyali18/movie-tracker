@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Faves from '../Faves/Faves';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter} from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
@@ -64,4 +64,5 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(FavesContainer);
+const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(FavesContainer));
+export default exportWithRouter;

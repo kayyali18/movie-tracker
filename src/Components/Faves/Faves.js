@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
 import PropTypes from 'prop-types';
 
-
 class Faves extends Component {
   constructor() {
     super();
