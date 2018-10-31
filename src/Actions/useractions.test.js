@@ -1,12 +1,11 @@
 import React from 'react';
 import * as Actions from './userActions';
 import { configure } from 'enzyme';
-import {shallow, mount} from 'enzyme';
-import rootReducer from '../Reducers/index.js'
+import { shallow, mount } from 'enzyme';
 
-describe('userActions', ()=>{
+describe('userActions', () => {
 
-  it('should have an action of type ADD_FAVORITE', ()=>{
+  it('should have an action of type ADD_FAVORITE', () => {
 
     const id = 2;
 
@@ -16,7 +15,7 @@ describe('userActions', ()=>{
     }
   })
 
-  it('should have an action of type DELETE_FAVORITE', ()=>{
+  it('should have an action of type DELETE_FAVORITE', () => {
 
     const id = 3;
 
