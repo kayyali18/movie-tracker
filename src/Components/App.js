@@ -45,3 +45,9 @@ const mapDispatchToProps = (dispatch) => ({
 const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
 
 export default exportWithRouter;
+
+App.propTypes = {
+  latestMovies: PropTypes.object,
+  nowPlaying: PropTypes.object,
+  user: PropTypes.object
+}
