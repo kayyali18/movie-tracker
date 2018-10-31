@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 import PropTypes from 'prop-types';
+import Faves from '../Faves/Faves';
 
 class MovieContainer extends Component {
   constructor() {
@@ -30,29 +31,55 @@ class MovieContainer extends Component {
     return movies;
   }
 
-  render() {
+  makeFaves = () => {
+    const { faveMovies } = this.props;
 
-    return (
-      <section>
-        <section className="even-bigger-movie-box">
-          <section className="text-box">
-            <Nav />
+    const movies = faveMovies.map(movie => {
+      return <Faves movie={movie} resetFavs={this.resetFavs} key={movie.id} />
+    })
+
+    return movies;
+  }
+
+  render() {
+    if (this.props.faveSelected && this.props.faveMovies.length) {
+      return (
+        <section>
+          <section className="even-bigger-movie-box">
+            <section className="text-box">
+              <Nav />
+            </section>
+            <section className='movie-box'>
+              {this.makeFaves()}
+            </section>
+            <div className="arrow" />
           </section>
-          <section className='movie-box'>
-            {this.makeMovies()}
-          </section>
-          <div className="arrow" />
         </section>
-      </section>
-    )
+      )
+    } else {
+      return (
+        <section>
+          <section className="even-bigger-movie-box">
+            <section className="text-box">
+              <Nav />
+            </section>
+            <section className='movie-box'>
+              {this.makeMovies()}
+            </section>
+            <div className="arrow" />
+          </section>
+        </section>
+      )
+    }
   }
 }
 
 
-const mapStateToProps = ({ movies, faveMovies, user }) => ({
+const mapStateToProps = ({ movies, faveMovies, user, faveSelected }) => ({
   latestMovies: movies,
   faveMovies,
-  user
+  user,
+  faveSelected
 
 })
 
