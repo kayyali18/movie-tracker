@@ -8,6 +8,7 @@ import Nav from './Nav/Nav';
 import Login from './Login/Login'
 import * as api from '../Helpers/apiCaller'
 import '../styles/App.css';
+import { favsLocalThunk } from '../Thunks/favsLocal.js';
 
 class App extends Component {
   constructor(props) {
@@ -16,9 +17,10 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const { latestMovies } = this.props;
+    const { latestMovies, user, getUserFavs } = this.props;
     const nowPlaying = await api.fetchNowPlaying()
     latestMovies(nowPlaying)
+    getUserFavs(user.id)
   }
 
   render() {
@@ -34,10 +36,12 @@ class App extends Component {
 
 const mapStateToProps = (state) =>({
   isAuthenticated: state.isAuthenticated,
+  user: state.user
 })
 
 const mapDispatchToProps = (dispatch) => ({
   latestMovies: movies => dispatch(latestMovies(movies)),
+  getUserFavs: id => dispatch(favsLocalThunk(id))
 })
 
 const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

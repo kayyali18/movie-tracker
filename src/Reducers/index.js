@@ -5,7 +5,7 @@ import {userExistsReducer} from './userExistsReducer';
 import {wrongCredentialsReducer} from './wrongCredentialsReducer';
 import {createAccountDisplayReducer} from './createAccountReducer';
 import { authenticateReducer } from './authenticateReducer';
-import { toggleFavReducer } from './toggleFavReducer';
+import { favsLocalReducer } from './favsLocalReducer';
 
 const rootReducer = combineReducers({
   movies: movieReducer,
@@ -14,7 +14,7 @@ const rootReducer = combineReducers({
   userExists: userExistsReducer,
   wrongCredentials: wrongCredentialsReducer,
   isAuthenticated: authenticateReducer,
-  favs: toggleFavReducer
+  favs: favsLocalReducer
 })
 
 export default rootReducer;

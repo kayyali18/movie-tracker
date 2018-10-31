@@ -35,6 +35,11 @@ export const removeFav = (movie) => ({
   movie
 })
 
+export const setFavLocal = favs => ({
+  type: 'FAV_LOCAL',
+  favs
+})
+
 export const isAuthenticated = (bool) =>({
   type: 'IS_AUTHENTICATED',
   isAuthenticated: bool

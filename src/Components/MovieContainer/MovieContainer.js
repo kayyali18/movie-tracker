@@ -3,19 +3,28 @@ import Movie from '../Movie/Movie';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
-
-import Data from '../../Helpers/Datacleaner.js';
+import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
 class MovieContainer extends Component {
   constructor() {
     super();
   }
 
+  componentDidMount() {
+    const { user, getUserFavs } = this.props;
+    getUserFavs(user.id)
+  }
+
+  resetFavs = () => {
+    const { user, getUserFavs } = this.props;
+    getUserFavs(user.id)
+  }
+
   makeMovies = () => {
     const { latestMovies } = this.props;
 
     const movies = latestMovies.map(movie => {
-      return <Movie movie={movie} key={movie.id} />
+      return <Movie movie={movie} resetFavs={this.resetFavs} key={movie.id} />
     })
 
     return movies;
@@ -43,9 +52,16 @@ class MovieContainer extends Component {
 }
 
 
-const mapStateToProps = ({ movies, faveMovies }) => ({
+const mapStateToProps = ({ movies, faveMovies, user }) => ({
   latestMovies: movies,
-  faveMovies
+  faveMovies,
+  user
+
 })
 
-export default connect(mapStateToProps, null)(MovieContainer);
+const mapDispatchToProps = (dispatch) => ({
+  getUserFavs: id => dispatch(favsLocalThunk(id))
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(MovieContainer);

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import * as api from '../../Helpers/apiCaller.js';
 import { connect } from 'react-redux';
-import { toggleFavReducer } from '../../Reducers/toggleFavReducer.js';
-import { addFav } from '../../Actions/index.js';
 import { addFavThunk } from '../../Thunks/addFav';
+import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
 
 
@@ -14,8 +13,10 @@ class Movie extends Component {
   }
 
   toggleFav = () => {
-    const {toggleFav, movie, userID} = this.props
+    const {toggleFav, movie, userID, resetFavs} = this.props
     toggleFav(movie, userID)
+    resetFavs()
+
   }
 
   render() {
@@ -48,5 +49,6 @@ export const mapStateToProps = state => ({
 
 export const mapDispatchToProps = dispatch => ({
   toggleFav: (movie, userID) => dispatch(addFavThunk(movie, userID))
+
 })
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);

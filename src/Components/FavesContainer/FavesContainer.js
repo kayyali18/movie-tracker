@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import Movie from '../Movie/Movie';
+import Faves from '../Faves/Faves';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
-
-import Data from '../../Helpers/Datacleaner.js';
+import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
 class FavesContainer extends Component {
   constructor() {
     super();
   }
 
-  makeMovies = () => {
-    const { latestMovies } = this.props;
+  componentDidMount() {
+    const { user, getUserFavs } = this.props;
+    getUserFavs(user.id)
+  }
 
-    const movies = latestMovies.map(movie => {
-      return <Movie movie={movie} key={movie.id} />
+  resetFavs = () => {
+    const { user, getUserFavs } = this.props;
+    getUserFavs(user.id)
+  }
+
+  makeMovies = () => {
+    const { faveMovies } = this.props;
+
+    const movies = faveMovies.map(movie => {
+      return <Faves movie={movie} resetFavs={this.resetFavs} key={movie.id} />
     })
 
     return movies;
@@ -42,8 +52,16 @@ class FavesContainer extends Component {
 }
 
 
-const mapStateToProps = ({ movies }) => ({
-  latestMovies: movies
+const mapStateToProps = ({ movies, faveMovies, user }) => ({
+  latestMovies: movies,
+  faveMovies,
+  user
+
 })
 
-export default connect(mapStateToProps, null)(FavesContainer);
+const mapDispatchToProps = (dispatch) => ({
+  getUserFavs: id => dispatch(favsLocalThunk(id))
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(FavesContainer);
