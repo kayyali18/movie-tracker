@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import PrivateRoute from '../Components/PrivateRoute.js';
 import { latestMovies, isAuthenticated } from '../Actions';
-import { BrowserRouter, Route, withRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, withRouter, Redirect } from 'react-router-dom';
 import Main from './Main/Main';
 import Login from './Login/Login'
 import * as api from '../Helpers/apiCaller'
