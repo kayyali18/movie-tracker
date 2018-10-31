@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Movie from '../Movie/Movie';
+import Faves from '../Faves/Faves';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
-class MovieContainer extends Component {
+class FavesContainer extends Component {
   constructor() {
     super();
   }
@@ -21,10 +21,10 @@ class MovieContainer extends Component {
   }
 
   makeMovies = () => {
-    const { latestMovies } = this.props;
+    const { faveMovies } = this.props;
 
-    const movies = latestMovies.map(movie => {
-      return <Movie movie={movie} resetFavs={this.resetFavs} key={movie.id} />
+    const movies = faveMovies.map(movie => {
+      return <Faves movie={movie} resetFavs={this.resetFavs} key={movie.id} />
     })
 
     return movies;
@@ -64,4 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
 })
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(MovieContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FavesContainer);

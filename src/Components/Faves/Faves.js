@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import * as api from '../../Helpers/apiCaller.js';
 import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
-import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
 
 
@@ -30,11 +28,11 @@ class Movie extends Component {
       <article className="movie-card">
         <section className='img-box'>
           <div className="fave-star" onClick={this.toggleFav}/>
-          <img className="movie-img" src={`${imgURL}${movie.poster}`} />
+          <img className="movie-img" src={`${imgURL}${movie.poster_path}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">
-          {/* <section className="release"> {movie.release_date}</section> */}
+          <section className="release"> {movie.release_date}</section>
           <p className="movie-overview">{movie.overview.toLowerCase()}</p>
         </section>
       </article>

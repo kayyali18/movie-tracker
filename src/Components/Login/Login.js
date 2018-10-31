@@ -160,7 +160,7 @@ export const mapStateToProps = state => ({
 export const mapDispatchToProps = dispatch => ({
   fetchUser: (user, password) => dispatch(fetchUser(user, password)),
   createAccountDisplay: (string) => dispatch(createAccountDisplay(string)),
-  createAccount: (username, email, password) => dispatch(createAccountThunk(username, email, password))
+  createAccount: (username, email, password) => dispatch(createAccountThunk(username, email, password)),
 })
 
 const exportWithRouter = withRouter(connect(

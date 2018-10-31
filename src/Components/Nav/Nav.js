@@ -12,7 +12,9 @@ const Nav = (props) => {
   return (
     <div>
       <h3 className="now-playing-title-text"> now playing </h3>
+      <NavLink to='/main/favs'>
       <h3 className='faves'> faves </h3>
+      </NavLink>
       <NavLink to="/login"><h3 className='logout' onClick={logoutUser}> log out</h3></NavLink>
     </div>
   )
