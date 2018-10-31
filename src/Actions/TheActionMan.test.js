@@ -1,8 +1,4 @@
-import React from 'react';
 import * as Actions from './index';
-import { configure } from 'enzyme';
-import { shallow, mount } from 'enzyme';
-import rootReducer from '../Reducers/index.js'
 
 describe('actions', () => {
   it('takes a username and password to login', () => {
