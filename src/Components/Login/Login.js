@@ -169,3 +169,9 @@ const exportWithRouter = withRouter(connect(
 )(Login))
 
 export default exportWithRouter;
+
+Login.propTypes = {
+  createAccountDisplay: PropTypes.object,
+  wrongCredentials: PropTypes.bool,
+  userExists: PropTypes.bool
+}
