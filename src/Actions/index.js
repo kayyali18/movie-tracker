@@ -19,7 +19,12 @@ export const createAccountDisplay = string => ({
   active: string
 })
 
-export const latestMovies = (movies) =>({
+export const switchFave = (bool) => ({
+  type: 'SWITCH_FAVE',
+  selected: bool
+})
+
+export const latestMovies = (movies) => ({
   type: 'NOW_PLAYING',
   latestMovies: movies
 })
@@ -40,7 +45,7 @@ export const setFavLocal = favs => ({
   favs
 })
 
-export const isAuthenticated = (bool) =>({
+export const isAuthenticated = (bool) => ({
   type: 'IS_AUTHENTICATED',
   isAuthenticated: bool
 })
