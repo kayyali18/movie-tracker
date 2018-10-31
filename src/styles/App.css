@@ -748,8 +748,8 @@ nav {
 
 .faves-counter {
   position: absolute;
-  right: 45px;
-  bottom: -5px;
+  left: 40px;
+  bottom: 20px;
   color: gray;
 }
 /*# sourceMappingURL=app.css.map */
