@@ -1,17 +1,25 @@
 /* eslint-disable */
 
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {shallow, mount} from 'enzyme';
-import Main from './Main';
+import Movie from './Movie';
 
 
-describe('Main', ()=>{
+describe('Movie', ()=>{
 
   let wrapper;
+  let props;
 
   beforeEach(()=>{
-    wrapper = shallow(<Main />);
+
+    let props = {
+      movie: [{movie: 'movie1'}]
+    }
+
+    wrapper = shallow(<Movie movie={props}/>);
+
   })
 
   it('should match the snapshot', ()=>{

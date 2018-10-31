@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import * as Actions from './index';
 
 describe('actions', () => {

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import {loginUser} from '../../Actions'
 import {fetchUser} from '../fetchUser'
 

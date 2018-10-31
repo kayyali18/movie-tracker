@@ -1,5 +1,5 @@
 import * as API from '../utils/api'
-import {loginUser, wrongCredentials, createAccountDisplay, isAuthenticated} from '../Actions'
+import {loginUser, wrongCredentials, isAuthenticated} from '../Actions'
 
 
 export const addFavThunk = (movie, userID) => {
@@ -19,7 +19,7 @@ const checkFavs = (favs, ourMovie) => {
   console.log (favs)
   let bool = false;
   favs.data.forEach(movie => {
-    if (movie.movie_id == ourMovie.id ) bool = true
+    if (movie.movie_id === ourMovie.id ) bool = true
   });
  return bool
 

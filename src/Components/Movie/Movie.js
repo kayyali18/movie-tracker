@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-import * as api from '../../Helpers/apiCaller.js';
 import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
-import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 import PropTypes from 'prop-types';
 
 
 class Movie extends Component {
-  constructor() {
-    super();
-  }
-
   toggleFav = () => {
     const { toggleFav, movie, userID, resetFavs } = this.props
     toggleFav(movie, userID)
@@ -28,7 +22,7 @@ class Movie extends Component {
       <article className="movie-card">
         <section className='img-box'>
           <div className="fave-star" onClick={this.toggleFav} />
-          <img className="movie-img" src={`${imgURL}${movie.poster}`} />
+          <img className="movie-img" alt='' src={`${imgURL}${movie.poster}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">

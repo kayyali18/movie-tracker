@@ -4,9 +4,6 @@ import { addFavThunk } from '../../Thunks/addFav';
 import PropTypes from 'prop-types';
 
 class Faves extends Component {
-  constructor() {
-    super();
-  }
 
   toggleFav = () => {
     const { toggleFav, movie, userID, resetFavs } = this.props
@@ -26,7 +23,7 @@ class Faves extends Component {
       <article className="movie-card">
         <section className='img-box'>
           <div className="fave-star" onClick={this.toggleFav} />
-          <img className="movie-img" src={`${imgURL}${movie.poster_path}`} />
+          <img className="movie-img" alt='' src={`${imgURL}${movie.poster_path}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
         <section className="date-box">

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { latestMovies, isAuthenticated } from '../Actions';
+import { latestMovies } from '../Actions';
 import { Route, withRouter, Redirect } from 'react-router-dom';
 import Main from './Main/Main';
 import Login from './Login/Login'
@@ -11,10 +11,7 @@ import PropTypes from 'prop-types';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props)
 
-  }
 
   async componentDidMount() {
     const { latestMovies, user, getUserFavs } = this.props;
