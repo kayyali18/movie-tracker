@@ -5,6 +5,7 @@ import { createAccountDisplay } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
 import { createAccountThunk } from '../../Thunks/createAccount';
 import { BrowserRouter, withRouter, NavLink, } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 
 class Login extends Component {
@@ -169,3 +170,9 @@ const exportWithRouter = withRouter(connect(
 )(Login))
 
 export default exportWithRouter;
+
+Login.propTypes = {
+  createAccountDisplay: PropTypes.object,
+  wrongCredentials: PropTypes.bool,
+  userExists: PropTypes.bool
+}

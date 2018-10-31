@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
+import PropTypes from 'prop-types';
 
 
-
-
-class Movie extends Component {
+class Faves extends Component {
   constructor() {
     super();
   }
 
   toggleFav = () => {
-    const {toggleFav, movie, userID, resetFavs} = this.props
+    const { toggleFav, movie, userID, resetFavs } = this.props
     toggleFav(movie, userID)
     resetFavs()
 
@@ -27,7 +26,7 @@ class Movie extends Component {
 
       <article className="movie-card">
         <section className='img-box'>
-          <div className="fave-star" onClick={this.toggleFav}/>
+          <div className="fave-star" onClick={this.toggleFav} />
           <img className="movie-img" src={`${imgURL}${movie.poster_path}`} />
         </section>
         <h3 className="movie-title">{movie.title.toLowerCase()}</h3>
@@ -49,4 +48,12 @@ export const mapDispatchToProps = dispatch => ({
   toggleFav: (movie, userID) => dispatch(addFavThunk(movie, userID))
 
 })
-export default connect(mapStateToProps, mapDispatchToProps)(Movie);
+export default connect(mapStateToProps, mapDispatchToProps)(Faves);
+
+Faves.propTypes = {
+  movie: PropTypes.object,
+  toggleFav: PropTypes.func,
+  user: PropTypes.object,
+  userID: PropTypes.number,
+  resetFaves: PropTypes.func
+}
