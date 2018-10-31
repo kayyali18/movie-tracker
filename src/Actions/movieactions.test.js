@@ -1,12 +1,8 @@
-import React from 'react';
 import * as Actions from './index';
-import { configure } from 'enzyme';
-import {shallow, mount} from 'enzyme';
-import rootReducer from '../Reducers/index.js'
 
-describe('movieActions', ()=>{
+describe('movieActions', () => {
 
-  it('should have an action of type NOW_PLAYING', ()=>{
+  it('should have an action of type NOW_PLAYING', () => {
 
     let mockMovies = [
       {

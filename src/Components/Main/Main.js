@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-import { Route, NavLink } from 'react-router-dom';
-import Header from '../Header/Header';
-import Nav from '../Nav/Nav';
+import React from 'react';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import FavesContainer from '../FavesContainer/FavesContainer';
 

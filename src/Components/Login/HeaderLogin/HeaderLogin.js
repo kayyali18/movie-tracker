@@ -4,8 +4,8 @@ const HeaderLogin = () => {
   return (
     <div className="app-header-container">
       <div className="app-logo"></div>
-      <h1 className="app-title">now playing</h1>
-      <p className="app-subtitle">movie tracking, easy</p>
+      <h1 className="app-title">now <br /> playing<span>©️</span></h1>
+      <p className="app-subtitle">a movie app</p>
     </div>
   )
 }

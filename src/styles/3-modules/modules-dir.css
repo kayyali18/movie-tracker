@@ -1,0 +1,218 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #171717;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.login-main {
+  width: 375px;
+  margin: auto;
+}
+
+.login-main .app-header-container {
+  text-align: left;
+  margin: 0;
+  line-height: 75px;
+}
+
+.login-main .app-title {
+  margin: 0 auto;
+  color: black;
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+}
+
+.login-main .app-subtitle {
+  position: relative;
+  letter-spacing: -2px;
+  top: 10rem;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.login-main .form-container {
+  background: #FEFEFE;
+  border-radius: 3px;
+  -webkit-box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
+          box-shadow: 8px 8px 5px rgba(116, 116, 116, 0.767);
+  height: 23rem;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 10rem auto 0 auto;
+  width: 80%;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.login-main .form-container:hover h2 {
+  opacity: 1;
+}
+
+.login-main .form-container p {
+  margin-top: 3.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.login-main .wrong-credentials {
+  color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  letter-spacing: 1px;
+  top: 45px;
+  margin: 0 auto;
+}
+
+.login-main h2 {
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+  opacity: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.login-main input {
+  border: none;
+}
+
+.login-main .user-image {
+  background: center/cover url("./Assets/user.png");
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+  top: 12rem;
+  width: 4rem;
+  z-index: 4;
+}
+
+.login-main .email-input {
+  border: none;
+  height: 5rem;
+  outline: none;
+}
+
+.login-main input {
+  padding: 15px;
+  width: 15rem;
+}
+
+.login-main input:focus {
+  outline: none;
+}
+
+.login-main .email-text, .login-main .password-text, .login-main .new-user-username, .login-main .new-user-email, .login-main .new-user-password {
+  color: black;
+}
+
+.login-main .email-text::-webkit-input-placeholder, .login-main .password-text::-webkit-input-placeholder, .login-main .new-user-username::-webkit-input-placeholder, .login-main .new-user-email::-webkit-input-placeholder, .login-main .new-user-password::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.login-main .email-text:-ms-input-placeholder, .login-main .password-text:-ms-input-placeholder, .login-main .new-user-username:-ms-input-placeholder, .login-main .new-user-email:-ms-input-placeholder, .login-main .new-user-password:-ms-input-placeholder {
+  text-align: center;
+}
+
+.login-main .email-text::-ms-input-placeholder, .login-main .password-text::-ms-input-placeholder, .login-main .new-user-username::-ms-input-placeholder, .login-main .new-user-email::-ms-input-placeholder, .login-main .new-user-password::-ms-input-placeholder {
+  text-align: center;
+}
+
+.login-main .email-text::placeholder, .login-main .password-text::placeholder, .login-main .new-user-username::placeholder, .login-main .new-user-email::placeholder, .login-main .new-user-password::placeholder {
+  text-align: center;
+}
+
+.login-main hr {
+  border: 1px solid #747474;
+  color: black;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.login-main .submit-button {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: .7rem;
+  margin: 0 auto;
+  padding: 8px 20px;
+  top: 30px;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: .4s;
+  transition: .4s;
+  z-index: 3;
+}
+
+.login-main .submit-button:focus {
+  outline: none;
+}
+
+.login-main .submit-button:hover {
+  background-color: #424242;
+}
+
+.login-main .create-account {
+  border-bottom: 2px solid transparent;
+  color: black;
+  cursor: pointer;
+  display: inline;
+  font-size: .8rem;
+  font-weight: 600;
+  position: relative;
+  bottom: -50px;
+  text-transform: uppercase;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.login-main .create-account:hover {
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  border-bottom: 2px solid black;
+}
+
+.login-main .create-p {
+  margin-top: 6rem !important;
+}
+
+.wrong-credentials2 {
+  color: red;
+  position: absolute;
+  left: 0;
+  right: 0;
+  letter-spacing: 1px;
+  top: 0;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=modules-dir.css.map */

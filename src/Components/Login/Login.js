@@ -1,28 +1,26 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
-import { loginUser, createAccountDisplay } from '../../Actions'
+import { createAccountDisplay } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
 import { createAccountThunk } from '../../Thunks/createAccount';
-import { BrowserRouter, Route, withRouter, Link, NavLink, Redirect } from 'react-router-dom';
+import { BrowserRouter, withRouter, NavLink, } from 'react-router-dom';
 
 
 class Login extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      // email: 'tman2272@aol.com',
       email: '',
       username: '',
       password: '',
-      // password: 'password',
     }
   }
 
   async componentDidMount() { }
 
   toggleActive = () => {
-    const {createAccountDisplay} = this.props
+    const { createAccountDisplay } = this.props
     this.props.active === ""
       ? createAccountDisplay('active')
       : createAccountDisplay('');
@@ -46,8 +44,8 @@ class Login extends Component {
   }
 
   createAccount = e => {
-    const {createAccount} = this.props
-    const {email, password, username} = this.state
+    const { createAccount } = this.props
+    const { email, password, username } = this.state
     e.preventDefault()
     createAccount(username, email, password)
     this.resetForm()
@@ -56,7 +54,7 @@ class Login extends Component {
 
   render() {
     const { email, username, password } = this.state
-    const {wrongCredentials, userExists} = this.props
+    const { wrongCredentials, userExists } = this.props
     return (
       <section className="login-main">
         <HeaderLogin />
@@ -70,8 +68,8 @@ class Login extends Component {
             >
               <p>Login</p>
               <h2>Welcome Back</h2>
-              {wrongCredentials ? <p className='wrong-credentials'> Username/Password incorrect</p> : null}
-              
+              {wrongCredentials ? <p className='wrong-credentials'> bad email / password</p> : null}
+
               <label className="email-input">
                 <input
                   tabIndex="0"
@@ -105,8 +103,9 @@ class Login extends Component {
             onSubmit={this.createAccount}
             aria-label="Create new MovieTracker account"
           >
-            <h2 className="new-user-h2">Create Account</h2>
-            {userExists ? <p className='wrong-credentials'> Username/Email already exists</p> : null}
+            <p className="create-p">create account</p>
+
+            {userExists ? <p className='wrong-credentials2'> username / email already exists</p> : null}
 
             <label>
               <input
