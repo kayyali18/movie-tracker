@@ -75,9 +75,9 @@ class MovieContainer extends Component {
 }
 
 
-const mapStateToProps = ({ movies, faveMovies, user, faveSelected }) => ({
+const mapStateToProps = ({ movies, favs, user, faveSelected }) => ({
   latestMovies: movies,
-  faveMovies,
+  faveMovies: favs,
   user,
   faveSelected
 
