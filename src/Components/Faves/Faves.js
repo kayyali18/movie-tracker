@@ -49,8 +49,8 @@ export const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(Movie);
 
 Faves.propTypes = {
-  toggleFav: PropTypes.function,
+  toggleFav: PropTypes.func,
   user: PropTypes.object,
   userID: PropTypes.number,
-  resetFaves: PropTypes.function
+  resetFaves: PropTypes.func
 }
