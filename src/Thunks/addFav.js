@@ -9,12 +9,7 @@ export const addFavThunk = (movie, userID) => {
       const bool = checkFavs(response, movie)
       if (bool) API.deleteFav(movie, userID)
       else API.postFav(movie, userID)
-     
-      //dispatch{addedtofavs}
-      //dispatch{addfavs}
-      //dispatch{removefavs}
     } catch (error) {
-      console.log (error)
 
     }
   }
@@ -29,10 +24,6 @@ const checkFavs = (favs, ourMovie) => {
  return bool
 
 }
-
-
-
-
 
 export const fetchUser = (email, password) => {
   return async (dispatch) => {

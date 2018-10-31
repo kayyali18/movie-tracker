@@ -5,7 +5,7 @@ import { addFavThunk } from '../../Thunks/addFav';
 
 
 
-class Movie extends Component {
+class Faves extends Component {
   constructor() {
     super();
   }
@@ -49,4 +49,4 @@ export const mapDispatchToProps = dispatch => ({
   toggleFav: (movie, userID) => dispatch(addFavThunk(movie, userID))
 
 })
-export default connect(mapStateToProps, mapDispatchToProps)(Movie);
+export default connect(mapStateToProps, mapDispatchToProps)(Faves);

@@ -7,14 +7,11 @@ const Main = (props) =>{
   return(
     <div className="Main">
 
-      <Route exact path='/favs' render={(props)=>{
+      <Route path='/favs' render={(props)=>{
         return <FavesContainer props={props}/>
-      }}
-      />
+      }}/>
 
       <Route exact path='/main' props={props} component={MovieContainer} />
-
-
 
     </div>
   )
