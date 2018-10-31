@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
+import PropTypes from 'prop-types';
 
 class MovieContainer extends Component {
   constructor() {

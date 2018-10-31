@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { isAuthenticated } from '../../Actions';
 import { mapStateToProps } from '../PrivateRoute';
+import PropTypes from 'prop-types';
+
 
 const Nav = (props) => {
   const logoutUser = () => {

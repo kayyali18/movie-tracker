@@ -7,6 +7,8 @@ import Login from './Login/Login'
 import * as api from '../Helpers/apiCaller'
 import '../styles/App.css';
 import { favsLocalThunk } from '../Thunks/favsLocal.js';
+import PropTypes from 'prop-types';
+
 
 class App extends Component {
   constructor(props) {

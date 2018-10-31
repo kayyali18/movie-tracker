@@ -2,6 +2,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import MovieContainer from '../MovieContainer/MovieContainer';
 import FavesContainer from '../FavesContainer/FavesContainer';
+import PropTypes from 'prop-types';
+
 
 const Main = (props) => {
   return (

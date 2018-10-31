@@ -3,8 +3,7 @@ import * as api from '../../Helpers/apiCaller.js';
 import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
-
-
+import PropTypes from 'prop-types';
 
 
 class Movie extends Component {
@@ -16,7 +15,6 @@ class Movie extends Component {
     const { toggleFav, movie, userID, resetFavs } = this.props
     toggleFav(movie, userID)
     resetFavs()
-
   }
 
   render() {
@@ -56,6 +54,6 @@ Movie.propTypes = {
   toggleFav: PropTypes.func,
   movie: PropTypes.object,
   movieID: PropTypes.number,
-  userID: propTypes.number,
-  resetFavs: propTypes.func
+  userID: PropTypes.number,
+  resetFavs: PropTypes.func
 }
