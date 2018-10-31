@@ -68,7 +68,7 @@ class Login extends Component {
             >
               <p>Login</p>
               <h2>Welcome Back</h2>
-              {wrongCredentials ? <p className='wrong-credentials'> Username/Password incorrect</p> : null}
+              {wrongCredentials ? <p className='wrong-credentials'> bad email / password</p> : null}
 
               <label className="email-input">
                 <input
@@ -103,8 +103,9 @@ class Login extends Component {
             onSubmit={this.createAccount}
             aria-label="Create new MovieTracker account"
           >
-            <h2 className="new-user-h2">Create Account</h2>
-            {userExists ? <p className='wrong-credentials'> Username/Email already exists</p> : null}
+            <p className="create-p">create account</p>
+
+            {userExists ? <p className='wrong-credentials2'> username / email already exists</p> : null}
 
             <label>
               <input
