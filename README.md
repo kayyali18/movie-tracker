@@ -6,6 +6,11 @@ now playing©️ is the ultimate app for finding out what movies are playing rig
 
 This project was done as a part of Turing School of Software and Design's curriculum. You can find out more here(https://github.com/turingschool-examples/movie-tracker).
 
+
+<img width="797" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47791535-9034d780-dcdf-11e8-924a-9ef6fded4b75.png">
+
+<img width="797" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47791534-8f9c4100-dcdf-11e8-90ec-5ebd008f7766.png">
+
 ### Installation
 
 Clone down the repo for this project:
