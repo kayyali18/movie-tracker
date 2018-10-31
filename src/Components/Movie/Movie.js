@@ -4,9 +4,6 @@ import { connect } from 'react-redux';
 import { addFavThunk } from '../../Thunks/addFav';
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 
-
-
-
 class Movie extends Component {
   constructor() {
     super();

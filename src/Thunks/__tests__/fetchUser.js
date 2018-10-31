@@ -18,7 +18,7 @@ describe('fetchUser', () => {
       ok: true
     }))
     const thunk = fetchUser(mockEmail, mockPass)
-    thunk(mockDispatch)
+    thunk(mockDispatch())
 
     expect(mockDispatch).toHaveBeenCalledWith()
   });

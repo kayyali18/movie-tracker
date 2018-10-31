@@ -3,7 +3,7 @@
 exports[`Login should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Login)
+  Symbol(enzyme.__unrendered__): <withRouter(Connect(Login))
     store={
       Object {
         "clearActions": [Function],
@@ -28,18 +28,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "loginCheck": [Function],
-      "store": Object {
-        "clearActions": [Function],
-        "dispatch": [Function],
-        "getActions": [Function],
-        "getState": [Function],
-        "replaceReducer": [Function],
-        "subscribe": [Function],
-      },
+      "children": [Function],
     },
     "ref": null,
-    "rendered": null,
+    "rendered": [Function],
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -48,18 +40,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "loginCheck": [Function],
-        "store": Object {
-          "clearActions": [Function],
-          "dispatch": [Function],
-          "getActions": [Function],
-          "getState": [Function],
-          "replaceReducer": [Function],
-          "subscribe": [Function],
-        },
+        "children": [Function],
       },
       "ref": null,
-      "rendered": null,
+      "rendered": [Function],
       "type": [Function],
     },
   ],
