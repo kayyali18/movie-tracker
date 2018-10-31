@@ -7,6 +7,8 @@ import Login from './Login/Login'
 import * as api from '../Helpers/apiCaller'
 import '../styles/App.css';
 import { favsLocalThunk } from '../Thunks/favsLocal.js';
+import PropTypes from 'prop-types';
+
 
 class App extends Component {
   constructor(props) {
@@ -45,3 +47,9 @@ const mapDispatchToProps = (dispatch) => ({
 const exportWithRouter = withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
 
 export default exportWithRouter;
+
+App.propTypes = {
+  latestMovies: PropTypes.object,
+  nowPlaying: PropTypes.object,
+  user: PropTypes.object
+}

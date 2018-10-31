@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
+import PropTypes from 'prop-types';
 
 class MovieContainer extends Component {
   constructor() {
@@ -26,7 +27,6 @@ class MovieContainer extends Component {
     const movies = latestMovies.map(movie => {
       return <Movie movie={movie} resetFavs={this.resetFavs} key={movie.id} />
     })
-
     return movies;
   }
 
@@ -34,9 +34,6 @@ class MovieContainer extends Component {
 
     return (
       <section>
-        <nav>
-
-        </nav>
         <section className="even-bigger-movie-box">
           <section className="text-box">
             <Nav />
@@ -65,3 +62,10 @@ const mapDispatchToProps = (dispatch) => ({
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(MovieContainer);
+
+MovieContainer.propTypes = {
+  movies: PropTypes.object,
+  user: PropTypes.object,
+  faveMovies: PropTypes.object,
+  movie_id: PropTypes.number
+}
