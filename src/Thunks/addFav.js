@@ -5,8 +5,11 @@ import {loginUser, wrongCredentials, createAccountDisplay, isAuthenticated} from
 export const addFavThunk = (movie, userID) => {
   return async (dispatch) => {
     try {
-      const response = await API.postFav(movie, userID)
-      if (!response.ok) throw Error(response.statusText)
+      const response = await API.getFavs(userID)
+      const bool = checkFavs(response, movie)
+      if (bool) API.deleteFav(movie, userID)
+      else API.postFav(movie, userID)
+     
       //dispatch{addedtofavs}
       //dispatch{addfavs}
       //dispatch{removefavs}
@@ -15,6 +18,16 @@ export const addFavThunk = (movie, userID) => {
 
     }
   }
+}
+
+const checkFavs = (favs, ourMovie) => {
+  console.log (favs)
+  let bool = false;
+  favs.data.forEach(movie => {
+    if (movie.movie_id == ourMovie.id ) bool = true
+  });
+ return bool
+
 }
 
 
