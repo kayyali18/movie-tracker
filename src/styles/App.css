@@ -567,35 +567,23 @@ nav {
 }
 
 .login-main .app-header-container {
-  text-align: center;
+  text-align: left;
+  margin: 0;
 }
 
 .login-main .app-title {
   margin: 0 auto;
   color: black;
-  font-size: 3rem;
-}
-
-.login-main .app-logo {
-  -webkit-animation: 🎥 100s linear infinite;
-          animation: 🎥 100s linear infinite;
-  background: center/cover url("./Assets/film.png");
-  -webkit-box-shadow: inset 0 10px 50px white;
-          box-shadow: inset 0 10px 50px white;
-  -webkit-filter: opacity(20%);
-          filter: opacity(20%);
-  height: 50px;
-  margin: 0 auto;
-  position: relative;
-  top: 70px;
-  width: 70px;
-  z-index: -1;
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
 }
 
 .login-main .app-subtitle {
-  letter-spacing: .5px;
-  font-weight: 100;
-  margin-top: .8rem;
+  position: relative;
+  letter-spacing: -2px;
+  top: 7rem;
+  font-size: 5rem;
 }
 
 .login-main .form-container {
