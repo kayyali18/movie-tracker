@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import HeaderLogin from './HeaderLogin/HeaderLogin'
-import { loginUser, createAccountDisplay } from '../../Actions'
+import { createAccountDisplay } from '../../Actions'
 import { fetchUser } from '../../Thunks/fetchUser';
 import { createAccountThunk } from '../../Thunks/createAccount';
-import { BrowserRouter, Route, withRouter, Link, NavLink, Redirect } from 'react-router-dom';
+import { BrowserRouter, withRouter, NavLink, } from 'react-router-dom';
 
 
 class Login extends Component {
