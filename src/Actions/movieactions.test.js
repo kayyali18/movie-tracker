@@ -1,10 +1,15 @@
 /* eslint-disable */
 
-import * as Actions from './index';
 
-describe('movieActions', () => {
+import React from 'react';
+import * as Actions from './TheActionMan.js';
+import { configure } from 'enzyme';
+import {shallow, mount} from 'enzyme';
+import rootReducer from '../Reducers/index.js'
 
-  it('should have an action of type NOW_PLAYING', () => {
+describe('movieActions', ()=>{
+
+  it('should have an action of type NOW_PLAYING', ()=>{
 
     let mockMovies = [
       {

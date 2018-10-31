@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import Movie from '../Movie/Movie';
 import { connect } from 'react-redux';
-import { NavLink } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 import { favsLocalThunk } from '../../Thunks/favsLocal.js';
 import PropTypes from 'prop-types';
 import Faves from '../Faves/Faves';
 
 class MovieContainer extends Component {
-  constructor() {
-    super();
-  }
 
   componentDidMount() {
     const { user, getUserFavs } = this.props;

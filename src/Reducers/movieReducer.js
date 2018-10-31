@@ -1,4 +1,4 @@
-import * as movieData from '../Helpers/apiCaller.js';
+
 
 
 const movieReducer = (state = [], action) => {

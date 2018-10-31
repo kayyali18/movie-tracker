@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Movie
+    movie={
+      Object {
+        "movie": Array [
+          Object {
+            "movie": "movie1",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h3>
+          Title: 
+        </h3>,
+        <time>
+          Release date: 
+        </time>,
+        <p>
+          Overview: 
+        </p>,
+        <img
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2undefined"
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Title: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Title: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Release date: ",
+            undefined,
+          ],
+          "dateTime": undefined,
+        },
+        "ref": null,
+        "rendered": Array [
+          "Release date: ",
+          undefined,
+        ],
+        "type": "time",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Overview: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Overview: ",
+          undefined,
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2undefined",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h3>
+            Title: 
+          </h3>,
+          <time>
+            Release date: 
+          </time>,
+          <p>
+            Overview: 
+          </p>,
+          <img
+            src="https://image.tmdb.org/t/p/w185_and_h278_bestv2undefined"
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Title: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Title: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Release date: ",
+              undefined,
+            ],
+            "dateTime": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            "Release date: ",
+            undefined,
+          ],
+          "type": "time",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Overview: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Overview: ",
+            undefined,
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "https://image.tmdb.org/t/p/w185_and_h278_bestv2undefined",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
